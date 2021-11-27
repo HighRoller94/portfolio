@@ -1,0 +1,57 @@
+.contact__section {
+    margin-top: 12vh;
+    padding-top: 17vh;
+    padding-bottom: 10vh;
+    .contact__container {
+        display: flex;
+        margin-left: 14%;
+        .contact__header {
+            h1 {
+                font-family: 'Poppins';
+                font-weight: 200;
+                font-size: 8rem;
+            }
+            h2 {
+                font-family: 'Poppins';
+                font-weight: 200;
+                font-size: 2rem;
+                margin-left: 1%;
+            }
+        }
+        .contact__form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 17%;
+            margin-left: 17%;
+            padding-bottom: 13vh;
+            .MuiTextField-root {
+                padding: 10px 0;
+                margin: 10px 0;
+                width: 200%;
+                color: currentColor;
+                font-family: 'Poppins';
+                label {
+                    color: currentColor;
+                    font-family: 'Poppins';
+                    font-weight: 300;
+                    font-size: 1.1rem;
+                }
+                input {
+                    font-size: 1.2rem;
+                    caret-color: currentColor;
+                }
+            }
+            button {
+                margin: 20px 0;
+                font-weight: 300;
+                font-size: 1.2rem;
+                margin-left: -5px;
+                display: flex;
+                color: currentColor;
+                background: none;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}

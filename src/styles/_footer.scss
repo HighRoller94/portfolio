@@ -1,0 +1,58 @@
+.footer__section {
+    margin: 10vh auto;
+    width: 73%;
+    border-top: 1px solid currentColor;
+    .footer__info {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        .footer__logoInfo {
+            .footer__logo {
+                height: 50px;
+                opacity: 0.6;
+                transition: .5s;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .footer__links {
+            margin-bottom: -20px;
+            p {
+                font-weight: 300;
+                font-size: 1rem;
+                margin-bottom: 15px;
+                opacity: 0.6;
+                transition: .5s;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .footer__projects {
+            p {
+                font-weight: 300;
+                font-size: 1rem;
+                margin-bottom: 15px;
+                opacity: 0.6;
+                transition: .5s;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .footer__top {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+    }
+    .rights {
+        display: flex;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 1rem;
+        margin-top: 75px;
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,61 @@
+.hero__section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    background: none;
+    .hero__text {
+        background: none;
+        position: relative;
+        margin-left: calc(14.5%);
+        h2 {
+            font-weight: 200;
+            font-size: 2.2rem;
+            background: none;
+        }
+        h1 {
+            font-weight: 200;
+            font-size: 10.5rem;
+            margin-left: -12px;
+            margin-top: -10px;
+            background: none;
+        }
+        h3 {
+            font-weight: 200;
+            font-size: 2.4rem;
+            margin-top: -15px;
+            margin-left: -6px;
+            background: none;
+        }
+    }
+    .download__btn {
+        position: absolute;
+        right: 12%;
+        margin-top: 80px;
+        background: none;
+        button {
+            text-decoration: none;
+            padding: 10px 25px;
+            color: currentColor;
+            background-color: inherit;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 17px;
+            font-weight: 300;
+        }
+        .link {
+            color: currentColor;
+        }
+    }
+    p {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+        margin-bottom: 100px;
+        font-size: 1.7rem;
+    }
+}

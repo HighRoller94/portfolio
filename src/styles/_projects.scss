@@ -1,0 +1,119 @@
+.projects__section {
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    .projects__header {
+        padding-top: 20vh;
+        h1 {
+            font-weight: 250;
+            font-size: 8rem;
+        }
+    }
+    .projects {
+        margin-top: 50px;
+        padding-bottom: 100px;
+        .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            opacity: 0.8;
+            transition: .5s;
+            &:nth-child(1) {
+                &:hover {
+                    transform: scale(1.1);
+                    opacity: 1;
+                    .project__header {
+                        margin-right: 100px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                &:hover {
+                    transform: scale(1.1);
+                    opacity: 1;
+                    .project__header {
+                        margin-left: 100px;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                &:hover {
+                    &:hover {
+                        transform: scale(1.1);
+                        opacity: 1;
+                        .project__header {
+                            margin-right: 100px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(4) {
+                &:hover {
+                    transform: scale(1.1);
+                    opacity: 1;
+                    .project__header {
+                        margin-left: 100px;
+                    }
+                }
+            }
+            .project__header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .5s;
+                h1 {
+                    transition: .5s;
+                    font-weight: 200;
+                    font-size: 4rem;
+                    margin: 0 30px;
+                }
+                .project__arrow {
+                    font-size: 5rem;
+                    stroke-width: 1rem;
+                    font-weight: 300px;
+                }
+            }
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 500px;
+                font-weight: 300;
+                font-size: 1.1rem;
+                text-align: center;
+                margin-top: 20px;
+                transition: .5s;
+            }
+            
+        }
+    }
+    .more__header {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+        opacity: 0.6;
+        h1 {
+            font-family: 'Poppins';
+            font-weight: 200;
+            font-size: 2rem;
+        }
+        .project__arrow {
+            margin-left: 2rem;
+            font-size: 2.7rem;
+            transition: .5s;
+        }
+        &:hover {
+            opacity: 1;
+            .project__arrow {
+                margin-left: 4rem;
+            }
+        }
+    }
+}
