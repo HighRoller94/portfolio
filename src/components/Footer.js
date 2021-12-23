@@ -1,7 +1,7 @@
 import React from 'react';
-import Aos from 'aos';
 
-import "aos/dist/aos.css";
+import { Link } from 'react-scroll'
+
 import '../styles/styles.scss'
 
 
@@ -15,7 +15,7 @@ function Footer() {
     }
 
     return (
-        <div className="footer__section" data-aos="fade-up">
+        <div className="footer__section">
             <div className="footer__info">
                 <div className="footer__logoInfo">
                     <svg
@@ -35,16 +35,15 @@ function Footer() {
                     
                 </div>
                 <div className="footer__links">
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Projects</p>
+                    <Link to="about"><p>ABOUT</p></Link>
+                    <Link to="projects"><p>PROJECTS</p></Link>
+                    <Link to="contact"><p>CONTACT</p></Link>
                 </div>
                 <div className="footer__projects">
-                    <p>Travel</p>
-                    <p>Cook</p>
-                    <p>Pyre</p>
-                    <p>Illume</p>
-                    <p>More</p>
+                    <p>TRAVEL</p>
+                    <p>COOK</p>
+                    <p>PYRE</p>
+                    <p>ILLUME</p>
                 </div>
                 <h1 className="footer__top focus" onClick={scrollToTop}>Back to top</h1>
             </div>

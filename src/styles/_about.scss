@@ -12,23 +12,22 @@
         }
     }
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-top: 20px;
         font-weight: 300;
         width: 45%;
     }
-    .about__image {
+    img {
         display: flex;
         position: absolute;
         right: 0;
-        margin-right: 13%;
-        margin-top: 25%;
-        img {
-            width: 450px;
-            height: 450px;
-            border-radius: 50%;
-            object-fit: cover;
-            transition: .5s;
-        }
+        margin-right: 14%;
+        margin-top: 16%;
+        width: 20%;
+        min-width: 300px;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: .5s;
     }
 }

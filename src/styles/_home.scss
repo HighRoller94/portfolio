@@ -1,30 +1,61 @@
 .hero__section {
     display: flex;
     flex-direction: column;
-    padding-top: 20vh;
+    padding-top: 24vh;
     background: none;
     .hero__text {
         background: none;
         position: relative;
         margin-left: calc(14.5%);
-        h2 {
-            font-weight: 200;
-            font-size: 2.2rem;
-            background: none;
-        }
         h1 {
             font-weight: 200;
-            font-size: 10.5rem;
+            font-size: 9rem;
             margin-left: -12px;
             margin-top: -10px;
             background: none;
         }
+    }
+    .wrapper {
+        display: flex;
+        margin-top: 10px;
+        margin-left: 5px;
         h3 {
             font-weight: 200;
             font-size: 2.4rem;
             margin-top: -15px;
             margin-left: -6px;
             background: none;
+        }
+        .dynamic__text {
+            height: 75px;
+            margin-top: -25px;
+            overflow: hidden; 
+            li {
+                list-style: none;
+                font-size: 2.4rem;
+                margin-top: 10px;
+                margin-left: -25px;
+                margin-right: 20px;
+                font-weight: 200;
+                color: currentColor;
+                position: relative;
+                top: 0;
+                animation: slide 10s steps(2) infinite;
+                &::after {
+                    color: currentColor;
+                    content: "";
+                    border-left: 2px solid currentColor;
+                    background-color: $offWhite;
+                    position: absolute;
+                    height: 95%;
+                    width: 100%;
+                    left: 0;
+                    margin-right: 5px;
+
+                    padding-left: 2px;
+                    animation: typing 5s steps(12) infinite;
+                }
+            }
         }
     }
     .download__btn {
@@ -35,27 +66,67 @@
         button {
             text-decoration: none;
             padding: 10px 25px;
-            color: currentColor;
             background-color: inherit;
-            outline: none;
-            border: none;
+            position: relative;
+            transition: all .35s;
+            border: 1px solid $offWhite;
             text-decoration: none;
-            font-size: 1.2rem;
-            border-radius: 17px;
-            font-weight: 300;
+            font-size: 1rem;
+            border-radius: 10px;
+            font-weight: 400;
+            &::after {
+                position: absolute;
+                content: "";                
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                transition: .35s;
+                background: $offBlack;
+                border-radius: 10px;
+            }
+            &:hover {
+                color: $offWhite;
+            }
+            &:hover:after {
+                width: 100%;
+            }
         }
         .link {
             color: currentColor;
+            text-decoration: none;
+            position: relative;
+            z-index: 2;
         }
     }
     p {
         display: flex;
+        margin: auto;
+        margin-top: 50px;
         justify-content: center;
         position: absolute;
-        bottom: 0;
-        left: 50%;
-        right: 50%;
+        bottom: 5%;
+        left: calc(47%);
         margin-bottom: 100px;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
+}
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100%);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slide {
+    100% {
+        top: -135px;
+    }
+}
+@media screen and (max-width: 768px) {
+
 }

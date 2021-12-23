@@ -32,7 +32,7 @@ function Projects() {
                 <div className="project focus" data-aos="fade-up" data-aos-duration="2000">
                     <div className="project__header">
                         <ChevronLeft className="project__arrow" />
-                        <h1>COOK</h1>
+                        <h1>CHEF</h1>
                     </div>
                     <p>Recipe search site connected to an external API. Built with React and SASS</p>
                 </div>

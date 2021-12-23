@@ -99,6 +99,7 @@
         align-items: center;
         transition: .5s;
         opacity: 0.6;
+        margin-left: 2%;
         h1 {
             font-family: 'Poppins';
             font-weight: 200;
@@ -113,6 +114,25 @@
             opacity: 1;
             .project__arrow {
                 margin-left: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects__section {
+        margin-top: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 5px;
+        .projects__header {
+            padding-top: 20vh;
+            h1 {
+                font-weight: 250;
+                font-size: 4rem;
             }
         }
     }

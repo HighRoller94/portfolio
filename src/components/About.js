@@ -17,18 +17,16 @@ function About() {
             <div data-aos="fade-right" data-aos-duration="2000" className="about__header">
                 <h1>ABOUT.</h1>
             </div>
-            <div data-aos="fade-right" data-aos-duration="2000" className="about__text">
+            <div data-aos="fade-right" className="about__text">
                 <p>
-                    Hey there, I'm Ash, a self-taught, front-end developer based in the UK. I have a background in visual communications, and 
+                    Hey there, I'm Ash, a front-end developer based in the UK. I have a background in visual communications, and 
                     more recently turned my attention to web coding, where I quickly found my passion.
                 </p>
                 <p>
-                    I'm always eager to learn new skills, and enjoy spending my time learning new ways to bring designs to life.
+                    I'm always eager to learn new skills, and enjoy spending my time learning new ways to bring designs to life with HTML, CSS and JS!
                 </p>
             </div>
-            <div data-aos="fade-left" data-aos-duration="2000" className="about__image">
-                <img src={me} alt="" />
-            </div>
+            <img data-aos="fade-left" src={me} alt="" />
         </div>
     )
 }

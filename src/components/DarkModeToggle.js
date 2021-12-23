@@ -6,31 +6,34 @@ import '../styles/styles.scss';
 
 const DarkModeToggle = () => {
     const [themeState, setThemeState] = useState(false);
-  
-    console.log(themeState)
+
+    useEffect(() => {
+      const getTheme = localStorage.getItem('Theme');
+      if (getTheme === 'dark' || themeState === 'null') {
+        setThemeState(true)
+        return  document.body.classList.add('dark-mode')
+        ;
+      }
+    }, [])
 
     const handleChange = () => {
-      setThemeState(!themeState);
-      if (themeState) {
+      if (themeState != true) {
         localStorage.setItem('Theme', 'dark');
         document.body.classList.add('dark-mode');
       } else {
         localStorage.setItem('Theme', 'light');
         document.body.classList.remove('dark-mode');
       }
+      setThemeState(!themeState);
     }
-    useEffect(() => {
-      const getTheme = localStorage.getItem('Theme');
-      if (getTheme === 'dark') return  document.body.classList.add('dark-mode');
-    })
 
     return (
     <div>
-        {themeState ? 
-            <Brightness2Icon className="toggle__icon" onClick={handleChange} /> 
-            : 
-            <FlareIcon className="toggle__icon" onClick={handleChange} />
-        }
+        {themeState === false ? (
+          <Brightness2Icon className="toggle__icon" onClick={handleChange} /> 
+        ) : (
+          <FlareIcon className="toggle__icon" onClick={handleChange} />
+        )}
     </div>
     )
 }

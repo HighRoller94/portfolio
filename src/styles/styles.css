@@ -23,7 +23,7 @@
 .overlay .navbar .nav__logo {
   margin-top: 5px;
   height: 33px;
-  margin-right: 50%;
+  margin-right: 55%;
   color: currentColor;
   width: auto;
   position: relative;
@@ -196,6 +196,44 @@
   color: currentColor;
 }
 
+@media screen and (max-width: 768px) {
+  .overlay {
+    background-color: purple;
+  }
+  .overlay .navbar .nav__logo {
+    width: 2.7rem;
+  }
+  .overlay .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 25px;
+  }
+  .overlay .socials .linked__icon {
+    font-size: 2.1rem;
+  }
+  .overlay .socials .git__icon {
+    margin-top: 10px;
+    font-size: 1.6rem;
+  }
+  .overlay .socials p {
+    font-size: 1.2rem;
+  }
+  .overlay .socials .bar {
+    height: 120px;
+  }
+}
+
 .hero__section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,18 +284,43 @@
 .hero__section .download__btn button {
   text-decoration: none;
   padding: 10px 25px;
-  color: currentColor;
   background-color: inherit;
-  outline: none;
-  border: none;
+  position: relative;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  border: 1px solid #fcfcfc;
   text-decoration: none;
   font-size: 1.2rem;
-  border-radius: 17px;
-  font-weight: 300;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.hero__section .download__btn button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  -webkit-transition: .35s;
+  transition: .35s;
+  background: #0c0c0c;
+  border-radius: 10px;
+}
+
+.hero__section .download__btn button:hover {
+  color: #fcfcfc;
+}
+
+.hero__section .download__btn button:hover:after {
+  width: 100%;
 }
 
 .hero__section .download__btn .link {
   color: currentColor;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__section p {
@@ -306,19 +369,17 @@
   width: 45%;
 }
 
-.about__section .about__image {
+.about__section img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
   right: 0;
-  margin-right: 13%;
-  margin-top: 25%;
-}
-
-.about__section .about__image img {
-  width: 450px;
-  height: 450px;
+  margin-right: 14%;
+  margin-top: 16%;
+  width: 23%;
+  min-width: 300px;
+  height: auto;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -479,6 +540,7 @@
   -webkit-transition: .5s;
   transition: .5s;
   opacity: 0.6;
+  margin-left: 2%;
 }
 
 .projects__section .more__header h1 {
@@ -502,10 +564,38 @@
   margin-left: 4rem;
 }
 
+@media screen and (max-width: 768px) {
+  .projects__section {
+    margin-top: 30vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0;
+    margin-left: 5px;
+  }
+  .projects__section .projects__header {
+    padding-top: 20vh;
+  }
+  .projects__section .projects__header h1 {
+    font-weight: 250;
+    font-size: 4rem;
+  }
+}
+
 .contact__section {
-  margin-top: 12vh;
+  margin-top: 11vh;
   padding-top: 17vh;
-  padding-bottom: 10vh;
+  padding-bottom: 20vh;
 }
 
 .contact__section .contact__container {
@@ -521,7 +611,12 @@
   font-size: 8rem;
 }
 
-.contact__section .contact__container .contact__header h2 {
+.contact__section .contact__container .contact__header a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.contact__section .contact__container .contact__header a h2 {
   font-family: 'Poppins';
   font-weight: 200;
   font-size: 2rem;
@@ -532,6 +627,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 25vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -539,45 +635,118 @@
   margin-top: 17%;
   margin-left: 17%;
   padding-bottom: 13vh;
-}
-
-.contact__section .contact__container .contact__form .MuiTextField-root {
-  padding: 10px 0;
-  margin: 10px 0;
-  width: 200%;
-  color: currentColor;
-  font-family: 'Poppins';
-}
-
-.contact__section .contact__container .contact__form .MuiTextField-root label {
-  color: currentColor;
-  font-family: 'Poppins';
   font-weight: 300;
-  font-size: 1.1rem;
 }
 
-.contact__section .contact__container .contact__form .MuiTextField-root input {
-  font-size: 1.2rem;
-  caret-color: currentColor;
+.contact__section .contact__container .contact__form .text__field {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
 }
 
-.contact__section .contact__container .contact__form button {
-  margin: 20px 0;
-  font-weight: 300;
-  font-size: 1.2rem;
-  margin-left: -5px;
+.contact__section .contact__container .contact__form .text__field input {
+  width: 100%;
+  height: 100%;
+  color: currentColor;
+  padding-top: 20px;
+  border: none;
+  background: none;
+  margin-top: -12px;
+  margin-left: -1px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact__section .contact__container .contact__form .text__field input:focus + .label-name .content-name,
+.contact__section .contact__container .contact__form .text__field input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: .9rem;
+}
+
+.contact__section .contact__container .contact__form .text__field input:focus + .label-name::after,
+.contact__section .contact__container .contact__form .text__field input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.contact__section .contact__container .contact__form .text__field label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  margin-bottom: 3px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.contact__section .contact__container .contact__form .text__field label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid currentColor;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact__section .contact__container .contact__form .text__field textarea {
+  margin-top: 0px;
+  resize: none;
+  width: 100%;
+  height: 300px;
+  color: currentColor;
+  padding-top: 20px;
+  border: none;
+  background: none;
+  margin-top: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact__section .contact__container .contact__form .text__field textarea:focus + .label-name .content-name,
+.contact__section .contact__container .contact__form .text__field textarea:valid + .label-name .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: .9rem;
+}
+
+.contact__section .contact__container .contact__form .text__field textarea:focus + .label-name::after,
+.contact__section .contact__container .contact__form .text__field textarea:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.contact__section .contact__container .contact__form .text__field .content-name {
+  position: absolute;
+  bottom: 5px;
+  margin-top: -10px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact__section .send__icon {
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: currentColor;
-  background: none;
-  outline: none;
-  border: none;
+  margin-top: 30px;
+  font-size: 3rem;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .footer__section {
-  margin: 10vh auto;
-  width: 73%;
+  margin: 15vh auto;
+  width: 72%;
   border-top: 1px solid currentColor;
 }
 
@@ -650,6 +819,128 @@
   padding-bottom: 20px;
 }
 
+.pyre__page {
+  padding-top: 7%;
+}
+
+.pyre__page .pyre__container {
+  width: 73%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyre__page .pyre__container .pyre__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__header h1 {
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__header img {
+  margin-left: 50px;
+  height: 65px;
+}
+
+.pyre__page .pyre__container .pyre__info p {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  font-weight: 200;
+  width: 75%;
+}
+
+.pyre__page .pyre__container .pyre__info h3 {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.pyre__page .pyre__container .pyre__info ul {
+  margin-top: 25px;
+  padding: 0;
+  list-style: none;
+  font-weight: 300;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__buttons {
+  margin-top: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__buttons a {
+  text-decoration: none;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__buttons a button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 25px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-right: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid currentColor;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__buttons a button .icon {
+  font-size: 1.7rem;
+  margin-right: 10px;
+}
+
+.pyre__page .pyre__container .pyre__info .pyre__buttons a button:hover {
+  background-color: #0c0c0c;
+  color: #fcfcfc;
+}
+
+.pyre__page .pyre__container .pyre__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 125px;
+}
+
+.pyre__page .pyre__container .pyre__images .pyre__1 {
+  width: 90%;
+}
+
+.pyre__page .pyre__container .pyre__images .pyre__2 {
+  margin-top: -200px;
+  margin-left: 235px;
+  width: 80%;
+}
+
 * {
   margin: 0;
   font-family: 'Poppins';
@@ -676,6 +967,41 @@ body.dark-mode {
 body.dark-mode .about__image img {
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
+}
+
+body.dark-mode .download__btn button {
+  border: 1px solid #0c0c0c;
+}
+
+body.dark-mode .download__btn button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fcfcfc;
+  font-weight: 500;
+}
+
+body.dark-mode .download__btn button:hover {
+  color: #0c0c0c;
+}
+
+body.dark-mode .download__btn button:hover:after {
+  width: 100%;
+  border: 1px solid currentColor;
+}
+
+body.dark-mode .pyre__buttons button {
+  background: none;
+  border: 1px solid #fcfcfc;
+  color: #fcfcfc;
+}
+
+body.dark-mode .pyre__buttons button:hover {
+  background-color: #fcfcfc;
+  color: #0c0c0c;
 }
 
 .cursor {
