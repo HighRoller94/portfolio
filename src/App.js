@@ -6,12 +6,10 @@ import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import NavOverlay from './components/NavOverlay';
-import Cook from './components/Cook';
 import Pyre from './components/Pyre';
-import Travel from './components/Travel';
-import Illume from './components/Illume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Skills from './components/Skills';
 
 import './styles/styles.scss';
 
@@ -47,34 +45,24 @@ function App() {
         exit={{ opacity: 0}}
       >
       <div className="cursor"></div>
-      <AnimatePresence exitBeforeEnter>
-        <Switch>
-          <Route path="/travel">
-            <NavOverlay />
-            <Travel />
-          </Route>
-          <Route path="/cook">
-            <NavOverlay />
-            <Cook />
-          </Route>
-          <Route path="/pyre">
-            <NavOverlay />
-            <Pyre />
-          </Route>
-          <Route path="/illume">
-            <NavOverlay />
-            <Illume />
-          </Route>
-          <Route path="/">
-            <NavOverlay />
-            <Home />
-            <About  />
-            <Projects />
-            <Contact />
-            <Footer />
-          </Route>
-        </Switch>
-      </AnimatePresence>
+      <div className="border"></div>
+          <AnimatePresence exitBeforeEnter>
+            <Switch>
+              <Route path="/pyre">
+                <NavOverlay />
+                <Pyre />
+              </Route>
+              <Route path="/">
+                <NavOverlay />
+                <Home />
+                <About  />
+                <Projects />
+                <Skills />
+                <Contact />
+                <Footer />
+              </Route>
+            </Switch>
+          </AnimatePresence>
       </motion.div>
     </Router>
   );

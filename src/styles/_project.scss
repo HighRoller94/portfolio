@@ -1,0 +1,58 @@
+.project {
+    background-color: $offWhite;
+    width: 100%;
+    height: 33vh;
+    position: relative;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    transition: 200ms ease-in;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        outline: none;
+        filter: blur(2px);
+        transform: scale(1.1);
+    }
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-family: 'Poppins';
+        font-weight: 300;
+        font-size: 4rem;
+        transition: 200ms ease-in-out;
+    }
+    p {
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+        font-size: 1.3rem;
+        display: none;
+        transition: 200ms ease-in-out;
+    }
+    &:hover {
+        margin-top: -10px;
+        h1 {
+            top: 45%;
+        }
+        p {
+            display: block;
+        }
+        img {
+            filter: blur(0);
+        }
+    }
+    
+}

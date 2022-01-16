@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Aos from 'aos';
 
-import me from '../assets/me.jpg';
+import me from '../assets/me.svg';
 
 import "aos/dist/aos.css";
 import '../styles/styles.scss';

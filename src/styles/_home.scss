@@ -6,52 +6,55 @@
     .hero__text {
         background: none;
         position: relative;
-        margin-left: calc(14.5%);
+        margin-left: 18%;
         h1 {
-            font-weight: 200;
             font-size: 9rem;
             margin-left: -12px;
             margin-top: -10px;
             background: none;
+            font-family: 'Helvetica Neue';
+            font-weight: 500;
+        }
+        h2 {
+            margin-left: -5px;
         }
     }
     .wrapper {
         display: flex;
-        margin-top: 10px;
-        margin-left: 5px;
+        margin-top: 1.5rem;
         h3 {
             font-weight: 200;
-            font-size: 2.4rem;
-            margin-top: -15px;
+            font-size: 2.7rem;
+            margin-top: -21px;
             margin-left: -6px;
             background: none;
         }
         .dynamic__text {
             height: 75px;
-            margin-top: -25px;
+            margin-top: -30px;
             overflow: hidden; 
             li {
                 list-style: none;
-                font-size: 2.4rem;
-                margin-top: 10px;
+                font-size: 2.7rem;
+                margin-top: 8px;
                 margin-left: -25px;
                 margin-right: 20px;
                 font-weight: 200;
                 color: currentColor;
                 position: relative;
-                top: 0;
+                top: 1px;
                 animation: slide 10s steps(2) infinite;
+                z-index: 2;
                 &::after {
                     color: currentColor;
                     content: "";
                     border-left: 2px solid currentColor;
-                    background-color: $offWhite;
+                    background-color: $offBlack;
                     position: absolute;
                     height: 95%;
                     width: 100%;
                     left: 0;
                     margin-right: 5px;
-
                     padding-left: 2px;
                     animation: typing 5s steps(12) infinite;
                 }
@@ -59,20 +62,19 @@
         }
     }
     .download__btn {
-        position: absolute;
-        right: 12%;
-        margin-top: 80px;
+        margin-top: 2.6rem;
         background: none;
         button {
             text-decoration: none;
-            padding: 10px 25px;
+            padding: 12px 27px;
+            margin-left: -7px;
             background-color: inherit;
             position: relative;
             transition: all .35s;
-            border: 1px solid $offWhite;
+            border: 0.5px solid $offWhite;
             text-decoration: none;
-            font-size: 1rem;
-            border-radius: 10px;
+            font-size: 1.1rem;
+            border-radius: 13px;
             font-weight: 400;
             &::after {
                 position: absolute;
@@ -82,11 +84,11 @@
                 width: 0;
                 height: 100%;
                 transition: .35s;
-                background: $offBlack;
+                background: $offWhite;
                 border-radius: 10px;
             }
             &:hover {
-                color: $offWhite;
+                color: $offBlack;
             }
             &:hover:after {
                 width: 100%;
@@ -108,7 +110,7 @@
         bottom: 5%;
         left: calc(47%);
         margin-bottom: 100px;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -124,7 +126,7 @@
 
 @keyframes slide {
     100% {
-        top: -135px;
+        top: -142px;
     }
 }
 @media screen and (max-width: 768px) {

@@ -11,6 +11,8 @@ $offWhite: #fcfcfc;
 @import './contact';
 @import './footer';
 @import './pyre';
+@import './skills';
+@import './project';
 
 * {
     margin: 0;
@@ -20,65 +22,25 @@ $offWhite: #fcfcfc;
     ::-webkit-scrollbar {
         display: none;
     }
+    
+}
+
+.border {
+    position: fixed;
+    left: 5%;
+    overflow: auto;
+    height: 95vh;
+    width: 87vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    border: 25px solid $offWhite;
 }
 
 body {
-    background-color: $offWhite;
-    color: $offBlack;
-    transition: .5s;
-}
-
-body.dark-mode {
     background-color: $offBlack;
     color: $offWhite;
-    .about__image img {
-        filter: brightness(0.8);
-    }
-    .download__btn {
-        button {
-            border: 1px solid $offBlack;
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 0;
-                height: 100%;
-                background: $offWhite;
-                font-weight: 500;
-                
-            }
-            &:hover {
-                color: $offBlack;
-            }
-            &:hover:after {
-                width: 100%;
-                border: 1px solid currentColor;            
-            }
-        }
-    }
-    .pyre__buttons {
-        button {
-            background: none;
-            border: 1px solid $offWhite;
-            color: $offWhite;
-            &:hover {
-                background-color: $offWhite;
-                color: $offBlack;
-            }
-        }
-    }
-    .hero__section {
-        .wrapper {
-            .dynamic__text {
-                li {
-                    &::after {
-                        background-color: $offBlack;
-                    }
-                }
-            }
-        }
-    }
 }
 
 .cursor {
@@ -109,10 +71,5 @@ body.dark-mode {
     to {
         transform: scale(.7);
     }
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
