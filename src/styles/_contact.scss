@@ -1,25 +1,35 @@
 .contact__section {
-    margin-top: 11vh;
+    margin-top: 13vh;
     padding-top: 17vh;
-    padding-bottom: 20vh;
-    z-index: 99;
+    padding-bottom: 25vh;
     .contact__container {
         display: flex;
-        margin-left: 14%;
+        position: relative;
+        margin-left: 16.5%;
+        .bg__contact {
+            position: absolute;
+            font-size: 35rem;
+            font-family: 'Helvetica Neue';
+            font-weight: 500;
+            color: $offWhite;
+            opacity: .01;
+            top: 5rem;
+            left: -24rem;
+        }
         .contact__header {
             h1 {
-                font-family: 'Poppins';
-                font-weight: 200;
-                font-size: 8rem;
+                font-family: 'Helvetica Neue';
+                font-weight: 400;
+                font-size: 6rem;
             }
             a { 
                 text-decoration: none;
                 color: currentColor;
                 h2 {
-                    font-family: 'Poppins';
-                    font-weight: 200;
-                    font-size: 2rem;
+                    font-weight: 300;
+                    font-size: 1.8rem;
                     margin-left: 1%;
+                    margin-top: 10px;
                 }
             }
             
@@ -29,7 +39,7 @@
             width: 25vw;
             flex-direction: column;
             margin-top: 17%;
-            margin-left: 17%;
+            margin-left: 24.5%;
             padding-bottom: 13vh;
             font-weight: 300;
             .text__field {
@@ -63,14 +73,17 @@
                     position: absolute;
                     bottom: 0px;
                     left: 0%;
-                    margin-bottom: 3px;
+                    margin-bottom: 1px;
                     width: 100%;
                     height: 100%;
+                    font-size: 1.2rem;
                     pointer-events: none;
+                    opacity: 0.9;
                     border-bottom: 1px solid currentColor;
                     &::after {
                         content: "";
                         position: absolute;
+                        opacity: 1;
                         left: 0px;
                         bottom: -1px;
                         height: 100%;

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 import "aos/dist/aos.css";
-import '../styles/styles.scss'
+import '../styles/styles.scss';
 
 function Home() {
     
@@ -19,7 +19,7 @@ function Home() {
                         </ul>
                         <h3 data-aos="fade-right" data-aos-duration="2000">based in the UK</h3>
                     </div>
-                    <div data-aos="fade-left" data-aos-duration="2000" className="download__btn fade">
+                    <div data-aos="fade-left" data-aos-duration="2000" className="download__btn fade focus">
                         <button className="link">
                             <a className="link" href="cv/Ash-Bridges-CV.pdf" target="_blank">
                                 Download CV

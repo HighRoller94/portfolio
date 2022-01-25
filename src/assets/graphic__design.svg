@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+  <g id="Group_71" data-name="Group 71" transform="translate(-1387.323 -2941.636)">
+    <g id="Group_73" data-name="Group 73">
+      <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(1387.323 2941.636)" fill="#0c0c0c" stroke="#fff" stroke-width="4">
+        <circle cx="54" cy="54" r="54" stroke="none"/>
+        <circle cx="54" cy="54" r="52" fill="none"/>
+      </g>
+      <path id="Icon_awesome-pencil-alt" data-name="Icon awesome-pencil-alt" d="M50.006,14.269l-4.63,4.63a1.206,1.206,0,0,1-1.707,0L32.52,7.751a1.206,1.206,0,0,1,0-1.707l4.63-4.63a4.831,4.831,0,0,1,6.82,0L50.006,7.45A4.813,4.813,0,0,1,50.006,14.269ZM28.543,10.021,2.169,36.4.039,48.6A2.413,2.413,0,0,0,2.832,51.39l12.2-2.139L41.408,22.877a1.206,1.206,0,0,0,0-1.707L30.26,10.021a1.218,1.218,0,0,0-1.717,0ZM12.463,34.135a1.4,1.4,0,0,1,0-1.989L27.93,16.68a1.406,1.406,0,0,1,1.989,1.989L14.452,34.135a1.4,1.4,0,0,1-1.989,0ZM8.838,42.582h4.821v3.646L7.18,47.363,4.057,44.239l1.135-6.478H8.838Z" transform="translate(1415.914 2969.921)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

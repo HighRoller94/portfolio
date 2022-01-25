@@ -1,20 +1,22 @@
 .footer__section {
-    margin: 15vh auto;
-    width: 72%;
-    border-top: 1px solid currentColor;
+    margin: 20vh auto;
+    width: 64%;
+    position: relative;
     .footer__info {
-        margin-top: 50px;
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        position: absolute;
+        left: -2rem;
+        bottom: 10rem;
         .footer__logoInfo {
             .footer__logo {
                 height: 50px;
-                opacity: 0.6;
+                margin-top: -15px;
+                font-family: 'Helvetica Neue';
+                font-weight: 400;
                 transition: .5s;
-                &:hover {
-                    opacity: 1;
-                }
+                font-size: 6rem;
             }
         }
         .footer__links {
@@ -22,7 +24,7 @@
             p {
                 font-weight: 300;
                 font-size: 1rem;
-                margin-bottom: 15px;
+                margin-bottom: 13px;
                 opacity: 0.6;
                 transition: .5s;
                 &:hover {
@@ -34,7 +36,7 @@
             p {
                 font-weight: 300;
                 font-size: 1rem;
-                margin-bottom: 15px;
+                margin-bottom: 13px;
                 opacity: 0.6;
                 transition: .5s;
                 &:hover {

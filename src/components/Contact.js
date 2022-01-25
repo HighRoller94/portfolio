@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
-import SendIcon from '@material-ui/icons/Send'
-import DoneIcon from '@material-ui/icons/Done'
-
 import Aos from 'aos';
+
+import SendIcon from '@material-ui/icons/Send';
+import DoneIcon from '@material-ui/icons/Done';
 
 import "aos/dist/aos.css";
 import '../styles/styles.scss'
@@ -20,7 +20,7 @@ function Contact() {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm('service_rjxavqe', 'template_ij66m24', e.target, 'user_tPwEwZeUHFlaN3PHk72Nh')
+        emailjs.sendForm('service_fppej9d', 'template_ij66m24', e.target, 'user_tPwEwZeUHFlaN3PHk72Nh')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -34,6 +34,7 @@ function Contact() {
         
         <div className="contact__section" id="contact">
             <div className="contact__container">
+            <h1 className="bg__contact">Email</h1>
                 <div className="contact__header" data-aos="fade-right">
                     <h1>CONTACT.</h1>
                     <a href="mailto:ashbridgescodes@gmail.com">

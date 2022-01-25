@@ -959,51 +959,6 @@ body {
   transition: .5s;
 }
 
-body.dark-mode {
-  background-color: #0c0c0c;
-  color: #fcfcfc;
-}
-
-body.dark-mode .about__image img {
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
-}
-
-body.dark-mode .download__btn button {
-  border: 1px solid #0c0c0c;
-}
-
-body.dark-mode .download__btn button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #fcfcfc;
-  font-weight: 500;
-}
-
-body.dark-mode .download__btn button:hover {
-  color: #0c0c0c;
-}
-
-body.dark-mode .download__btn button:hover:after {
-  width: 100%;
-  border: 1px solid currentColor;
-}
-
-body.dark-mode .pyre__buttons button {
-  background: none;
-  border: 1px solid #fcfcfc;
-  color: #fcfcfc;
-}
-
-body.dark-mode .pyre__buttons button:hover {
-  background-color: #fcfcfc;
-  color: #0c0c0c;
-}
-
 .cursor {
   width: 30px;
   height: 30px;
@@ -1050,6 +1005,7 @@ body.dark-mode .pyre__buttons button:hover {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+ monospace;
 }
 /*# sourceMappingURL=styles.css.map */

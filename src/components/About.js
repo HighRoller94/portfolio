@@ -14,19 +14,17 @@ function About() {
 
     return (
         <div className="about__section" id="about">
-            <div data-aos="fade-right" data-aos-duration="2000" className="about__header">
+            <h1 className="bg-about">About</h1>
+            <div data-aos="fade-right" data-aos-anchor-placement="top-center" className="about__header">
                 <h1>ABOUT.</h1>
             </div>
-            <div data-aos="fade-right" className="about__text">
+            <div data-aos="fade-right" data-aos-delay="300" className="about__text">
                 <p>
-                    Hey there, I'm Ash, a front-end developer based in the UK. I have a background in visual communications, and 
-                    more recently turned my attention to web coding, where I quickly found my passion.
-                </p>
-                <p>
-                    I'm always eager to learn new skills, and enjoy spending my time learning new ways to bring designs to life with HTML, CSS and JS!
+                    Hey there, I'm Ash, a front-end developer from the UK. I have a background in visual communications, and 
+                    more recently turned my attention to web coding, where I quickly found my passion. <br /><br />I'm always eager to learn new skills, and enjoy spending my time learning new ways to bring designs to life with HTML, CSS and JS!
                 </p>
             </div>
-            <img data-aos="fade-left" src={me} alt="" />
+            <img data-aos="fade-left" data-aos-delay="300" src={me} alt="" />
         </div>
     )
 }

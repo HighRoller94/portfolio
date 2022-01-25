@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
 
 import '../styles/styles.scss';
 
@@ -44,13 +44,13 @@ function NavOverlay() {
                         <span className="menu__bar"></span>
                     </div>
                     <ul className="navbar__menu">
-                        <li class="navbar__item focus">
+                        <li className="navbar__item focus">
                             <Link to="about"><h1 className="navbar__links focus">ABOUT</h1></Link>
                         </li>
-                        <li class="navbar__item focus">
+                        <li className="navbar__item focus">
                             <Link to="projects"><h1 className="navbar__links focus">PORTFOLIO</h1></Link>
                         </li>
-                        <li class="navbar__item focus">
+                        <li className="navbar__item focus">
                             <Link to="skills"><h1 className="navbar__links focus">SKILLS</h1></Link>
                         </li>
                     </ul>

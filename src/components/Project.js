@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LanguageIcon from '@material-ui/icons/Language';
 
 function Project({ title, image, desc }) {
     return (
-        <div className="project">
+        <div className="project focus">
             <img src={image} alt="" />
             <h1>{title}</h1>
             <p>{desc}</p>

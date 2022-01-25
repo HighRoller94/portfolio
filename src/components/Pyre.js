@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Aos from 'aos';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -22,7 +22,7 @@ function Pyre() {
                         <img src={pyreLogo} alt="" />
                     </div>
                     <p>Music player app with a simple dashboard layout. Built with HTML, SASS and React, Pyre uses the Spotify API to allows users to login, listen and manage their media.</p>
-                    <h3>Packages used (front-end) -</h3>
+                    <h3>Packages used -</h3>
                     <ul>
                         <li>SASS</li>
                         <li>Axios</li>
