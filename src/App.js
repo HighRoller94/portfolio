@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -6,7 +6,6 @@ import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import NavOverlay from './components/NavOverlay';
-import Pyre from './components/Pyre';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
@@ -14,7 +13,8 @@ import Skills from './components/Skills';
 import './styles/styles.scss';
 
 function App() {
-
+  const [project, setProject] = useState(null);
+  
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
     const focus = document.querySelectorAll(".focus")
@@ -48,15 +48,11 @@ function App() {
       <div className="border"></div>
           <AnimatePresence exitBeforeEnter>
             <Switch>
-              <Route path="/pyre">
-                <NavOverlay />
-                <Pyre />
-              </Route>
               <Route path="/">
                 <NavOverlay />
                 <Home />
                 <About  />
-                <Projects />
+                <Projects setProject={setProject}/>
                 <Skills />
                 <Contact />
                 <Footer />

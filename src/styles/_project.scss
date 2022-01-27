@@ -23,6 +23,7 @@
     }
     h1 {
         position: absolute;
+        color: $offWhite;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -34,6 +35,7 @@
     }
     p {
         position: absolute;
+        color: $offWhite;
         bottom: 15%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -46,7 +48,7 @@
     &:hover {
         margin-top: -10px;
         h1 {
-            top: 40%;
+            top: 43%;
         }
         p {
             display: block;
