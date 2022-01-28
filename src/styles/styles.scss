@@ -12,7 +12,6 @@ $offWhite: #fcfcfc;
 @import './footer';
 @import './pyre';
 @import './skills';
-@import './project';
 
 * {
     margin: 0;
@@ -22,7 +21,6 @@ $offWhite: #fcfcfc;
     ::-webkit-scrollbar {
         display: none;
     }
-    
 }
 
 .border {

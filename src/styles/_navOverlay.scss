@@ -118,17 +118,17 @@
     .download__icon {
         position: fixed;
         bottom: 40rem;
-        right: 12rem;
+        right: 11rem;
         font-size: 3rem;
         visibility: hidden;
         opacity: 0;
         transition: 1s;
-        z-index: 999;
+        z-index: 10;
     }
     .download__icon.active {
         visibility: visible;
         opacity: 1;
-        bottom: 10rem;
+        bottom: 7rem;
     }
     .link {
         color: currentColor;
