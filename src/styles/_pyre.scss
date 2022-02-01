@@ -24,7 +24,7 @@
             .pyre__header {
                 display: flex;
                 align-items: center;
-                margin-top: 7vh;
+                margin-top: 8vh;
                 h1 {
                     font-family: 'Helvetica Neue';
                     font-size: 5rem;
@@ -43,7 +43,7 @@
                     width: 70%;
                 }
                 h3 {
-                    margin-top: 40px;
+                    margin-top: 30px;
                     font-size: 1.1rem;
                     font-weight: 300;
                     font-weight: 500;
@@ -91,17 +91,17 @@
             position: relative;
             .pyre__1 {
                 position: absolute;
-                width: 100%;
-                height: 30vh;
+                width: 90%;
+                height: 27vh;
                 top: 21vh;
-                right: 10vw;
+                right: 13vw;
             }
             .pyre__2 {
                 position: absolute;
                 width: 80%;
                 height: 30vh;
                 left: 5vw;
-                top: 33vh;
+                top: 32vh;
             }
         }
     }

@@ -38,7 +38,7 @@ function Projects({ setProject }) {
                     </div>
                     <div className="project focus">
                         <img src={shop} alt="Market" />
-                        <h1>Market</h1>
+                        <h1>Marquet</h1>
                         <p>Multipage ecommerce marketplace</p>
                     </div>
                     <div className="project focus">
