@@ -13,8 +13,8 @@
             align-items: center;
             margin: 0 auto;
             .nav__logo {
-                width: 52px;
-                margin-top: 10px;
+                width: 55px;
+                margin-top: 15px;
             }
             .navbar__toggle {
                 display: none;
@@ -40,6 +40,7 @@
             .navbar__menu {
                 display: flex;
                 list-style: none;
+                margin-left: -5px;
                 .navbar__item {
                     margin: 0 20px;
                     .navbar__links {
@@ -78,7 +79,8 @@
                 font-weight: 550;
                 font-kerning: 1px;
                 text-transform: uppercase;
-                
+                margin-right: 3px;
+                margin-top: 3px;
             }
         }
     }
