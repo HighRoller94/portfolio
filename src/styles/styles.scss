@@ -64,7 +64,6 @@ body {
     background-color: currentColor;
 }
 
-
 @keyframes cursorAnim {
     from {
         transform: scale(1.2);
@@ -74,3 +73,17 @@ body {
     }
 }
 
+@media screen and (max-width: 414px) {
+    .body {
+        overflow-x: hidden;
+    }
+    .border {
+        left: 0;
+        border: 15px solid $offWhite;
+        width: 92.7vw;
+        height: 96vh;
+    }
+    .body {
+        cursor: pointer;
+    }
+}

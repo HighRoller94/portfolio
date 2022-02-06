@@ -8,7 +8,7 @@
         position: relative;
         margin-left: 17.5%;
         h1 {
-            font-size: 9.5rem;
+            font-size: clamp(5.8rem, 12vw, 9.5rem);
             margin-left: -12px;
             margin-top: -10px;
             background: none;
@@ -21,7 +21,10 @@
     }
     .wrapper {
         display: flex;
+        justify-content: center;
         margin-top: 1.5rem;
+        width: 100%;
+        margin-left: -3.5rem;
         h3 {
             font-weight: 200;
             font-size: 2.7rem;
@@ -75,7 +78,7 @@
             transition: all .35s;
             border: 0.5px solid $offWhite;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: clamp(1.3rem, 1.5vw, 1.1rem);
             border-radius: 13px;
             font-weight: 400;
             &::after {
@@ -102,17 +105,9 @@
             position: relative;
             z-index: 99;
         }
-    }
-    p {
-        display: flex;
-        margin: auto;
-        margin-top: 50px;
-        justify-content: center;
-        position: absolute;
-        bottom: 5%;
-        left: calc(47%);
-        margin-bottom: 100px;
-        font-size: 1.2rem;
+        .scroll__btn {
+            display: none;
+        }
     }
 }
 
@@ -131,6 +126,105 @@
         top: -142px;
     }
 }
-@media screen and (max-width: 768px) {
 
+@media screen and (max-width: 414px) {
+    .hero__section {
+        overflow: hidden;
+        padding-top: 25.5vh;
+        .hero__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            h1 {
+                margin-left: 0;
+            }
+            h2 {
+                display: none;
+            }
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 50%;
+                margin-left: 1rem;
+                h3:nth-child(1) {
+                    font-size: 1.5rem;
+                    position: absolute;
+                    top: .05rem;
+                    left: 0;
+                }
+                h3:nth-child(3) {
+                    font-size: 1.35rem;
+                    margin-left: -.5rem;
+                    margin-top: .9rem;
+                }
+                .dynamic__text {
+                    left: .2rem;
+                    position: absolute;
+                    width: 100%;
+                    margin-top: -5rem;
+                    li {
+                        font-size: 1.5rem;
+                        margin-top: 2.05rem;
+                        margin-right: 0;
+                        animation: mobslide 10s steps(2) infinite;
+                        &::after {
+                            animation: mobtyping 5s steps(12) infinite;
+                            height: 95%;
+                        }
+                    }
+                }
+            }
+        .download__btn {
+            display: flex;
+            position: static;
+            border-radius: 0;
+            margin-top: 6vh;
+            margin-left: 0;
+            background-color: $offWhite;
+            color: $offBlack;
+            button {
+                padding: 6px 18px;
+                border-radius: none;
+                background: none;
+                margin-left: 0;
+                a {
+                    font-family: 'Helvetica Neue';
+                    text-transform: uppercase;
+                }
+                &::after {
+                    background: $offBlack;
+                    color: $offWhite;
+                    border-radius: 0;
+                }
+                &:hover {
+                    color: $offWhite;
+                }
+            }
+        }
+        .scroll__btn {
+            display: block;
+            margin-top: 5rem;
+        }
+        }
+    }
+}
+
+@keyframes mobtyping {
+    40%,
+    60% {
+        left: calc(85%);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes mobslide {
+    100% {
+        top: -8.4rem;
+    }
 }

@@ -35,7 +35,7 @@ function Skills() {
                 <h1>SKILLS.</h1>
                 <p>Here are a few skills I've picked up along the way...</p>
             </div>
-            <div className="skills__grid">
+            <div className="skills__container">
                 <div className="skills__web" data-aos="fade-up">
                     <img className="web__icon" src={web__development} alt="web" />
                     <div className="web__header">

@@ -30,7 +30,7 @@ function Projects({ setProject }) {
                 <h1>PORTFOLIO.</h1>
                 <p>Check out some of the projects I've been working on...</p>
             </div>
-            <div className="projects" data-aos-delay="200"  data-aos="fade-up">
+            <div className="projects" data-aos="fade-up">
                     <div className="project focus">
                         <img src={travel} alt="Prestige" />
                         <h1>Prestige</h1>

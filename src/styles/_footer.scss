@@ -9,16 +9,15 @@
         position: absolute;
         left: -1rem;
         bottom: 10rem;
-        .footer__logoInfo {
-            .footer__logo {
-                height: 50px;
-                margin-top: -15px;
-                font-family: 'Helvetica Neue';
-                font-weight: 400;
-                transition: .5s;
-                font-size: 6rem;
-            }
+        .footer__logo {
+            height: 50px;
+            margin-top: -15px;
+            font-family: 'Helvetica Neue';
+            font-weight: 400;
+            transition: .5s;
+            font-size: 6rem;
         }
+        
         .footer__links {
             margin-bottom: -20px;
             p {
@@ -56,5 +55,56 @@
         font-size: 1rem;
         margin-top: 75px;
         padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .footer__section {
+        margin-top: 7rem;
+        margin-bottom: 5rem;
+        width: 100%;
+        .footer__info {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .footer__icons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 30%;
+                margin-bottom: 1.8rem;
+                .li__icon {
+                    font-size: 3rem;
+                }
+                .gh__icon {
+                    font-size: 2.5rem;
+                }
+            }
+            .footer__links {
+                width: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                }
+            }
+            .footer__top {
+                margin-top: 2.5rem;
+                font-family: 'Helvetica Neue';
+                background-color: $offWhite;
+                color: $offBlack;
+                padding: 7px 20px;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+            .footer__logo {
+                margin-top: 2.5rem;
+                width: 50px;
+            }
+        }
     }
 }
