@@ -21,8 +21,12 @@ function Footer() {
         <div className="footer__section">
             <div className="footer__info">
                 <div className="footer__icons">
-                    <LinkedInIcon className="li__icon" />
-                    <GitHubIcon className="gh__icon" />
+                    <a className="link" href="https://www.linkedin.com/in/ash-bridges/" target="_blank" >
+                        <LinkedInIcon className="li__icon" />
+                    </a>
+                    <a className="link" href="https://github.com/HighRoller94" target="_blank" >
+                        <GitHubIcon className="gh__icon" />
+                    </a>
                 </div>
                 <div className="footer__links">
                     <Link to="about"><p>ABOUT</p></Link>
@@ -38,6 +42,7 @@ function Footer() {
                         </svg>                    
                     </Link>
                 </div>
+                <p>Copyright Ash Bridges &copy;</p>
             </div>
         </div>
     )
