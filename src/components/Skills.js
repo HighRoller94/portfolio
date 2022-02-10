@@ -31,9 +31,9 @@ function Skills() {
     return (
         <div className="skills__section" id="skills">
             <h1 className="bg__skills">Design</h1>
-            <div className="skills__header" data-aos="fade-right">
-                <h1>SKILLS.</h1>
-                <p>Here are a few skills I've picked up along the way...</p>
+            <div className="skills__header" >
+                <h1 data-aos="fade-right">SKILLS.</h1>
+                <p data-aos="fade-right" data-aos-delay="200">Here are a few skills I've picked up along the way...</p>
             </div>
             <div className="skills__container">
                 <div className="skills__web" data-aos="fade-up">

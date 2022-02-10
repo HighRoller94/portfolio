@@ -27,8 +27,8 @@ function Projects({ setProject }) {
         <div>
             <div className="projects__section" id="projects">
             <div className="projects__header" data-aos="fade-right" data-aos-anchor-placement="top-center"  >
-                <h1>PORTFOLIO.</h1>
-                <p>Check out some of the projects I've been working on...</p>
+                <h1 data-aos="fade-right" >PORTFOLIO.</h1>
+                <p data-aos="fade-right" data-aos-delay="200" >Check out some of the projects I've been working on...</p>
             </div>
             <div className="projects" data-aos="fade-up">
                     <div className="project">

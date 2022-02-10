@@ -17,12 +17,12 @@ function About() {
             <h1 className="bg-about">About</h1>
             <div className="about__text">
                 <h1 className="about__header">ABOUT.</h1>
-                <p>
+                <p data-aos="fade-right">
                     Hey there, I'm Ash, a front-end developer from the UK. I have a background in visual communications, and have recently turned my attention to web coding, where I quickly found my passion. <br /><br />I'm always eager to learn, and enjoy spending my time learning new ways to bring designs to life.
                 </p>
             </div>
             <h1 className="bg-about2">About</h1>
-            <img src={me} alt="" />
+            <img data-aos="fade-left" src={me} alt="" />
         </div>
     )
 }

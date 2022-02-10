@@ -36,37 +36,38 @@ function Contact() {
         <div className="contact__section" id="contact">
             <div className="contact__container">
             <h1 className="bg__contact">Email</h1>
+            <div className="contact">
                 <div className="contact__header" data-aos="fade-right">
                     <h1>CONTACT.</h1>
                 </div>
-                <div className="email">
-                        <a href="mailto:ashbridgescodes@gmail.com">
-                            <h2 className="focus">Get in touch</h2>
-                            <MailIcon className="icon" />
-                        </a> 
-                    </div>
-                <form className="contact__form" data-aos="fade-left" noValidate autoComplete="off" onSubmit={sendEmail}>
-                    <div className="text__field">
-                        <input type="text" name="name" autoComplete="off" required />
-                        <label htmlFor="name" className="label-name" ><span className="content-name">Name</span></label>
-                    </div>
-                    <div className="text__field">
-                        <input type="text" name="email" autoComplete="off" required />
-                        <label htmlFor="name" className="label-name" ><span className="content-name">Email</span></label>
-                    </div>
-                    <div className="text__area">
-                        <textarea type="text" rows="10" name="message" autoComplete="off" required />
-                        <label htmlFor="name" className="label-name" ><span className="content-name">Message</span></label>
-                    </div>
-                    <button ref={sendButton} style={{display: "none"}} type="submit"></button>
-                </form>
-                {!status ? (
-                        <SendIcon className="send__icon focus" onClick={handleChange}/>
-                    ) : (
-                        <DoneIcon className="send__icon"/>
-                    )}
+                <div className="email" data-aos="fade-right" data-aos-delay="200">
+                    <a href="mailto:ashbridgescodes@gmail.com">
+                        <h2 className="focus">Get in touch</h2>
+                        <MailIcon className="icon" />
+                    </a> 
+                </div>
+            </div>
+            <form className="contact__form" data-aos="fade-left" noValidate autoComplete="off" onSubmit={sendEmail}>
+                <div className="text__field">
+                    <input type="text" name="name" autoComplete="off" required />
+                    <label htmlFor="name" className="label-name" ><span className="content-name">Name</span></label>
+                </div>
+                <div className="text__field">
+                    <input type="text" name="email" autoComplete="off" required />
+                    <label htmlFor="name" className="label-name" ><span className="content-name">Email</span></label>
+                </div>
+                <div className="text__area">
+                    <textarea type="text" rows="10" name="message" autoComplete="off" required />
+                    <label htmlFor="name" className="label-name" ><span className="content-name">Message</span></label>
+                </div>
+                <button ref={sendButton} style={{display: "none"}} type="submit"></button>
+            </form>
+            {!status ? (
+                    <SendIcon className="send__icon focus" onClick={handleChange}/>
+                ) : (
+                    <DoneIcon className="send__icon"/>
+                )}
                 <h1 className="bg__contact2">Email</h1>
-                
             </div>
         </div>
     )
