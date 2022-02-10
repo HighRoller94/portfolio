@@ -1,0 +1,108 @@
+[33mcommit c153ee973d4560029b78f6563b1f28eeb03c0f2f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Thu Feb 10 12:55:44 2022 +0000
+
+    pushed final design
+
+[33mcommit 92ad6fd6d8bb9087d032133d28ff50b4f1d90504[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Mon Feb 7 20:45:57 2022 +0000
+
+    styled footer
+
+[33mcommit 953952c1ac73c7394f3b15a434e25b6ec1867edd[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Mon Feb 7 20:44:53 2022 +0000
+
+    updated projects
+
+[33mcommit 9cad19c2f534ffb874ac47769b69e721bfe930b0[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Mon Feb 7 18:34:13 2022 +0000
+
+    fixed contact form mobile
+
+[33mcommit d3926b56ff9c75186c0b5a7166f34f656045c203[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Sun Feb 6 16:00:10 2022 +0000
+
+    fixed typing animation bug on response
+
+[33mcommit dc2bc28ae04703a80d7a16103f965b8fee35be9e[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Sun Feb 6 15:54:11 2022 +0000
+
+    made mobile responsive
+
+[33mcommit 24e80aa56646893f0999c286c8228f4415b88ca4[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Wed Feb 2 12:01:05 2022 +0000
+
+    minor changes
+
+[33mcommit 13eacb98daa3cd8695ab2cbe77294d0cf3353f5c[m
+Merge: 32af7fa 89e74e7
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Tue Feb 1 23:21:17 2022 +0000
+
+    Merge branch 'master' of https://github.com/HighRoller94/portfolio
+
+[33mcommit 32af7fa2c305902a3f5917ea9f84fb750ef2c9d3[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Tue Feb 1 23:19:00 2022 +0000
+
+    updated logo/title
+
+[33mcommit 0db6f3886351b9466d20352a39677bb67ed85853[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Tue Feb 1 21:57:04 2022 +0000
+
+    updated CV, slightly changed layout
+
+[33mcommit 89e74e7ffa73aef8d570720127f2bda111cbf1b5[m
+Author: Ash Bridges <77104720+HighRoller94@users.noreply.github.com>
+Date:   Tue Feb 1 19:58:58 2022 +0000
+
+    deleted outdated CV
+
+[33mcommit 3325979b2ed916c578c71c42c7ae9c2d27b78392[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Fri Jan 28 15:28:09 2022 +0000
+
+    updated pyre modal
+
+[33mcommit d8cda44068c06c0d3e887f3ca934d7f6af91e7ed[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Thu Jan 27 12:19:58 2022 +0000
+
+    added project modals and reorganised code
+
+[33mcommit f1dcc8e4f54c38978028830c22e4c5ecc65ec4e5[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Tue Jan 25 22:06:13 2022 +0000
+
+    final final portfolio site
+
+[33mcommit a0d159ef768c254e3c71ae1da38ad585d6690cdf[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Sun Jan 16 22:31:27 2022 +0000
+
+    updated portfolio site
+
+[33mcommit 0d6c5f12ee6fda633a4471c37936a47075ec3dd5[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Thu Dec 23 11:42:08 2021 +0000
+
+    base code for portfolio react app
+
+[33mcommit 16a4bc3f8141fd31a196e84cef87ebde8cda0b94[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Sat Nov 27 15:43:42 2021 +0000
+
+    First commit
+
+[33mcommit c60ecc54e8e043be196ad48aeb2b70c1b987ebb3[m
+Author: Ash Bridges <ashbridges@virginmedia.com>
+Date:   Thu Nov 11 13:18:32 2021 +0000
+
+    Initialize project using Create React App

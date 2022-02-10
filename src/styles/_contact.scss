@@ -9,7 +9,7 @@
         .bg__contact {
             position: absolute;
             font-size: 35rem;
-            font-family: 'Helvetica Neue';
+            font-family: 'Roboto Condensed', sans-serif;
             font-weight: 500;
             color: $offWhite;
             opacity: .01;
@@ -18,22 +18,35 @@
         }
         .contact__header {
             h1 {
-                font-family: 'Helvetica Neue';
+                font-family: 'Roboto Condensed', sans-serif;
                 font-weight: 400;
                 font-size: clamp(1.6rem, 8.5vw, 6rem);
-                width: 70%;
             }
+        }
+        .email {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
             a { 
                 text-decoration: none;
                 color: currentColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 70vw;
                 h2 {
-                    font-weight: 300;
-                    font-size: clamp(2rem, 5vw, 1.8rem);
+                    font-weight: 100;
+                    font-size: clamp(1.6rem, 5vw, 1.8rem);
                     margin-left: 1%;
                     margin-top: 10px;
                 }
+                .icon {
+                    margin-top: .5rem;
+                    margin-left: 1.5rem;
+                    font-size: 2rem;
+                }
             }
-            
         }
         .contact__form {
             display: flex;
@@ -81,6 +94,7 @@
                     pointer-events: none;
                     opacity: 0.9;
                     border-bottom: 1px solid currentColor;
+                    text-transform: uppercase;
                     &::after {
                         content: "";
                         position: absolute;
@@ -94,21 +108,34 @@
                         transition: 0.5s;
                     }
                 }
+                .content-name {
+                    position: absolute;
+                    bottom: 5px;
+                    margin-top: -10px;
+                    left: 0px;
+                    transition: all 0.3s ease;
+                }
+            }
+            .text__area {
+                margin-bottom: 20px;
+                width: 100%;
+                position: relative;
+                height: 7rem;
+                overflow: hidden;
                 textarea {
-                    margin-top: 0px;
-                    resize: none;
                     width: 100%;
-                    height: 300px;
+                    height: 100%;
                     color: currentColor;
-                    padding-top: 20px;
+                    padding-top: 35px;
                     border: none;
                     background: none;
-                    margin-top: 10px;
+                    margin-top: -12px;
+                    margin-left: -1px;
                     font-size: 1rem;
                     outline: none;
                     &:focus + .label-name .content-name,
                     &:valid + .label-name .content-name {
-                        transform: translateY(-150%);
+                        transform: translateY(-75%);
                         font-size: .9rem;
                     }
                     &:focus + .label-name::after,
@@ -116,10 +143,34 @@
                         transform: translateX(0%);
                     }
                 }
+                label {
+                    position: absolute;
+                    text-transform: uppercase;
+                    bottom: 0;
+                    left: 0;
+                    margin-bottom: 1px;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1.2rem;
+                    pointer-events: none;
+                    opacity: 0.9;
+                    border-bottom: 1px solid currentColor;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        opacity: 1;
+                        left: 0px;
+                        bottom: -1px;
+                        height: 100%;
+                        width: 100%;
+                        border-bottom: 2px solid currentColor;
+                        transform: translateX(-150%);
+                        transition: 0.5s;
+                    }
+                }
                 .content-name {
                     position: absolute;
-                    bottom: 5px;
-                    margin-top: -10px;
+                    top: 1rem;
                     left: 0px;
                     transition: all 0.3s ease;
                 }
@@ -129,21 +180,26 @@
     .send__icon {
         margin-left: auto;
         display: flex;
-        margin-top: 30px;
-        font-size: 3rem;
+        position: absolute;
+        bottom: 0;
+        right: 20rem;
+        font-size: 2.75rem;
         transition: .5s;
+    }
+    .bg__contact2 {
+        display: none;
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 500px) {
     .contact__section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding-top: 10vh;
+        padding-top: 15vh;
         padding-bottom: 0;
-        margin-top: 3vh;
+        margin-top: 0;
         .contact__container {
             display: flex;
             flex-direction: column;
@@ -151,7 +207,15 @@
             align-items: center;
             margin-left: 0;
             .bg__contact {
-                display: none;
+                display: block;
+                font-size: 10rem;
+                top: -11rem;
+                left: -6rem;
+                position: absolute;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-weight: 500;
+                color: $offWhite;
+                opacity: .025;
             }
             .contact__header {
                 h1 {
@@ -164,41 +228,58 @@
                 }
                 a {
                     h2 {
-                        text-decoration: underline 2px;
-                        font-weight: 250;
-                        margin-top: 3rem;
+                        text-decoration: underline;
+                        font-weight: 100;
+                        margin-top: 1.5rem;
                         width: 100%;
                     }
                 }
             }
             .contact__form {
+                position: relative;
                 margin-left: 0;
-                margin-top: 5rem;
+                margin-top: 3rem;
+                padding-top: 1rem;
                 font-weight: 400;
-                z-index: 999;
+                z-index: 5;
                 padding-bottom: 0;
                 width: 77%;
                 color: $offBlack;
                 background-color: $offWhite;
+                border-radius: 5px;
+                padding-bottom: 4rem;
                 .text__field {
-                    margin: 0 auto;
+                    margin: auto;
+                    margin-top: 5px;
                     width: 75%;
-                    .input {
-                        margin-top: 0;
-                        padding-top: 0;
-                        font-family: 'Helvetica Neue';
-                    }
-                    .label {
-                        font-family: 'Helvetica Neue';
+                    label {
+                        font-size: 1.1rem;
+                        text-transform: uppercase;
                     }
                 }
+                .text__area {
+                    width: 75%;
+                    margin: 15px auto;
+                    label {
+                        font-size: 1.1rem;
+                    }
+                }
+                
             }
             .send__icon {
+                right: 12vw;
+                bottom: -5rem;
+            }
+            .bg__contact2 {
                 display: block;
-                margin-right: 2.4rem;
-                margin-top: 3rem;
-                font-size: 2.5rem;
-                padding-bottom: 4vh;
+                font-size: 10rem;
+                top: 34rem;
+                left: 4rem;
+                position: absolute;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-weight: 500;
+                color: $offWhite;
+                opacity: .025;
             }
         }
         

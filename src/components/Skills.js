@@ -42,55 +42,56 @@ function Skills() {
                         <h2>Web Development</h2>
                         <p>I love coding from scratch and creating something new</p>
                     </div>
-                    <div className="web__toolsContainer">
+                    <div className="web__skills">
                         <h3>Languages I speak:</h3>
                         <div className="web__tools">
-                            <div className="tool">
-                                <img className="icon" src={html} alt=""/>
+                            <div className="html">
+                                <img className="html-icon" src={html} alt=""/>
                                 <h2>HTML</h2>
                             </div>
-                            <div className="tool">
-                                <img className="js__icon" src={javascript} alt=""/>
+                            <div className="javascript">
+                                <img className="js-icon" src={javascript} alt=""/>
                                 <h2>JS</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={css} alt=""/>
+                            <div className="css">
+                                <img className="css-icon" src={css} alt=""/>
                                 <h2>CSS</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={react} alt=""/>
+                            <div className="react">
+                                <img className="react-icon" src={react} alt=""/>
                                 <h2>React</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={sass} alt=""/>
+                            <div className="sass">
+                                <img className="sass-icon" src={sass} alt=""/>
                                 <h2>Sass</h2>
                             </div>
                         </div>
                     </div>
                 </div>
+                <h1 className="bg__skills2">Design</h1>
                 <div className="skills__ui" data-aos="fade-up" data-aos-delay="200">
                     <img className="ui__icon" src={uiux__design} alt="web" />
                     <div className="ui__header">
                         <h2>UI/UX Design</h2>
                         <p>Clean and modern design patterns are what I've really come to appreciate</p>
                     </div>
-                    <div className="ui__toolsContainer">
+                    <div className="ui__skills">
                         <h3>Design tools:</h3>
                         <div className="ui__tools">
-                            <div className="tool">
-                                <img className="icon" src={xd} alt=""/>
+                            <div className="adobe-xd">
+                                <img className="xd-icon" src={xd} alt=""/>
                                 <h2>Adobe XD</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={figma} alt=""/>
+                            <div className="figma">
+                                <img className="figma-icon" src={figma} alt=""/>
                                 <h2>Figma</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={penandpaper} alt=""/>
+                            <div className="paper">
+                                <img className="paper-icon" src={penandpaper} alt=""/>
                                 <h2>Pen & Paper</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={sketch} alt=""/>
+                            <div className="sketch">
+                                <img className="sketch-icon" src={sketch} alt=""/>
                                 <h2>Sketch</h2>
                             </div>
                         </div>
@@ -102,25 +103,25 @@ function Skills() {
                         <h2>Graphic Design</h2>
                         <p>I've also been known to dabble with design in a few different ways</p>
                     </div>
-                    <div className="gd__toolsContainer">
+                    <div className="gd__skills">
                         <h3>Tools I've used:</h3>
                         <div className="gd__tools">
-                            <div className="tool">
-                                <img className="icon" src={illustrator} alt=""/>
+                            <div className="illustrator">
+                                <img className="illustrator-icon" src={illustrator} alt=""/>
                                 <h2>Illustrator</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={photoshop} alt=""/>
+                            <div className="photoshop">
+                                <img className="photoshop-icon" src={photoshop} alt=""/>
                                 <h2>Photoshop</h2>
                             </div>
-                            <div className="tool">
-                                <img className="icon" src={indesign} alt=""/>
+                            <div className="indesign">
+                                <img className="indesign-icon" src={indesign} alt=""/>
                                 <h2>InDesign</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <h1 className="bg__skills3">Design</h1>
             </div>
         </div>
     )

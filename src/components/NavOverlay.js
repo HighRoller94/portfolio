@@ -23,10 +23,26 @@ function NavOverlay() {
     useEffect(() => {
         const menu = document.querySelector(".navbar__toggle");
         const navMenu = document.querySelector(".navbar__menu");
+        
         menu.addEventListener("click", () => {
             menu.classList.toggle('active')
             navMenu.classList.toggle('active')
         })
+
+        const homeLink = document.querySelector(".nav__logo");
+        homeLink.addEventListener("click", () => {
+            navMenu.classList.remove('active');
+            menu.classList.toggle('active');
+        })
+
+        const links = document.querySelectorAll(".navbar__links");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove('active');
+                menu.classList.toggle('active');
+            })
+        })
+
         const downloadIcon = document.querySelector('.download__icon');
         const downloadAppear = () => {
             downloadIcon.classList.toggle('active', window.scrollY > 1500);
@@ -55,6 +71,17 @@ function NavOverlay() {
                         <li className="navbar__item focus">
                             <Link to="skills"><h1 className="navbar__links focus">SKILLS</h1></Link>
                         </li>
+                        <li className="mobile__contact focus">
+                            <Link to="contact"><h1 className="navbar__links">CONTACT</h1></Link>
+                        </li>
+                        <div className="menu__socials">
+                            <a className="link" href="https://www.linkedin.com/in/ash-bridges/" target="_blank" >
+                                <LinkedInIcon className="li__icon" />
+                            </a>
+                            <a className="link" href="https://github.com/HighRoller94" target="_blank" >
+                                <GitHubIcon className="gh__icon" />
+                            </a>
+                        </div>
                     </ul>
                     <div className="nav__button__div">
                         <Link to="contact"><button className="nav__button focus">Contact</button></Link>

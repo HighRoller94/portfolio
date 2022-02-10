@@ -21,6 +21,7 @@ function About() {
                     Hey there, I'm Ash, a front-end developer from the UK. I have a background in visual communications, and have recently turned my attention to web coding, where I quickly found my passion. <br /><br />I'm always eager to learn, and enjoy spending my time learning new ways to bring designs to life.
                 </p>
             </div>
+            <h1 className="bg-about2">About</h1>
             <img src={me} alt="" />
         </div>
     )
