@@ -9,7 +9,7 @@
     width: 100%;
     background: rgba(0,0,0,0.5);
     z-index: 99;
-    .travel__modal {
+    .eatz__modal {
         display: flex;
         flex-direction: column;
         max-width: 90%;
@@ -42,8 +42,8 @@
                 color: $offWhite;
             }
         }
-        .travel__info {
-            .travel__header {
+        .eatz__info {
+            .eatz__header {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
@@ -58,7 +58,7 @@
                     display: none;
                 }
             }
-            .travel__text {
+            .eatz__text {
                 text-align: center;
                 font-size: 1rem;
                 margin: 0 auto;
@@ -67,7 +67,7 @@
                     font-size: 1rem;
                     margin-top: 1.5rem;
                 }
-                .travel__1 {
+                .eatz__1 {
                     width: 100%;
                     margin: 2rem 0;
                 }
@@ -83,12 +83,12 @@
                     font-size: 1rem;
                     font-weight: 200;
                 }
-                .travel__2 {
+                .eatz__2 {
                     width: 100%;
                     margin: 2rem 0;
                 }
             }
-            .travel__buttons {
+            .eatz__buttons {
                 margin-top: .5rem;
                 margin-bottom: 4rem;
                 display: flex;
@@ -139,7 +139,7 @@
                 }
             }
         }
-        .travel__images {
+        .eatz__images {
             display: none;
         }
     }
@@ -150,7 +150,7 @@
 }
 
 @media screen and (min-width: 1312px) {
-    .travel__modal {
+    .eatz__modal {
         display: grid;
         overflow: scroll;
         grid-template-columns: 0.42fr 0.58fr;
@@ -161,11 +161,11 @@
         border: 10px solid $offWhite;
         position: relative;
         background-color: $offBlack;
-        .travel__info {
+        .eatz__info {
             display: flex;
             flex-direction: column;
             margin-left: 19%;
-            .travel__header {
+            .eatz__header {
                 display: flex;
                 align-items: center;
                 margin-top: 8vh;
@@ -180,7 +180,7 @@
                     margin-left: 1.5vw;
                 }
             }
-            .travel__text {
+            .eatz__text {
                 p {
                     margin-top: 4vh;
                     font-size: 1.1rem;
@@ -200,7 +200,7 @@
                     font-weight: 200;
                 }
             }
-            .travel__buttons {
+            .eatz__buttons {
                 margin-top: 4.5rem;
                 display: flex;
                 a {
@@ -248,18 +248,18 @@
                 }
             }
         }
-        .travel__images {
+        .eatz__images {
             display: flex;
             flex-direction: column;
             position: relative;
-            .travel__1 {
+            .eatz__1 {
                 position: absolute;
                 width: 90%;
                 height: 27vh;
                 top: 21vh;
                 right: 13vw;
             }
-            .travel__2 {
+            .eatz__2 {
                 position: absolute;
                 width: 80%;
                 height: 30vh;
