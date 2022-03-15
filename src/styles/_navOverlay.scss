@@ -2,21 +2,35 @@
     .navbar {
         position: fixed;
         display: flex;
-        height: 17.5vh;
+        height: 8rem;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         z-index: 10;
         .navbar__container {
-            width: 83%;
+            width: 80%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
             .nav__logo {
-                height: 3.1rem;
-                margin-top: 15px;
+                width: 3rem;
             }
             .navbar__toggle {
-                display: none;
+                margin-top: -.75rem;
+                z-index: 100;
+                display: flex;
+                flex-direction: column;
+                transition: 200ms;
+                .menu__bar {
+                    display: block;
+                    width: 31px;
+                    height: 3px;
+                    border-radius: 20px;
+                    margin: 3.4px auto;
+                    background-color: currentColor;
+                    transition: all 0.3s ease-in-out;
+                }
             }
             .navbar__toggle.active {
                 .menu__bar:nth-child(2) {
@@ -33,13 +47,24 @@
             }
             .navbar__menu {
                 display: flex;
-                list-style: none;
-                margin-left: -5px;
+                flex-direction: column;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                transition: all .5s ease;
+                background-color: $offBlack;
+                right: 0;
+                width: 100%;
+                top: -1000px;
+                opacity: 1;
+                z-index: 99;
                 .navbar__item {
-                    margin: 0 20px;
+                    margin: 3vh auto;
                     .navbar__links {
-                        font-size: 1.2rem;
-                        font-weight: 400;
+                        font-size: clamp(2.2rem, 4vw, 3.5rem);
+                        opacity: 0.5;
+                        font-weight: 200;
+                        transition: 200ms ease-in;
                         position: relative;
                         &:before {
                             content: "";
@@ -58,217 +83,256 @@
                             justify-content: center;
                             visibility: visible;
                             width: 108%;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .menu__socials {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .li__icon {
+                        font-size: 3.25rem;
+                        margin: 0 1.5rem;
+                        margin-top: 1.2rem;
+                        &:hover { 
+                            opacity: 0.7;
+                        }
+                    }
+                    .gh__icon {
+                        font-size: 2.75rem;
+                        margin: 0 1.5rem;
+                        margin-top: 1.2rem;
+                        &:hover { 
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            .navbar__menu.active {
+                background-color: $offBlack;
+                top: 0;
+                list-style: none;
+                right: 0;
+                opacity: 1;
+                width: 100%;
+                transition: all .5s ease;
+                z-index: 99;
+                height: 99vh;
+                margin-top: -.75rem;
+                .navbar__item {
+                    margin: 3vh auto;
+                    h1 {
+                        font-size: 2.7rem;
+                    }
+                    .navbar__links {
+                        font-size: clamp(2.2rem, 2vw, 3rem);
+                        transition: 200ms ease-in;
+                        font-weight: 200;
+                        &:hover {
+                            opacity: 1;
                         }
                     }
                 }
                 .mobile__contact {
-                    display: none;
-                }
-                .menu__socials {
-                    display: none;
+                    display: block;
+                    opacity: 1;
+                    background-color: $offWhite;
+                    color: $offBlack;
+                    margin: 5vh auto;
+                    h1 {
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-weight: 400;
+                        font-size: 2.2rem;
+                        padding: 6px 13px;
+                    }
                 }
             }
             .nav__button__div {
-                button {
-                    background-color: $offWhite;
-                    color: $offBlack;
-                    outline: none;
-                    border: none;
-                    border-radius: 15px;
-                    padding: 9px 32px;
-                    font-size: .85rem;
-                    font-weight: 550;
-                    font-kerning: 1px;
-                    text-transform: uppercase;
-                    margin-right: 3px;
-                    margin-top: 3px;
-                }
+                display: none;
+
             }
         }
     }
     .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: fixed;
-        bottom: 0;
-        left: 8%;
-        z-index: 99;
-        .link {
-            color: currentColor;
-        }
-        .linked__icon {
-            font-size: 2.4rem;
-        }
-        .git__icon {
-            margin-top: 4px;
-            font-size: 1.9rem;
-            margin-bottom: -6px;
-        }
-        p {
-            margin: 35px 0;
-            padding-bottom: 5px;
-            font-size: 1.1rem;
-            font-weight: 400;
-            transform: rotate(-90deg);
-        }
-        .bar {
-            height: 23vh;
-            width: 2px;
-            background-color: currentColor;
-        }
+        display: none;
     }
     .download__icon {
-        position: fixed;
-        bottom: 40rem;
-        right: 10rem;
-        font-size: 3rem;
-        visibility: hidden;
-        opacity: 0;
-        transition: 1s;
-        z-index: 10;
-    }
-    .download__icon.active {
-        visibility: visible;
-        opacity: 1;
-        bottom: 7rem;
+        display: none;
     }
     .link {
         color: currentColor;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 768px) {
     .overlay {
         .navbar {
-            display: flex;
-            position: fixed;
-            justify-content: center;
-            width: 100%;
+            height: 12rem;
             .navbar__container {
-                display: flex;
-                justify-content: space-between;
-                position: relative;
-                width: 100%;
-                z-index: 999;
+                width: 84%;
                 .nav__logo {
-                    width: 2.7rem;
-                    position: absolute;
-                    top: 20%;
-                    z-index: 999;
-                    padding: 0 4rem;
+                    margin-left: 1rem;
+                    width: 3.5rem;
                 }
                 .navbar__toggle {
-                    margin-top: 2px;
-                    padding: 0 4rem;
-                    z-index: 100;
-                    display: flex;
-                    flex-direction: column;
-                    transition: 200ms;
-                    .menu__bar {
-                        display: block;
-                        width: 31px;
-                        height: 3px;
-                        border-radius: 20px;
-                        margin: 3.4px auto;
-                        background-color: currentColor;
-                        transition: all 0.3s ease-in-out;
-                    }
+                    display: none;
                 }
                 .navbar__menu {
+                    background: none;
+                    width: 100%;
                     display: flex;
-                    flex-direction: column;
-                    position: absolute;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all .5s ease;
-                    background-color: $offBlack;
-                    right: 0;
-                    width: 100%;
-                    top: -1000px;
-                    opacity: 1;
-                    z-index: 99;
-                    .menu__socials {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        .li__icon {
-                            font-size: 3.25rem;
-                            margin: 0 1.5rem;
-                            margin-top: 1.2rem;
-                        }
-                        .gh__icon {
-                            font-size: 2.75rem;
-                            margin: 0 1.5rem;
-                            margin-top: 1.2rem;
-                        }
-                    }
+                    flex-direction: row;
+                    justify-content: right;
+                    list-style: none;
+                    position: static;
                     .navbar__item {
-                        margin: 3vh auto;
-                        h1 {
-                            font-size: 3rem;
-                        }
+                        margin: 0 1.5rem;
                         .navbar__links {
-                            font-size: clamp(2.2rem, 4vw, 3.5rem);
-                            opacity: 0.5;
-                            transition: 200ms ease-in;
-                            font-weight: 100;
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            opacity: 1;
                             &:hover {
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-                .navbar__menu.active {
-                    background-color: $offBlack;
-                    top: 1.4rem;
-                    right: 0;
-                    opacity: 1;
-                    width: 100%;
-                    transition: all .5s ease;
-                    z-index: 99;
-                    height: 99vh;
-                    margin-top: -.75rem;
-                    .navbar__item {
-                        margin: 3vh auto;
-                        h1 {
-                            font-size: 2.7rem;
-                        }
-                        .navbar__links {
-                            font-size: clamp(2.2rem, 2vw, 3rem);
-                            opacity: 0.5;
-                            transition: 200ms ease-in;
-                            font-weight: 100;
-                            &:hover {
-                                opacity: 1;
+                                cursor: pointer;
                             }
                         }
                     }
                     .mobile__contact {
-                        display: block;
-                        opacity: 1;
-                        background-color: $offWhite;
-                        color: $offBlack;
-                        margin: 5vh auto;
-                        h1 {
-                            font-family: 'Roboto Condensed', sans-serif;
+                        display: none;
+                    }
+                    .menu__socials {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1312px) {
+    .overlay {
+        .navbar {
+            position: fixed;
+            height: 11.5rem;
+            display: flex;
+            width: 100%;
+            z-index: 10;
+            .navbar__container {
+                width: 83%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
+                .nav__logo {
+                    height: 4rem;
+                    margin-left: 0;
+                }
+                .navbar__toggle {
+                    display: none;
+                }
+                .navbar__menu {
+                    display: flex;
+                    list-style: none;
+                    margin-left: .5rem;
+                    margin-top: -1rem;
+                    justify-content: center;
+                    .navbar__item {
+                        margin: 0 20px;
+                        .navbar__links {
+                            font-size: 1.2rem;
                             font-weight: 400;
-                            font-size: 2.2rem;
-                            padding: 6px 13px;
+                            position: relative;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                width: 0;
+                                height: 4px;
+                                bottom: -16px;
+                                margin-left: -3px;
+                                margin-bottom: 10px;
+                                background-color: $offWhite;
+                                visibility: hidden;
+                                transition: 300ms ease-in-out;
+                            }
+                            &:hover:before {
+                                display: flex;
+                                justify-content: center;
+                                visibility: visible;
+                                width: 108%;
+                            }
                         }
+                    }
+                    .mobile__contact {
+                        display: none;
+                    }
+                    .menu__socials {
+                        display: none;
                     }
                 }
                 .nav__button__div {
-                    display: none;
-                    width: 0%;
+                    display: block;
+                    margin-left: 1.25rem;
+                    margin-top: -1rem;
+                    h1 {
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                    }
                 }
             }
         }
         .socials {
-            display: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 8%;
+            z-index: 99;
+            color: $offWhite;
+            .link {
+                color: currentColor;
+            }
+            .linked__icon {
+                font-size: 2.4rem;
+            }
+            .git__icon {
+                margin-top: 4px;
+                font-size: 1.9rem;
+                margin-bottom: -6px;
+            }
+            p {
+                margin: 35px 0;
+                padding-bottom: 5px;
+                font-size: 1.1rem;
+                font-weight: 400;
+                transform: rotate(-90deg);
+            }
+            .bar {
+                height: 23vh;
+                width: 2px;
+                background-color: currentColor;
+            }
         }
         .download__icon {
-            display: none;
+            display: block;
+            position: fixed;
+            bottom: 40rem;
+            right: 10rem;
+            font-size: 3rem;
+            visibility: hidden;
+            color: $offWhite;
+            opacity: 0;
+            transition: 1s;
+            z-index: 10;
+        }
+        .download__icon.active {
+            visibility: visible;
+            opacity: 1;
+            bottom: 7rem;
+        }
+        .link {
+            color: currentColor;
         }
     }
     
