@@ -1,39 +1,47 @@
 .projects__section {
-    margin-top: 20vh;
     display: flex;
-    margin-left: 16.8%;
     flex-direction: column;
-    position: relative;
-        .projects__header {
+    align-items: center;
+    justify-content: center;
+    .projects__header {
         padding-top: 20vh;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         h1 {
-            font-weight: 400;
+            padding: 6px 12px;
+            background-color: $offWhite;
+            color: $offBlack;
             font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400;
             font-size: clamp(1.8rem, 9vw, 5rem);
         }
         p {
-            margin-top: 10px;
+            width: 70%;
             font-size: clamp(16px, 2vw, 1.1rem);
-            font-weight: 100;
+            font-weight: 200;
+            margin-top: 1.5rem;
         }
     }
     .projects {
-        margin-top: 100px;
-        padding-bottom: 100px;
-        display: grid;
-        width: 77.5%;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 60px;
-        grid-row-gap: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 5.5rem;
+        grid-row-gap: 0;
         .project {
-            background-color: $offWhite;
-            width: 100%;
-            height: 33vh;
+            width: 80%;
+            height: 20rem;
+            margin-bottom: 5rem;
             position: relative;
-            border: none;
-            outline: none;
             overflow: hidden;
-            transition: 200ms ease-in;
+            z-index: 1;
+            transition: 300ms ease-in-out;
             img {
                 width: 100%;
                 height: 100%;
@@ -45,21 +53,23 @@
                 background-size: contain;
                 outline: none;
                 filter: saturate(80%) brightness(50%);
+                transition: 200ms ease-out;
             }
             h1 {
                 position: absolute;
                 color: $offWhite;
-                top: 50%;
+                top: 47%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-transform: uppercase;
-                font-weight: 300;
-                font-size: 3.5rem;
+                font-weight: 600;
+                font-size: 3rem;
                 transition: all .3s ease-in-out;
+                font-family: 'Roboto', sans-serif;
             }
             p {
                 position: absolute;
-                color: $offWhite;
+                color: $offBlack;
                 bottom: 30%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -72,109 +82,250 @@
             }
             button {
                 transition: 200ms ease-in;
-                position: absolute;
-                bottom: 17%;
+                position: relative;
+                bottom: 30%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
                 visibility: hidden;
-                background-color: $offWhite;
+                background: none;
                 color: $offBlack;
+                border:none;
                 outline: none;
-                border: none;
-                font-size: 1.4rem;
-                padding: 3px 20px;
+                font-size: 1.3rem;
+                padding: .3rem 2rem;
                 opacity: 0;
-                border-radius: 5px;
+                
+                border: 1px solid $offBlack;
+                z-index: 1;
+                transition: 300ms ease-in-out;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: $offBlack;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 200ms ease-in-out;
+                }
+                &:hover::before,
+                &:focus::before {
+                    transform: scaleX(1);
+                }
+                &:hover,
+                &:focus {
+                    color: $offWhite;
+                    z-index: 3;
+                    cursor: pointer;
+                }
             }
-            &:hover {
-                margin-top: -10px;
-                h1 {
-                    top: 31%;
-                }
-                p {
-                    visibility: visible;
-                    opacity: 1;
-                    bottom: 34%;
-                    transition: all .2s ease-in-out;
-                }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                background-color: $offWhite;
+                opacity: 1;
+                transform: scaleY(0);
+                transform-origin: bottom;
+                transition: transform 300ms ease-in-out;
+            }
+            &:hover::before,
+            &:focus::before {
+                transform: scaleY(1);
+            }
+            &:hover,
+            &:focus{
                 img {
-                    filter: blur(1px) brightness(20%);
+                    background-color: $offBlack;
                     border: none;
                 }
-                button {
-                    visibility: visible;
+                h1 {
+                    top: 31%;
+                    z-index: 2;
+                    color: $offBlack;
+                }
+                p {
+                    top: 51%;
                     opacity: 1;
+                    visibility: visible;
+                    z-index: 2;
+                }
+                button {
+
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 2;
                 }
             }
         }
-        
     }
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 768px) {
     .projects__section {
-        margin-top: 0;
-        margin-left: 0;
+        text-align: left;
         .projects__header {
-            margin-top: 0;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
+            text-align: left;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 80%;
             h1 {
-                padding: 6px 12px;
-                background-color: $offWhite;
-                color: $offBlack;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 400;
+                padding: 0;
+                margin-left: 0;
+                color: $offWhite;
+                background-color: $offBlack;
             }
             p {
-                width: 80%;
-                font-size: 16px;
-                font-weight: 100;
-                margin-top: 5vh;
+
             }
         }
         .projects {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 80%;
             justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-top: 10vh;
-            grid-row-gap: 0;
-            margin-bottom: -20vh;
+            grid-row-gap: 2.5rem;
+            grid-column-gap: 2.5rem;
             .project {
-                width: 70%;
-                height: 33vh;
-                margin-bottom: 8.5vh;
+                width: 100%;
+                height: 17rem;
+                margin-bottom: 0;
                 h1 {
-                    top: 47%;
                     font-size: 2.5rem;
                 }
                 p {
                     font-size: 1rem;
-                    bottom: 30%;
                 }
                 button {
-                    bottom: 13%;
-                    font-size: 1rem;
+                    padding: .2rem 1.5rem;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1312px) {
+    .projects__section {
+        margin-top: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        margin-left: 16.8%;
+        .projects__header {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-top: 20vh;
+            h1 {
+                font-weight: 400;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: clamp(1.8rem, 9vw, 5rem);
+            }
+            p {
+                width: 100%;
+                margin-top: 10px;
+                font-size: clamp(16px, 2vw, 1.1rem);
+                font-weight: 200;
+            }
+        }
+        .projects {
+            margin-top: 100px;
+            padding-bottom: 100px;
+            display: grid;
+            width: 80%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 60px;
+            grid-row-gap: 60px;
+            .project {
+                background-color: $offWhite;
+                width: 100%;
+                height: 20rem;
+                position: relative;
+                border: none;
+                outline: none;
+                overflow: hidden;
+                transition: 200ms ease-in;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border: none;
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    outline: none;
+                    filter: saturate(80%) brightness(50%);
+                }
+                h1 {
+                    position: absolute;
+                    color: $offWhite;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-transform: uppercase;
+                    font-size: 3rem;
+                    transition: all .3s ease-in-out;
+                }
+                p {
+                    position: absolute;
+                    color: $offBlack;
+                    bottom: 29%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80%;
+                    text-align: center;
+                    font-size: 1.1rem;
+                    visibility: hidden;
+                    transition: all .3s ease-in-out;
+                    opacity: 0;
+                }
+                button {
+                    transition: 200ms ease-in;
+                    position: absolute;
+                    bottom: 17%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    visibility: hidden;
+                    font-size: 1.3rem;
+                    opacity: 0;
                 }
                 &:hover {
-                    margin-top: 0;
+                    margin-top: -10px;
                     h1 {
-                        top: 25%;
-                        font-weight: 500;
+                        top: 30%;
                     }
                     p {
-                        display: block;
-                        bottom: 30.5%;
+                        visibility: visible;
+                        opacity: 1;
+                        transition: all .2s ease-in-out;
+                    }
+                    img {
+                        filter: brightness(20%);
+                        border: none;
+                    }
+                    button {
+                        visibility: visible;
+                        opacity: 1;
                     }
                 }
             }
+            
         }
     }
     
