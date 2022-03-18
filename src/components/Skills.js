@@ -32,15 +32,15 @@ function Skills() {
         <div className="skills__section" id="skills">
             <h1 className="bg__skills">Design</h1>
             <div className="skills__header" >
-                <h1 data-aos="fade-right">SKILLS.</h1>
-                <p data-aos="fade-right" data-aos-delay="200">Here are a few skills I've picked up along the way...</p>
+                <h1 data-aos="fade-right">Skills.</h1>
+                <p data-aos="fade-right" data-aos-delay="200">Here are a few <strong>skills</strong> I've picked up along the way.</p>
             </div>
             <div className="skills__container">
                 <div className="skills__web" data-aos="fade-up">
                     <img className="web__icon" src={web__development} alt="web" />
                     <div className="web__header">
                         <h2>Web Development</h2>
-                        <p>I love coding from scratch and creating something new</p>
+                        <p>I love coding from scratch and creating new websites</p>
                     </div>
                     <div className="web__skills">
                         <h3>Languages I speak:</h3>
@@ -61,10 +61,6 @@ function Skills() {
                                 <img className="react-icon" src={react} alt=""/>
                                 <h2>React</h2>
                             </div>
-                            <div className="sass">
-                                <img className="sass-icon" src={sass} alt=""/>
-                                <h2>Sass</h2>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,7 +69,7 @@ function Skills() {
                     <img className="ui__icon" src={uiux__design} alt="web" />
                     <div className="ui__header">
                         <h2>UI/UX Design</h2>
-                        <p>Clean and modern design patterns are what I've really come to appreciate</p>
+                        <p>Clean and modern design patterns are where I feel comfortable</p>
                     </div>
                     <div className="ui__skills">
                         <h3>Design tools:</h3>

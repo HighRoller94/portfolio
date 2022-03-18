@@ -1,53 +1,63 @@
 .skills__section {
     display: flex;
     flex-direction: column;
-    padding-top: 20vh;
     width: 100%;
+    margin-top: 3rem;
     position: relative;
     .bg__skills {
+        display: block;
         position: absolute;
-        font-size: 35rem;
+        font-size: 10rem;
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 500;
         color: $offWhite;
-        opacity: .01;
-        top: -5rem;
-        right: 12rem;
+        opacity: .025;
+        top: 10rem;
+        left: -7rem;
     }
     .skills__header {
-        margin-left: 17.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         h1 {
-            font-weight: 400;
-            font-size: clamp(1rem, 9vw, 5rem);
+            font-size: $mobileHeaderFontSize;
+            width: 70%;
             font-family: 'Roboto Condensed', sans-serif;
         }
         p {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            font-weight: 100;
+            text-align: center;
+            font-weight: 200;
+            margin-top: 2.5rem;
+            width: 60%;
+            font-size: $mobileBodyFontSize;
         }
     }
     .skills__container {
-        margin-left: 17.5%;
-        display: grid;
-        width: 60%;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 7.75rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
         margin-top: 7rem;
         .skills__web {
-            width: 318px;
+            width: 70%;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             height: 100%;
+            margin-bottom: 13.5vh;
             text-align: center;
-            border: 4px solid $offWhite;
+            border: 3px solid $offWhite;
             border-radius: 2px;
             .web__icon {
                 position: relative;
                 top: -3rem;
-                width: 95px;
+                width: 7rem;
                 background: none;
             }
             .web__header {
@@ -55,130 +65,108 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-top: -1.5rem;
+                margin-top: -2rem;
                 h2 {
                     font-family: 'Roboto Condensed', sans-serif;
-                    font-weight: 500;
-                    margin-top: -5px;
-                    font-size: 1.9rem;
+                    font-weight: 200;
+                    margin-top: .8rem;
+                    font-size: 2.25rem;
                 }
                 p {
                     margin-top: 20px;
-                    width: 65%;
-                    font-weight: 100;
+                    font-size: .9rem;
+                    width: 75%;
+                    font-weight: 300;
                 }
             }
             .web__skills {
                 position: relative;
+                width: 100%;
                 h3 {
                     margin-top: 1.5rem;
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                     font-weight: 300;
+                    font-family: 'Roboto Condensed', sans-serif;
                 }
                 .web__tools {
-                    height: 31vh;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 1rem;
+                    grid-row-gap: 2.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 3rem auto 4rem auto;
+                    width: 60%;
+                    height: 100%;
                     .html {
-                        position: absolute;
-                        width: 50%;
-                        left: -2.75rem;
-                        top: 5.5rem;
                         .html-icon {
-                            width: 2.9rem;
+                            width: 55%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.25rem;
-                            left: 1.6rem;
-                            font-weight: 200;
+                            margin-top: .5rem;
                             font-size: 1rem;
-                            margin-bottom: 1.5rem;
+                            font-weight: 300;
                         }
                     }
                     .javascript {
-                        position: absolute;
-                        width: 50%;
-                        left: 2.75rem;
-                        top: 5.5rem;
                         .js-icon {
-                            width: 3.25rem;
+                            width: 60%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.25rem;
-                            left: 2.25rem;
-                            font-weight: 200;
+                            margin-top: .65rem;
                             font-size: 1rem;
-                            margin-bottom: 1.5rem;
+                            font-weight: 300;
                         }
                     }
                     .css {
-                        position: absolute;
-                        right: -1.5rem;
-                        top: 5.5rem;
                         .css-icon {
-                            width: 2.9rem;
+                            width: 50%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.25rem;
-                            right: .5rem;
-                            font-weight: 200;
+                            margin-top: .5rem;
                             font-size: 1rem;
-                            margin-bottom: 1.5rem;
+                            font-weight: 300;
                         }
                     }
                     .react {
-                        position: absolute;
-                        left: 1.5rem;
-                        top: 13rem;
                         .react-icon {
-                            width: 3.25rem;
+                            width: 58%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.25rem;
-                            left: .1rem;
-                            font-weight: 200;
+                            margin-top: .5rem;
                             font-size: 1rem;
-                            margin-bottom: 1.5rem;
-                        }
-                    }
-                    .sass {
-                        position: absolute;
-                        top: 13rem;
-                        right: 1rem;
-                        .sass-icon {
-                            width: 3.25rem;
-                        }
-                        h2 {
-                            position: absolute;
-                            top: 4.25rem;
-                            right: .35rem;
-                            font-weight: 200;
-                            font-size: 1rem;
-                            margin-bottom: 1.5rem;
+                            font-weight: 300;
                         }
                     }
                 }
             }
         }
         .bg__skills2 {
-            display: none;
+            display: block;
+            font-size: 10rem;
+            top: 35rem;
+            left: 4rem;
+            position: absolute;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 500;
+            color: $offWhite;
+            opacity: .025;
         }
         .skills__ui {
-            width: 318px;
+            width: 70%;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             height: 100%;
+            margin-bottom: 13.5vh;
             text-align: center;
-            border: 4px solid $offWhite;
+            border: 3px solid $offWhite;
             border-radius: 2px;
             .ui__icon {
                 position: relative;
                 top: -3rem;
-                width: 95px;
+                width: 7rem;
                 background: none;
             }
             .ui__header {
@@ -186,116 +174,97 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-top: -1.5rem;
+                margin-top: -2rem;
                 h2 {
                     font-family: 'Roboto Condensed', sans-serif;
-                    font-weight: 500;
-                    margin-top: -5px;
-                    font-size: 1.9rem;
+                    font-weight: 200;
+                    margin-top: .8rem;
+                    font-size: 2.25rem;
                 }
                 p {
                     margin-top: 20px;
-                    width: 70%;
-                    font-weight: 100;
+                    font-size: .9rem;
+                    width: 75%;
+                    font-weight: 300;
                 }
             }
             .ui__skills {
                 position: relative;
+                width: 100%;
                 h3 {
                     margin-top: 1.5rem;
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                     font-weight: 300;
+                    font-family: 'Roboto Condensed', sans-serif;
                 }
                 .ui__tools {
-                    height: 31vh;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 1rem;
+                    grid-row-gap: 2.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 3rem auto 4rem auto;
+                    width: 60%;
+                    height: 100%;
                     .adobe-xd {
-                        position: absolute;
-                        width: 70%;
-                        left: -1.75rem;
-                        top: 5.5rem;
                         .xd-icon {
-                            height: 3.25rem;
-                            width: 3.25rem;
+                            width: 55%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.5rem;
-                            left: .5rem;
-                            font-weight: 200;
-                            font-size: .9rem;
-                            margin-bottom: 1.5rem;
+                            margin-top: .5rem;
+                            font-size: 1rem;
+                            font-weight: 300;
                         }
                     }
                     .figma {
-                        position: absolute;
-                        width: 70%;
-                        right: -2.75rem;
-                        top: 5.5rem;
                         .figma-icon {
-                            height: 3.25rem;
-                            width: 3rem;
+                            width: 60%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.5rem;
-                            right: 1.3rem;
-                            font-weight: 200;
-                            font-size: .9rem;
-                            margin-bottom: 1.5rem;
+                            margin-top: .65rem;
+                            font-size: 1rem;
+                            font-weight: 300;
                         }
                     }
                     .paper {
-                        position: absolute;
-                        width: 80%;
-                        left: -2.1rem;
-                        top: 13rem;
                         .paper-icon {
-                            width: 3rem;
+                            width: 50%;
                         }
                         h2 {
-                            position: absolute;
-                            left: .4rem;
-                            top: 4.5rem;
-                            font-weight: 200;
-                            font-size: .9rem;
-                            margin-bottom: 1.5rem;
+                            margin-top: .5rem;
+                            font-size: 1rem;
+                            font-weight: 300;
                         }
                     }
                     .sketch {
-                        position: absolute;
-                        width: 70%;
-                        right: -2.8rem;
-                        top: 13rem;
                         .sketch-icon {
-                            height: 3rem;
+                            width: 58%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.5rem;
-                            right: 1.15rem;
-                            font-weight: 200;
-                            font-size: .9rem;
-                            margin-bottom: 1.5rem;
+                            margin-top: .5rem;
+                            font-size: 1rem;
+                            font-weight: 300;
                         }
                     }
-                    
                 }
             }
         }
         .skills__design {
-            width: 318px;
+            width: 70%;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             height: 100%;
+            margin-bottom: 13.5vh;
             text-align: center;
-            border: 4px solid $offWhite;
+            border: 3px solid $offWhite;
             border-radius: 2px;
             .gd__icon {
                 position: relative;
                 top: -3rem;
-                width: 95px;
+                width: 7rem;
                 background: none;
             }
             .gd__header {
@@ -303,263 +272,139 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-top: -1.5rem;
+                margin-top: -2rem;
                 h2 {
                     font-family: 'Roboto Condensed', sans-serif;
-                    font-weight: 500;
-                    margin-top: -5px;
-                    font-size: 1.9rem;
+                    font-weight: 200;
+                    margin-top: .8rem;
+                    font-size: 2.25rem;
                 }
                 p {
                     margin-top: 20px;
-                    width: 70%;
-                    font-weight: 100;
+                    font-size: .9rem;
+                    width: 75%;
+                    font-weight: 300;
                 }
             }
             .gd__skills {
                 position: relative;
+                width: 100%;
                 h3 {
-                    margin-top: 1.6rem;
+                    margin-top: 1.5rem;
+                    font-size: 1.5rem;
                     font-weight: 300;
-                    font-size: 1.2rem;
+                    font-family: 'Roboto Condensed', sans-serif;
                 }
                 .gd__tools {
-                    height: 31vh;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 1rem;
+                    grid-row-gap: 2.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 3rem auto 3.5rem auto;
+                    width: 60%;
+                    height: 100%;
                     .illustrator {
-                        position: absolute;
-                        width: 70%;
-                        left: -2rem;
-                        top: 5.75rem;
                         .illustrator-icon {
-                            width: 3.5rem;
+                            width: 55%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.5rem;
-                            left: .9rem;
-                            font-weight: 200;
+                            margin-top: .5rem;
                             font-size: 1rem;
-                            margin-bottom: 1.5rem;
+                            font-weight: 300;
                         }
                     }
                     .photoshop {
-                        position: absolute;
-                        width: 70%;
-                        right: -2.5rem;
-                        top: 5.75rem;
                         .photoshop-icon {
-                            width: 3.5rem;
+                            width: 55%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.5rem;
-                            right: .3rem;
-                            font-weight: 200;
+                            margin-top: .5rem;
                             font-size: 1rem;
-                            margin-bottom: 1.5rem;
+                            font-weight: 300;
                         }
                     }
                     .indesign {
-                        position: absolute;
-                        width: 70%;
-                        left: 1.75rem;
-                        top: 13.5rem;
                         .indesign-icon {
-                            width: 3.5rem;
+                            width: 55%;
                         }
                         h2 {
-                            position: absolute;
-                            top: 4.5rem;
-                            left: 1.05rem;
-                            font-weight: 200;
+                            margin-top: .5rem;
                             font-size: 1rem;
-                            margin-bottom: 1.5rem;
+                            font-weight: 300;
                         }
                     }
                 }
             }
         }
         .bg__skills3 {
-            display: none;
+            display: block;
+            font-size: 10rem;
+            top: 80rem;
+            right: 4rem;
+            position: absolute;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 500;
+            color: $offWhite;
+            opacity: .025;
         }
     }
 }
 
-@media screen and (max-width: 500px) { 
+
+@media screen and (min-width: 768px) {
     .skills__section {
-        padding-top: 15vh;
+    
+    }
+}
+
+@media screen and (min-width: 1312px) {
+    .skills__section {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        .bg__skills {
-            display: block;
-            font-size: 10rem;
-            opacity: .025;
-            top: 10rem;
-            left: -7rem;
-        }
+        justify-content: center;
         .skills__header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-left: 0;
-            h1 {              
-                padding: 6px 12px;
-                background-color: $offWhite;
-                color: $offBlack;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 400;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            width: 65%;
+            margin: 0 auto 5rem auto;
+            h1 {
+                font-size: $desktopHeaderFontSize;
+                width: 100%;
             }
             p {
-                text-align: center;
-                font-weight: 100;
-                margin-top: 1.5rem;
-                width: 70%;
-                font-size: 1.05rem;
+                font-size: $desktopBodyFontSize;
+                text-align: left;
+                margin-top: 1rem;
+                width: 100%;
             }
         }
         .skills__container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-            margin-left: 0;
-            margin-top: 4.8rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 10%;
+            margin: 8rem auto 0 auto;
+            width: 65%;
             .skills__web {
-                width: 77%;
-                height: 100%;
-                margin-bottom: 13.5vh;
-                padding-bottom: 4rem;
+                width: 100%;
                 .web__icon {
-                    width: 92px;
+                    width: 6.5rem;
                 }
-                .web__header {
-                    h2 {
-                        margin-top: .8rem;
-                        font-size: 1.8rem;
-                    }
-                }
-                p {
-                    font-size: 0.95rem;
-                }
-                .web__toolsContainer {
-                    padding-bottom: 3rem;
-                    width: 95%;
-                    h3 {
-                        font-size: 1.05rem;
-                    }
-                    .web__skills {
-                        padding-bottom: 2.5rem;
-                        .web__tools {
-                            margin-top: 1.75rem;
-                            padding-top: 1rem;
-                            .tool {
-                                .icon {
-                                    margin: 0 2rem;
-                                    width: 40px;
-                                }
-                                h2 {
-                                    margin-top: 5px;
-                                    font-size: .95rem;
-                                    margin-top: 15px;
-                                    margin-bottom: 1.5rem;
-                                }
-                            }
-                        }
-                    }
-                    
-                }
-            }
-            .bg__skills2 {
-                display: block;
-                font-size: 10rem;
-                top: 35rem;
-                left: 4rem;
-                position: absolute;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 500;
-                color: $offWhite;
-                opacity: .025;
             }
             .skills__ui {
-                width: 77%;
-                height: 100%;
-                padding-bottom: 4rem;
-                margin-bottom: 13.5vh;
+                width: 100%;
                 .ui__icon {
-                    width: 90px;
-                }
-                .ui__header {
-                    h2 {
-                        margin-top: .8rem;
-                        font-size: 1.8rem;
-                    }
-                }
-                p {
-                    font-size: 0.95rem;
-                }
-                .ui__skills {
-                    padding-bottom: 2.5rem;
+                    width: 6.5rem;
                 }
             }
             .skills__design {
-                width: 77%;
-                height: 100%;
-                padding-bottom: 5rem;
-                margin-bottom: 8vh;
+                width: 100%;
                 .gd__icon {
-                    width: 90px;
+                    width: 6.5rem;
                 }
-                .gd__header {
-                    h2 {
-                        margin-top: .8rem;
-                        font-size: 1.8rem;
-                    }
-                    p {
-                        margin-top: 30px;
-                        font-size: 0.95rem;
-                    }
-                }
-                .gd__skills {
-                    h3 {
-                        font-size: 1.05rem;
-                    }
-                    .gd__tools {
-                        margin-top: 2.5rem;
-                        column-gap: 2.5rem;
-                        .illustrator {
-                            h2 {
-                                left: .5rem;
-                            }
-                        }
-                        .photoshop {
-                            h2 {
-                                right: 0rem;
-                            }
-                        }
-                        .indesign {
-                            left: 1.45rem;
-                            h2 {
-                                left: .7rem;
-                            }
-                        }
-                    }
-                }
-            }
-            .bg__skills3 {
-                display: block;
-                font-size: 10rem;
-                top: 80rem;
-                right: 4rem;
-                position: absolute;
-                font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 500;
-                color: $offWhite;
-                opacity: .025;
             }
         }
     }
-    
 }

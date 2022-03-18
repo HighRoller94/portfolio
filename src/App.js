@@ -29,10 +29,6 @@ function App() {
         cursor.classList.remove('link-focus')
       })
     })
-    document.addEventListener("scroll", () => {
-      const scroll = document.querySelector('.download__icon', '.download__btn');
-      scroll.classList.toggle('active', window.scrollY > 450)
-    })
   });
 
   return (

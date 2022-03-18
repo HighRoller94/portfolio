@@ -36,37 +36,42 @@ function Contact() {
         <div className="contact__section" id="contact">
             <div className="contact__container">
             <h1 className="bg__contact">Email</h1>
-            <div className="contact">
-                <div className="contact__header" data-aos="fade-right">
-                    <h1>CONTACT.</h1>
+                <div className="contact">
+                    <div className="contact__header" data-aos="fade-right">
+                        <a href="mailto:ashbridgescodes@gmail.com">
+                            <h2 className="focus">Whats next?</h2>
+                        </a> 
+                        <h1>Get in touch!</h1>
+                    </div>
+                    <div className="contact__text">
+                        <p>I'd love to hear from you. Feel free to shoot me a message and I'll get back to you as soon as I can!</p>
+                        <div className="contact__mail focus">
+                            <MailIcon className="icon" />
+                            <a href="mailto:ashbridgescodes@gmail.com">
+                                <h2 className="focus">ashbridgescodes@gmail.com</h2>
+                            </a> 
+                        </div>
+                    </div>
                 </div>
-                <div className="email" data-aos="fade-right" data-aos-delay="200">
-                    <a href="mailto:ashbridgescodes@gmail.com">
-                        <h2 className="focus">Get in touch</h2>
-                        <MailIcon className="icon" />
-                    </a> 
-                </div>
-            </div>
-            <form className="contact__form" data-aos="fade-left" noValidate autoComplete="off" onSubmit={sendEmail}>
-                <div className="text__field">
-                    <input type="text" name="name" autoComplete="off" required />
-                    <label htmlFor="name" className="label-name" ><span className="content-name">Name</span></label>
-                </div>
-                <div className="text__field">
-                    <input type="text" name="email" autoComplete="off" required />
-                    <label htmlFor="name" className="label-name" ><span className="content-name">Email</span></label>
-                </div>
-                <div className="text__area">
-                    <textarea type="text" rows="10" name="message" autoComplete="off" required />
-                    <label htmlFor="name" className="label-name" ><span className="content-name">Message</span></label>
-                </div>
-                <button ref={sendButton} style={{display: "none"}} type="submit"></button>
-            </form>
-            {!status ? (
-                    <SendIcon className="send__icon focus" onClick={handleChange}/>
-                ) : (
-                    <DoneIcon className="send__icon"/>
-                )}
+                <form className="contact__form" data-aos="fade-left" noValidate autoComplete="off" onSubmit={sendEmail}>
+                    <div className="text__field">
+                        <input type="text" name="name" autoComplete="off" required />
+                        <label htmlFor="name" className="label-name" ><span className="content-name">Name</span></label>
+                    </div>
+                    <div className="text__field">
+                        <input type="text" name="email" autoComplete="off" required />
+                        <label htmlFor="name" className="label-name" ><span className="content-name">Email</span></label>
+                    </div>
+                    <div className="text__area">
+                        <textarea type="text" rows="10" name="message" autoComplete="off" required />
+                        <label htmlFor="name" className="label-name" ><span className="content-name">Message</span></label>
+                    </div>
+                    {!status ? (
+                        <button type="submit" className="send__btn">Send message!</button>
+                    ) : (
+                        <button className="send__btn sent">Message sent!</button>
+                    )}
+                </form>
                 <h1 className="bg__contact2">Email</h1>
             </div>
         </div>

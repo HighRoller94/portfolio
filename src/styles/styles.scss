@@ -1,51 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&family=Roboto+Condensed&display=swap');
 
 $offBlack: #0c0c0c;
-$offWhite: #fcfcfc;
+$offWhite: #f1f1f1;
+
+$mobileHeaderFontSize: 2.5rem;
+$mobileBodyFontSize: 1rem;
+
+$tabletHeaderFontSize: 3.5rem;
+$tabletBodyFontSize: 1rem;
+
+$desktopHeaderFontSize: 3.5rem;
+$desktopBodyFontSize: 1.1rem;
 
 @import './navOverlay';
+@import './toggleMode';
 @import './home';
 @import './about';
+
 @import './projects';
+@import './travel';
+@import './pyre';
+@import './marquet';
+@import './illume';
+@import './eatz';
+
+@import './skills';
 @import './contact';
 @import './footer';
-@import './pyre';
-@import './skills';
 
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    cursor: none;
     ::-webkit-scrollbar {
         display: none;
     }
 }
 
-.border {
-    overflow-x:hidden;
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    justify-content: center;
-    border: 25px solid black;
-    background: transparent;
-    pointer-events: none;
-}
-
 body {
+    overflow-x: hidden;
+    cursor: none;
     background-color: $offBlack;
     color: $offWhite;
-    overflow-x: hidden;
+    transition: 200ms ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+.border {
+    position: fixed;
+    overflow-x:hidden;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border: 15px solid black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background: transparent;
+    pointer-events: none;
 }
 
 .cursor {
@@ -58,6 +74,36 @@ body {
     z-index: 100;
     animation: cursorAnim 2s infinite alternate;
     pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+    .border {
+        overflow-x:hidden;
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        justify-content: center;
+        border: 25px solid black;
+        background: transparent;
+        pointer-events: none;
+    }
+    
+}
+
+@media screen and (min-width: 1312px) {
+    .border {
+        border: 35px solid black;
+        border-width: 35px 50px 35px 50px;
+    }
 }
 
 .link-focus {
@@ -77,22 +123,4 @@ body {
     }
 }
 
-@media screen and (max-width: 500px) {
-    .body {
-        overflow-x: hidden;
-        cursor: pointer;
-    }
-    .border {
-        box-sizing: border-box;
-        top: 0;
-        left: 0;
-        border: 15px solid $offWhite;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .cursor {
-        // display: none;
-    }
-}
+

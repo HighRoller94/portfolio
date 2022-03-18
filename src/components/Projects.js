@@ -30,36 +30,38 @@ function Projects() {
     return (
         <div>
             <div className="projects__section" id="projects">
-            <div className="projects__header" data-aos="fade-right" data-aos-anchor-placement="top-center"  >
-                <h1 data-aos="fade-right">PORTFOLIO.</h1>
-                <p data-aos="fade-right" data-aos-delay="200" >Check out some of the <strong>projects</strong> I've been working on...</p>
+            <div className="projects__header" data-aos="fade-right" >
+                <h1 data-aos="fade-right">My main bits.</h1>
+                <p data-aos="fade-right" >Check out some of the <strong>projects</strong> I've been working on recently!</p>
             </div>
             <div className="projects" data-aos="fade-up">
-                    <div className="project">
+                    <div className="project focus">
                         <img src={travel} al="Travel" />
                         <h1>Travair</h1>
                         <p>Responsive single page travel website/landing page</p>
                         <button className="focus" onClick={() => { setOpenTravel(true) }}>View</button>
                     </div>
-                    <div className="project">
+                    
+                    <div className="project focus">
                         <img src={shop} alt="Market" />
                         <h1>Marquet</h1>
                         <p>Multipage ecommerce marketplace with cart</p>
                         <button className="focus" onClick={() => { setOpenMarquet(true) }}>View</button>
                     </div>
-                    <div className="project">
+                    
+                    <div className="project focus">
                         <img src={chef} alt="Chef" />
                         <h1>Eatz</h1>
                         <p>Blog-type recipe app connected to an external API</p>
                         <button className="focus" onClick={() => { setOpenEatz(true) }}>View</button>
                     </div>
-                    <div className="project">
+                    <div className="project focus">
                         <img src={pyre} alt="Pyre" />
                         <h1>Pyre</h1>
                         <p>Music player app with a simple dashboard layout</p>
                         <button className="focus" onClick={() => { setOpenPyre(true) }}>View</button>
                     </div>
-                    <div className="project">
+                    <div className="project focus">
                         <img src={illume} alt="Illume" />
                         <h1>Illume</h1>
                         <p>Social media app aimed at helping creatives</p>

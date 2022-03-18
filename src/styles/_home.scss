@@ -1,53 +1,73 @@
 .hero__section {
     display: flex;
     flex-direction: column;
-    padding-top: 25vh;
+    padding-top: 22vh;
     background: none;
+    overflow: hidden;
     .hero__text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         background: none;
         position: relative;
-        margin-left: 17.5%;
+        margin-left: 3.5rem;
         h1 {
-            font-size: clamp(5.8rem, 13.5vh, 11rem);
-            margin-left: -12px;
-            margin-top: -10px;
+            font-size: 7rem;
             background: none;
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 500;
         }
         h2 {
-            margin-left: -5px;
+            font-weight: 200;
+            font-size: 1.3rem;
+            margin-left: .4rem;
         }
         .scroll__btn {
-            display: none;
+            margin-left: .3rem;
         }
     }
     .wrapper {
+        opacity: .6;
         display: flex;
-        margin-top: 1.5rem;
-        min-width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 50%;
+        margin-top: .75rem;
+        margin-left: 1rem;
         h3 {
-            font-weight: 50;
-            font-size: 2.7rem;
+            font-weight: 200;
+            font-size: 1.8rem;
             margin-top: -21px;
             margin-left: -6px;
             background: none;
+            &:nth-child(1) {
+                position: absolute;
+                top: .05rem;
+                left: 0;
+            }
+            &:nth-child(3) {
+                margin-left: -.5rem;
+                margin-top: 1.4rem;
+            }
         }
         .dynamic__text {
+            left: .35rem;
+            position: absolute;
+            width: 100%;
+            margin-top: -6.1rem;
             height: 75px;
-            margin-top: -30px;
             overflow: hidden; 
             li {
                 list-style: none;
-                font-size: 2.7rem;
-                margin-top: 7.5px;
+                font-size: 1.8rem;
+                margin-top: 2.05rem;
                 margin-left: -25px;
-                margin-right: 20px;
-                font-weight: 100;
+                font-weight: 200;
                 color: currentColor;
                 position: relative;
                 top: 1px;
-                animation: slide 10s steps(2) infinite;
+                animation: mobslide 10s steps(2) infinite;
                 z-index: 2;
                 &::after {
                     color: currentColor;
@@ -55,53 +75,58 @@
                     border-left: 2px solid currentColor;
                     background-color: $offBlack;
                     position: absolute;
-                    height: 100%;
+                    height: 95%;
                     width: 100%;
                     left: 0;
                     margin-right: 5px;
                     padding-left: 2px;
-                    animation: typing 5s steps(12) infinite;
+                    animation: mobtyping 5s steps(12) infinite;
                 }
             }
         }
     }
     .download__btn {
-        margin-top: 2.6rem;
+        margin-top: 3rem;
         background: none;
+        margin-left: .5rem;
         z-index: 2;
-        position: absolute;
         button {
             text-decoration: none;
-            padding: .8rem 1.8rem;
-            margin-left: -7px;
+            padding: .8rem 1.3rem;
             background-color: inherit;
             position: relative;
-            transition: all .35s;
-            border: 0.5px solid $offWhite;
+            transition: 300ms ease-in-out;
+            color: $offWhite;
+            border: 1px solid $offWhite;
             text-decoration: none;
-            font-size: clamp(1.3rem, 1.5vw, 1.1rem);
-            border-radius: 13px;
+            font-size: 1rem;
             font-weight: 400;
+            z-index: 1;
             a {
-                font-family: 'Roboto Condensed', sans-serif;
-                text-transform: uppercase;
+                transition: 300ms ease-in-out;
             }
-            &::after {
+            &::before {
+                content: '';
                 position: absolute;
-                content: "";                
+                outline: none;
+                border: 1px solid $offWhite;
                 top: 0;
                 left: 0;
-                width: 0;
-                height: 100%;
-                transition: .35s;
-                background: $offWhite;
-                border-radius: 10px;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                background-color: $offWhite;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 300ms ease-in-out;
             }
-            &:hover {
+            &:hover::before,
+            &:focus::before {
+                transform: scaleX(1);
+            }
+            &:hover a,
+            &:focus a {
                 color: $offBlack;
-            }
-            &:hover:after {
-                width: 100%;
             }
         }
         .link {
@@ -110,117 +135,57 @@
             position: relative;
             z-index: 99;
         }
-        .scroll__btn {
-            display: none;
+    }
+    .scroll__btn {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 30px;
+        margin-top: 6rem;
+        margin-bottom: 1rem;
+        height: 50px;
+        margin-left: 1rem;
+        .mouse {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            padding: 10px 10px;
+            height: 30px;
+            border: 1px solid currentColor;
+            border-radius: 25px;
+            box-sizing: content-box;
+            .scroller {
+                width: 8px;
+                height: 8px;
+                border-radius: 25px;
+                background-color: currentColor;
+                animation-name: scroller;
+                animation-duration: 3s;
+                animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                animation-iteration-count: infinite;
+            }
         }
     }
 }
 
-@keyframes typing {
-    40%,
-    60% {
-        left: calc(100%);
+@keyframes scroller {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(0);
+        opacity: 1;
     }
     100% {
-        left: 0;
-    }
-}
-
-@keyframes slide {
-    100% {
-        top: -144px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .hero__section {
-        overflow: hidden;
-        padding-top: 25.5vh;
-        .hero__text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 0;
-            h1 {
-                margin-left: 0;
-            }
-            h2 {
-                display: none;
-            }
-            .wrapper {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                width: 50%;
-                margin-left: 1rem;
-                h3:nth-child(1) {
-                    font-size: 1.5rem;
-                    position: absolute;
-                    top: .05rem;
-                    left: 0;
-                }
-                h3:nth-child(3) {
-                    font-size: 1.35rem;
-                    margin-left: -.5rem;
-                    margin-top: 1.2rem;
-                }
-                .dynamic__text {
-                    left: .2rem;
-                    position: absolute;
-                    width: 100%;
-                    margin-top: -2.7rem;
-                    li {
-                        font-size: 1.5rem;
-                        margin-top: 2.05rem;
-                        margin-right: 0;
-                        animation: mobslide 10s steps(2) infinite;
-                        &::after {
-                            animation: mobtyping 5s steps(12) infinite;
-                            height: 95%;
-                        }
-                    }
-                }
-            }
-        .download__btn {
-            display: flex;
-            position: static;
-            border-radius: 13px;
-            margin-top: 6vh;
-            margin-left: 0;
-            background-color: $offWhite;
-            color: $offBlack;
-            button {
-                padding: .7rem 1.7rem;
-                background: none;
-                margin-left: 0;
-                a {
-                    font-family: 'Roboto Condensed', sans-serif;
-                    text-transform: uppercase;
-                }
-                &::after {
-                    background: $offBlack;
-                    color: $offWhite;
-                    border-radius: 10px;
-                }
-                &:hover {
-                    color: $offWhite;
-                }
-            }
-        }
-        .scroll__btn {
-            display: block;
-            margin-top: 25%;
-        }
-        }
+        transform: translateY(50%);
+        opacity: 0;
     }
 }
 
 @keyframes mobtyping {
     40%,
     60% {
-        left: calc(85%);
+        left: calc(80%);
     }
     100% {
         left: 0;
@@ -229,6 +194,210 @@
 
 @keyframes mobslide {
     100% {
-        top: -8.9rem;
+        top: -9.4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero__section {
+        padding-top: 22vh;
+        .hero__text {
+            margin-left: 16.5%;
+            h1 {
+                font-size: 9rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        .wrapper {
+            width: 37%;
+            margin-top: 0;
+            h3 {
+                font-size: 2rem;
+            }
+            .dynamic__text {
+                left: .5rem;
+                margin-top: -6.45rem;
+                li {
+                    font-size: 2rem;
+                    animation: tabslide 10s steps(2) infinite;
+                    &::after {
+                        height: 95%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes tabtyping {
+    40%,
+    60% {
+        left: calc(70%);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes tabslide {
+    100% {
+        top: -10rem;
+    }
+}
+
+@media screen and (min-width: 1312px) {
+    .hero__section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 25vh;
+        background: none;
+        .hero__text {
+            background: none;
+            position: relative;
+            margin-left: 17%;
+            h2 {
+                font-weight: 400;
+            }
+            h1 {
+                font-size: 10.5rem;
+                margin-left: -12px;
+                margin-top: -10px;
+                background: none;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-weight: 500;
+            }
+            h2 {
+                margin-left: -5px;
+            }
+            .scroll__btn {
+                display: none;
+            }
+        }
+        .wrapper {
+            display: flex;
+            margin-top: .6rem;
+            min-width: 50%;
+            margin-left: 1rem;
+            h3 {
+                font-weight: 200;
+                font-size: 2.7rem;
+                background: none;
+                display: flex;
+                position: relative;
+                &:nth-child(1) {
+                    position: absolute;
+                    left: -1rem;
+                }
+                &:nth-child(3) {
+                    position: absolute;
+                    margin-left: 22.75rem;
+                    margin-top: 1.4rem;
+                    width: 100%;
+                }
+            }
+            .dynamic__text {
+                height: 75px;
+                left: .3rem;
+                margin-top: 1.05rem;
+                overflow: hidden; 
+                li {
+                    list-style: none;
+                    font-size: 2.7rem;
+                    margin-top: 7.5px;
+                    margin-left: -25px;
+                    margin-right: 20px;
+                    font-weight: 200;
+                    color: currentColor;
+                    position: relative;
+                    top: 1px;
+                    animation: slide 10s steps(2) infinite;
+                    z-index: 2;
+                    &::after {
+                        color: currentColor;
+                        content: "";
+                        border-left: 2px solid currentColor;
+                        background-color: $offBlack;
+                        position: absolute;
+                        height: 95%;
+                        width: 100%;
+                        left: 0;
+                        padding-left: 2px;
+                        animation: typing 5s steps(12) infinite;
+                    }
+                }
+            }
+        }
+        .download__btn {
+            margin-top: 6rem;
+            background: none;
+            z-index: 2;
+            button {
+                text-decoration: none;
+                padding: .7rem 1.8rem;
+                margin-left: -.75rem;
+                background-color: inherit;
+                position: relative;
+                transition: 300ms ease-in-out;
+                color: $offWhite;
+                border: 1px solid $offWhite;
+                text-decoration: none;
+                font-size: clamp(1.2rem, 1.5vw, 1.1rem);
+                font-weight: 400;
+                z-index: 1;
+                a {
+                    transition: 300ms ease-in-out;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    outline: none;
+                    border: 1px solid $offWhite;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: $offWhite;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 300ms ease-in-out;
+                }
+                &:hover::before,
+                &:focus::before {
+                    transform: scaleX(1);
+                }
+                &:hover a,
+                &:focus a {
+                    color: $offBlack;
+                }
+            }
+            .link {
+                color: currentColor;
+                text-decoration: none;
+                position: relative;
+                z-index: 99;
+            }
+            .scroll__btn {
+                display: none;
+            }
+        }
+    }
+    
+    @keyframes typing {
+        40%,
+        60% {
+            left: calc(33.7%);
+        }
+        100% {
+            left: 0;
+        }
+    }
+    
+    @keyframes slide {
+        100% {
+            top: -142px;
+        }
     }
 }
