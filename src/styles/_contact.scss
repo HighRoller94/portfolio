@@ -28,7 +28,7 @@
             .contact__header {
                 margin-bottom: 1.5rem;
                 h1 {
-                    font-family: 'Roboto Condensed', sans-serif;
+                    font-family: $headerFont;
                     font-weight: 600;
                     font-size: $mobileHeaderFontSize;
                 }
@@ -296,8 +296,8 @@
                 font-size: 35rem;
                 opacity: .01;
                 color: $offWhite;
-                top: 5rem;
-                left: -24rem;
+                top: 0rem;
+                left: -25rem;
             }
             .contact {
                 display: flex;

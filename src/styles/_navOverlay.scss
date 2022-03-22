@@ -1,7 +1,7 @@
 .overlay {
     .navbar {
         position: fixed;
-        background-color: rgba(12, 12, 12, 0.6);
+        background-color: rgba(241, 241, 241, 0.6);
         backdrop-filter: blur(.2rem);
         display: flex;
         height: 6.5rem;
@@ -18,6 +18,7 @@
             margin: 1.25rem auto 0 auto;
             .nav__logo {
                 width: 3.25rem;
+                
             }
             .navbar__toggle {
                 margin-top: -.75rem;
@@ -64,12 +65,13 @@
                 align-items: center;
                 justify-content: center;
                 transition: all .5s ease;
-                background-color: $offBlack;
+                background-color: currentColor;
                 right: 0;
                 width: 100%;
                 top: -1000px;
                 opacity: 1;
                 z-index: 99;
+                overflow: hidden;
                 .navbar__item {
                     margin: 3vh auto;
                     opacity: 1;
@@ -88,19 +90,19 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding-top: 5rem;
                     .li__icon {
-                        font-size: 3.25rem;
-                        margin: 0 1.5rem;
+                        font-size: 3.75rem;
+                        margin: 0 2rem;
                         margin-top: 1.2rem;
-                        
                         &:hover { 
                             opacity: 0.7;
                             cursor: none;
                         }
                     }
                     .gh__icon {
-                        font-size: 2.75rem;
-                        margin: 0 1.5rem;
+                        font-size: 3.25rem;
+                        margin: 0 2rem;
                         margin-top: 1.2rem;
                         &:hover { 
                             opacity: 0.7;
@@ -110,7 +112,7 @@
                 }
             }
             .navbar__menu.active {
-                background-color: $offBlack;
+                background-color: currentColor;
                 top: 0;
                 list-style: none;
                 right: 0;
@@ -118,17 +120,18 @@
                 width: 100%;
                 transition: all .5s ease;
                 z-index: 99;
-                height: 99vh;
+                height: 100vh;
                 margin-top: -.75rem;
+                overflow: hidden;
                 .navbar__item {
-                    margin: 3vh auto;
+                    margin: 1.5rem auto;
                     h1 {
                         font-size: 2.7rem;
                     }
                     .navbar__links {
-                        font-size: clamp(2.2rem, 2vw, 3rem);
+                        font-size: 2rem;
                         transition: 200ms ease-in;
-                        font-weight: 200;
+                        font-weight: 300;
                         text-transform: uppercase;
                         &:hover {
                             opacity: 1;
@@ -137,15 +140,22 @@
                 }
                 .mobile__contact {
                     display: block;
-                    opacity: 1;
-                    background-color: $offWhite;
-                    color: $offBlack;
-                    margin: 5vh auto;
-                    h1 {
-                        font-family: 'Roboto Condensed', sans-serif;
-                        font-weight: 400;
-                        font-size: 2.2rem;
-                        padding: 6px 13px;
+                    margin: 2rem 0;
+                    button {
+                        padding: .4rem 1.6rem;
+                        font-weight: 300;
+                        border: 1px solid currentColor;
+                        color: currentColor;
+                        background: none;
+                        outline: none;
+                        font-size: 2rem;
+                        z-index: 1;
+                        position: relative;
+                        transition: 200ms ease;
+                        text-transform: uppercase;
+                        &:hover {
+                            background-color: rgba(250, 250, 250, .25);
+                        }
                     }
                 }
             }
@@ -167,9 +177,17 @@
 
 .navbar.active {
     height: 2rem;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 1px 5px rgba(255, 255, 255, .2);
 }
 
+body.dark-mode {
+    .navbar {
+        background-color: rgba(12, 12, 12, 0.6);
+    }
+    .navbar.active {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
+    }
+}
 @media screen and (min-width: 768px) {
     .overlay {
         .navbar {
@@ -200,7 +218,10 @@
                             font-size: 1rem;
                             font-weight: 400;
                             text-transform: uppercase;
-                            opacity: 1;
+                            opacity: .7;
+                            &:hover {
+                                opacity: 1;
+                            }
                         }
                     }
                     .mobile__contact {
@@ -209,36 +230,16 @@
                         button {
                             padding: .4rem 1.6rem;
                             font-weight: 400;
-                            border: 1px solid $offWhite;
-                            color: $offWhite;
+                            border: 1px solid currentColor;
+                            color: currentColor;
                             background: none;
                             outline: none;
                             font-size: 1rem;
                             z-index: 1;
                             position: relative;
-                            &::before {
-                                content: '';
-                                position: absolute;
-                                outline: none;
-                                border: 1px solid $offWhite;
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-                                z-index: -1;
-                                background-color: $offWhite;
-                                transform: scaleX(0);
-                                transform-origin: left;
-                                transition: transform 300ms ease-in-out;
-                            }
-                            &:hover::before,
-                            &:focus::before {
-                                transform: scaleX(1);
-                            }
-                            &:hover,
-                            &:focus {
-                                opacity: 1;
-                                color: $offBlack;
+                            transition: 200ms ease;
+                            &:hover {
+                                background-color: rgba(250, 250, 250, .25);
                             }
                         }
                     }
@@ -256,12 +257,13 @@
             bottom: 0;
             left: 4.5%;
             z-index: 99;
-            color: $offWhite;
+            color: currentColor;
             .link {
                 color: currentColor;
             }
             .linked__icon {
                 font-size: 2rem;
+                color: currentColor;
                 &:hover {
                     opacity: 0.8;
                     transition: 200ms ease-in;
@@ -271,6 +273,7 @@
             .git__icon {
                 margin-top: 10px;
                 font-size: 1.6rem;
+                color: currentColor;
                 &:hover {
                     opacity: 0.8;
                     transition: 200ms ease-in;
@@ -291,49 +294,6 @@
                 background-color: currentColor;
             }
         }
-        .socials {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            left: 4.5%;
-            z-index: 99;
-            color: $offWhite;
-            .link {
-                color: currentColor;
-            }
-            .linked__icon {
-                font-size: 2rem;
-                &:hover {
-                    opacity: 0.8;
-                    transition: 200ms ease-in;
-                    cursor: none;
-                }
-            }
-            .git__icon {
-                margin-top: 10px;
-                font-size: 1.6rem;
-                &:hover {
-                    opacity: 0.8;
-                    transition: 200ms ease-in;
-                    cursor: none;
-                }
-            }
-            p {
-                margin: 30px 0;
-                margin-bottom: 2.5rem;
-                padding-bottom: 5px;
-                font-size: .95rem;
-                font-weight: 400;
-                transform: rotate(-90deg);
-            }
-            .bar {
-                height: 13rem;
-                width: 2px;
-                background-color: currentColor;
-            }
-        }
         .download__cv {
             display: flex;
             flex-direction: column;
@@ -342,7 +302,7 @@
             bottom: 40rem;
             right: -.3rem;
             z-index: 99;
-            color: $offWhite;
+            color: currentColor;
             visibility: hidden;
             opacity: 0;
             transition: 2s ease;
@@ -360,6 +320,7 @@
             }
             .download__icon {
                 width: 32px;
+                color: currentColor;
             }
         }
         .download__cv.active {
@@ -429,24 +390,18 @@
                     h1 {
                         padding: .5rem 1.8rem;
                         font-weight: 400;
-                        border: 1px solid $offWhite;
+                        border: 1px solid currentColor;
                         font-size: 1rem;
+                        transition: 200ms ease;
+                            &:hover {
+                                background-color: rgba(250, 250, 250, .25);
+                            }
                     }
                 }
             }
         }
         .socials {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
             left: 8%;
-            z-index: 99;
-            color: $offWhite;
-            .link {
-                color: currentColor;
-            }
             .linked__icon {
                 font-size: 2.4rem;
             }
@@ -457,49 +412,26 @@
             }
             p {
                 margin: 35px 0;
-                padding-bottom: 5px;
                 font-size: 1.1rem;
-                font-weight: 400;
-                transform: rotate(-90deg);
             }
             .bar {
                 height: 23vh;
-                width: 2px;
-                background-color: currentColor;
             }
         }
         .download__cv {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: fixed;
-            bottom: 40rem;
-            right: 6%;
-            z-index: 99;
-            color: $offWhite;
-            visibility: hidden;
-            opacity: 0;
-            transition: 2s ease;
+            right: 5.5%;
             p {
-                margin-bottom: 4rem;
                 font-size: .95rem;
-                font-weight: 400;
-                transform: rotate(-90deg);
             }
             .bar {
-                margin: 1rem 0;
-                height: 10rem;
-                width: 2px;
-                background-color: currentColor;
+                margin: 1.5rem 0;
             }
             .download__icon {
-                width: 32px;
+                width: 50px;
             }
         }
         .download__cv.active {
-            visibility: visible;
-            opacity: 1;
-            bottom: 2.5rem;
+            bottom: 5rem;
         }
     }
     .navbar.active {
@@ -507,8 +439,6 @@
     }
     
 }
-
-
 
 .nav__hidden {
     transform: translateY(-8rem);

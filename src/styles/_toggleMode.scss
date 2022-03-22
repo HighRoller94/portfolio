@@ -1,0 +1,58 @@
+.toggle__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2.5rem;
+    margin-right: 2.5rem;
+    .toggle {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        color: currentColor;
+        &:active::after {
+            width: 130px;
+        }
+        &:checked  {
+            + label {
+                background: $offBlack;
+                &::after {
+                    left: calc(100% - 5px);
+                    transform: translateX(-100%);
+                }
+            }
+        }
+        
+    }
+    label {
+        text-indent: -9999px;
+        width: 3rem;
+        height: 1.5rem;
+        background-color: currentColor;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: .9rem;
+            height: .9rem;
+            background: $offWhite;
+            border-radius: 90px;
+            transition: 0.3s;
+        }
+        &:hover {
+            cursor: none;
+        }
+    }
+    
+}
+
+body.dark-mode {
+    label {
+        &::after {
+            background: $offBlack;
+        }
+    }
+}

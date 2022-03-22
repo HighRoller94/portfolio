@@ -3,13 +3,23 @@
 $offBlack: #0c0c0c;
 $offWhite: #f1f1f1;
 
+
+
+$headerFont: 'Roboto Condensed', sans-serif;
+
+// MOBILE
+
 $mobileHeaderFontSize: 2.5rem;
 $mobileBodyFontSize: 1rem;
+
+// TABLET 
 
 $tabletHeaderFontSize: 3.5rem;
 $tabletBodyFontSize: 1rem;
 
-$desktopHeaderFontSize: 3.5rem;
+// DESKTOP
+
+$desktopHeaderFontSize: 4.5rem;
 $desktopBodyFontSize: 1.1rem;
 
 @import './navOverlay';
@@ -40,11 +50,16 @@ $desktopBodyFontSize: 1.1rem;
 body {
     overflow-x: hidden;
     cursor: none;
-    background-color: $offBlack;
-    color: $offWhite;
+    background-color: $offWhite;
+    color: $offBlack;
     transition: 200ms ease-in-out;
     margin: 0;
     padding: 0;
+}
+
+body.dark-mode {
+    background-color: $offBlack;
+    color: $offWhite;
 }
 
 .border {

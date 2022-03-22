@@ -9,7 +9,7 @@
     .bg-about {
         position: absolute;
         opacity: .025;
-        color: $offWhite;
+        color: currentColor;
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 500;
         top: 6rem;
@@ -28,8 +28,10 @@
         font-weight: 500;
     }
     h1 {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-weight: 300;
+        font-family: $headerFont;
+        font-weight: 600;
+        color: currentColor;
+        opacity: 0.7;
         font-size: $mobileHeaderFontSize;
     }
     .about__text {
@@ -43,7 +45,7 @@
         p {
             font-size: 1rem;
             margin-top: 1.5rem;
-            font-weight: 200;
+            font-weight: 400;
             width: 80%;
         }
         img {
@@ -86,14 +88,12 @@
                 font-size: $tabletHeaderFontSize;
                 padding: 0;
                 background: none;
-                color: $offWhite;
             }
             .about__text {
                 p {
                     font-size: $tabletBodyFontSize;
                     margin-left: .5rem;
                     margin-top: .5rem;
-                    font-weight: 200;
                     font-size: 1rem;
                     width: 100%;
                     text-align: left;
@@ -137,24 +137,22 @@
             flex-direction: column;
             h1 {
                 font-size: $desktopHeaderFontSize;
-                
             }
             .about__text {
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
-                margin-top: 2rem;
+                margin-top: 1.5rem;
                 width: 100%;
                 p {
                     font-size: $desktopBodyFontSize;
                     margin-top: 0;
                     margin-left: 0;
                     width: 60%;
-                    font-weight: 200;
                 }
                 img {
                     margin: 2rem 0 0 auto;
-                    width: 50%;
+                    width: 55%;
                     margin-top: 0;
                 }
             }
@@ -166,8 +164,8 @@
             color: $offWhite;
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 500;
-            top: 14rem;
-            left: -18rem;
+            top: 5rem;
+            left: -5rem;
             font-size: 35rem;
         }
         .bg-about2 {

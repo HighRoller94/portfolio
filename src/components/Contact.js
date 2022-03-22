@@ -32,10 +32,9 @@ function Contact() {
     };
     
     return (
-        
         <div className="contact__section" id="contact">
             <div className="contact__container">
-            <h1 className="bg__contact">Email</h1>
+            <h1 className="bg__contact">Contact</h1>
                 <div className="contact">
                     <div className="contact__header" data-aos="fade-right">
                         <a href="mailto:ashbridgescodes@gmail.com">
@@ -43,8 +42,8 @@ function Contact() {
                         </a> 
                         <h1>Get in touch!</h1>
                     </div>
-                    <div className="contact__text">
-                        <p>I'd love to hear from you. Feel free to shoot me a message and I'll get back to you as soon as I can!</p>
+                    <div className="contact__text" data-aos="fade-right" data-aos-delay="1000">
+                        <p>I'd love to hear from you, feel free to shoot me a message!</p>
                         <div className="contact__mail focus">
                             <MailIcon className="icon" />
                             <a href="mailto:ashbridgescodes@gmail.com">
@@ -67,7 +66,7 @@ function Contact() {
                         <label htmlFor="name" className="label-name" ><span className="content-name">Message</span></label>
                     </div>
                     {!status ? (
-                        <button type="submit" className="send__btn">Send message!</button>
+                        <button type="submit" className="send__btn focus">Send message!</button>
                     ) : (
                         <button className="send__btn sent">Message sent!</button>
                     )}

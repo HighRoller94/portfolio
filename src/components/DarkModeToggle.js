@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Brightness2Icon from '@material-ui/icons/Brightness2';
-import FlareIcon from '@material-ui/icons/Flare';
 
 import '../styles/styles.scss';
 
@@ -9,7 +7,7 @@ const DarkModeToggle = () => {
 
     useEffect(() => {
       const getTheme = localStorage.getItem('Theme');
-      if (getTheme === 'dark' || themeState === 'null') {
+      if (getTheme == 'dark') {
         setThemeState(true)
         return  document.body.classList.add('dark-mode')
         ;
@@ -28,12 +26,9 @@ const DarkModeToggle = () => {
     }
 
     return (
-    <div>
-        {themeState === false ? (
-          <Brightness2Icon className="toggle__icon" onClick={handleChange} /> 
-        ) : (
-          <FlareIcon className="toggle__icon" onClick={handleChange} />
-        )}
+    <div className="toggle__container">
+        <input className="toggle" type="checkbox" id="switch" onChange={handleChange} />
+        <label for="switch">Toggle</label>
     </div>
     )
 }
