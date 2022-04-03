@@ -1,7 +1,7 @@
 .hero__section {
     display: flex;
     flex-direction: column;
-    padding-top: 22vh;
+    padding-top: 23vh;
     background: none;
     overflow: hidden;
     .hero__text {
@@ -10,7 +10,7 @@
         flex-direction: column;
         background: none;
         position: relative;
-        margin-left: 3.5rem;
+        margin-left: 10%;
         h1 {
             font-size: 7rem;
             background: none;
@@ -32,8 +32,8 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
-        width: 50%;
-        margin-top: .75rem;
+        width: 45%;
+        margin-top: .7rem;
         margin-left: 1rem;
         transition: 0;
         h3 {
@@ -94,29 +94,33 @@
         button {
             text-decoration: none;
             padding: .8rem 1.3rem;
-            background-color: inherit;
+            background-color: $offBlack;
             position: relative;
             transition: 300ms ease-in-out;
             color: $offWhite;
-            border: 1px solid currentColor;
+            border: 1px solid $offBlack;
+            outline: none;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 500;
             z-index: 1;
+            border-radius: .5rem;
             a {
+                color: $offWhite;
                 transition: 300ms ease-in-out;
             }
             &::before {
                 content: '';
                 position: absolute;
                 outline: none;
-                border: 1px solid currentColor;
+                border: none;
                 top: 0;
-                left: 0;
+                left: .1px;
                 bottom: 0;
                 right: 0;
                 z-index: -1;
-                background-color: currentColor;
+                border-radius: .5rem;
+                background-color: $offWhite;
                 transform: scaleX(0);
                 transform-origin: left;
                 transition: transform 300ms ease-in-out;
@@ -127,11 +131,10 @@
             }
             &:hover a,
             &:focus a {
-                color: $offWhite;
+                color: $offBlack;
             }
         }
         .link {
-            color: currentColor;
             text-decoration: none;
             position: relative;
             z-index: 99;
@@ -150,14 +153,14 @@
             display: flex;
             align-content: center;
             justify-content: center;
-            padding: 10px 10px;
+            padding: 9px 9px;
             height: 30px;
-            border: 1px solid currentColor;
+            border: 2px solid currentColor;
             border-radius: 25px;
             box-sizing: content-box;
             .scroller {
-                width: 8px;
-                height: 8px;
+                width: 10px;
+                height: 10px;
                 border-radius: 25px;
                 background-color: currentColor;
                 animation-name: scroller;
@@ -169,6 +172,26 @@
     }
 }
 
+body.dark-mode {
+    .hero__section {
+        .download__btn {
+            button {
+                background-color: $offWhite;
+                border: 1px solid $offWhite;
+                a {
+                    color: $offBlack;
+                }
+                &::before {
+                    background-color: $offBlack;
+                }
+                &:hover a,
+                &:focus a {
+                    color: $offWhite;
+                }
+            }
+        }
+    }
+}
 @keyframes scroller {
     0% {
         opacity: 0;
@@ -212,7 +235,7 @@
             }
         }
         .wrapper {
-            width: 37%;
+            width: 40%;
             margin-top: 0;
             h3 {
                 font-size: 2rem;
@@ -319,7 +342,7 @@
                 font-size: 1.2rem;
             }
             .link {
-                color: currentColor;
+
                 text-decoration: none;
                 position: relative;
                 z-index: 99;

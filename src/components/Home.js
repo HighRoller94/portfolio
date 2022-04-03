@@ -16,7 +16,7 @@ function Home() {
                 animate={{ opacity: 1}}
                 transition={{ delay: 1.25, duration: 1 }}
                 >
-                    I'M ASH.
+                    I'M ASH!
                 </motion.h1>
                 <motion.div className="wrapper" 
                 initial={{ opacity: 0}}
@@ -27,7 +27,7 @@ function Home() {
                         <li><span>web developer</span></li>
                         <li><span>visual creative</span></li>
                     </ul>
-                    <h3 data-aos="fade-up" data-aos-duration="2000">based in the UK!</h3>
+                    <h3 data-aos="fade-up" data-aos-duration="2000">based in the UK.</h3>
                 </motion.div>
                 <motion.div className="download__btn fade focus" 
                 initial={{ opacity: 0}}
@@ -35,7 +35,7 @@ function Home() {
                 transition={{ delay: 4, duration: 1.5 }}>
                     <button className="link">
                         <a className="link" href="cv/Ash-Bridges-CV.pdf" target="_blank">
-                            Download CV!
+                            Download CV
                         </a>
                     </button>
                 </motion.div>

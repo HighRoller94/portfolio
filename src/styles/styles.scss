@@ -9,7 +9,7 @@ $headerFont: 'Roboto Condensed', sans-serif;
 
 // MOBILE
 
-$mobileHeaderFontSize: 2.5rem;
+$mobileHeaderFontSize: 3rem;
 $mobileBodyFontSize: 1rem;
 
 // TABLET 
@@ -117,7 +117,7 @@ body.dark-mode {
 @media screen and (min-width: 1312px) {
     .border {
         border: 35px solid black;
-        border-width: 35px 50px 35px 50px;
+        border-width: 50px 70px 50px 70px;
     }
 }
 

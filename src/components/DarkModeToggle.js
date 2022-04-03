@@ -26,7 +26,7 @@ const DarkModeToggle = () => {
     }
 
     return (
-    <div className="toggle__container">
+    <div className="toggle__container focus">
         <input className="toggle" type="checkbox" id="switch" onChange={handleChange} />
         <label for="switch">Toggle</label>
     </div>

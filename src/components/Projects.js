@@ -32,7 +32,7 @@ function Projects() {
             <div className="projects__section" id="projects">
             <div className="projects__header" data-aos="fade-right" >
                 <h1 data-aos="fade-right">My main bits.</h1>
-                <p data-aos="fade-right" >Check out some of the <strong>projects</strong> I've been working on!</p>
+                <p data-aos="fade-right" >Check out some of the <strong>projects</strong> I've been working on recently!</p>
             </div>
             <div className="projects"  data-aos="fade-up">
                     <div className="project focus" onClick={() => { setOpenTravel(true) }}>

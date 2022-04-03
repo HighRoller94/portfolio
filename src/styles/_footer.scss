@@ -25,7 +25,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $offWhite;
+        color: $offBlack;
         margin: 1rem 0 1.5rem 0;
         .li__icon {
             font-size: 2.5rem;
@@ -50,6 +50,13 @@
     }
 }
 
+body.dark-mode {
+    .footer__section {
+        .footer__icons {
+            color: $offWhite;
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
     .footer__section {

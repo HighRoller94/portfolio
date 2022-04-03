@@ -5,7 +5,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
         margin-left: 0;
         position: relative;
         .bg__contact {
@@ -22,10 +21,12 @@
         .contact {
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
+            width: 100%;
             .contact__header {
+                width: 80%;
+                margin: 0 auto;
                 margin-bottom: 1.5rem;
                 h1 {
                     font-family: $headerFont;
@@ -49,15 +50,13 @@
             }
             .contact__text {
                 p {
-                    width: 75%;
-                    margin: .75rem auto 1.5rem auto;
-                    font-size: .9rem;
+                    width: 80%;
+                    margin: .25rem auto 1.5rem auto;
+                    font-size: 1rem;
                 }
                 .contact__mail {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 50%;
+                    width: 80%;
                     margin: 0 auto;
                     .icon {
                         font-size: 1.75rem;
@@ -84,10 +83,11 @@
             width: 87%;
             flex-direction: column;
             margin-left: 0;
+            margin-top: 2rem;
             padding-bottom: 4rem;
             .text__field {
                 margin-bottom: .5rem;
-                width: 80%;
+                width: 90%;
                 position: relative;
                 height: 60px;
                 overflow: hidden;
@@ -148,7 +148,7 @@
             }
             .text__area {
                 margin: 1rem auto 20px auto;
-                width: 80%;
+                width: 90%;
                 position: relative;
                 height: 10rem;
                 overflow: hidden;
@@ -208,7 +208,7 @@
     }
     .send__btn {
         transition: 200ms ease-in;
-        text-align: center;
+
         background: none;
         color: $offWhite;
         border: none;
@@ -219,7 +219,8 @@
         border: 1px solid $offWhite;
         font-weight: 500;
         z-index: 1;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: 1.5rem;
         margin-top: 3.5rem;
         max-width: 12rem;
         transition: 300ms ease-in-out;
@@ -286,7 +287,7 @@
     .contact__section {
         width: 100%;
         .contact__container {
-            width: 65%;
+            width: 67%;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -305,9 +306,12 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 margin-top: 2rem;
+                margin-left: 0;
                 .contact__header {
                     display: flex;
                     flex-direction: column;
+                    justify-content: flex-start;
+                    margin: 0 0 2rem 0;
                     h1 {
                         font-size: $desktopHeaderFontSize;
                     }
@@ -347,7 +351,7 @@
                 }
             }
             .contact__form {
-                margin-top: .5rem;
+                margin-top: 1rem;
                 width: 47%;
                 .text__field {
                     height: 4rem;

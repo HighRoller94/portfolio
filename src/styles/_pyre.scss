@@ -19,8 +19,8 @@
         height: 90%;
         overflow-y: scroll;
         box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
-        border: 5px solid currentColor;
         background-color: $offBlack;
+        border: 5px solid $offWhite;
         position: relative;
         .btn__close {
             display: flex;
@@ -44,6 +44,7 @@
             }
         }
         .pyre__info {
+            color: $offWhite;
             .pyre__header {
                 display: flex;
                 align-items: center;
@@ -51,7 +52,8 @@
                 justify-content: center;
                 h1 {
                     margin-top: .5rem;
-                    font-size: 5rem;
+                    color: currentColor;
+                    font-size: 4.5rem;
                     font-family: 'Roboto Condensed', sans-serif;
                     font-weight: 500;
                     text-transform: uppercase;
@@ -100,7 +102,7 @@
                     text-decoration: none;
                     button {
                         display: flex;
-                        background-color: inherit;
+                        background-color: $offBlack;
                         align-items: center;
                         padding: 7px 20px;
                         position: relative;
@@ -147,14 +149,21 @@
             display: none;
         }
     }
+    body.dark-mode {
+        .backdrop {
+            .pyre__modal {
+                border: 5px solid $offWhite;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
     .backdrop {
         .pyre__modal {
             width: 85%;
+            border: 7px solid currentColor;
             height: 85%;
-            border: 7px solid $offWhite;
             .btn__close {
                 padding: .075rem .075rem;
                 margin: 1.2rem 1.2rem 1.2rem auto;
@@ -204,12 +213,11 @@
             }
         }
     }
-}
-
-body.dark-mode {
-    .backdrop {
-        .pyre__modal {
-            border: 7px solid $offBlack;
+    body.dark-mode {
+        .backdrop {
+            .pyre__modal {
+                border: 7px solid $offWhite;
+            }
         }
     }
 }
@@ -217,9 +225,9 @@ body.dark-mode {
 @media screen and (min-width: 1312px) {
     .backdrop {
         .pyre__modal {
+            border: 12px solid $offWhite;
             width: 70%;
             height: 82%;
-            border: 12px solid $offWhite;
             .btn__close {
                 padding: .1rem .1rem;
                 margin: 1.5rem 1.5rem 1.5rem auto;
@@ -228,6 +236,7 @@ body.dark-mode {
                 }
             }
             .pyre__info {
+                color: $offWhite;
                 .pyre__header {
                     h1 {
                         font-size: 6rem;
@@ -240,8 +249,10 @@ body.dark-mode {
                 }
                 .pyre__text {
                     width: 100%;
+                    font-weight: 300;
                     p {
                         width: 80%;
+                        
                         font-size: 1.1rem;
                     }
                     .pyre__1 {
@@ -265,5 +276,23 @@ body.dark-mode {
             }
         }
     }
+    body.dark-mode {
+        .backdrop {
+            .pyre__modal {
+                border: 12px solid currentColor;
+            }
+        }
+    }
 }
 
+
+body.dark-mode {
+    .backdrop {
+        .pyre__modal {
+            background-color: $offBlack;
+            .pyre__info {
+                color: currentColor;
+            }
+        }
+    }
+}
