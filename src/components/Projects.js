@@ -1,27 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LanguageIcon from '@material-ui/icons/Language';
 
-import MarquetModal from './MarquetModal';
-import EatzModal from './EatzModal';
-import PyreModal from './PyreModal';
-import IllumeModal from './IllumeModal';
-import TravelModal from './TravelModal';
-
-import travel from '../assets/travel.svg';
-import chef from '../assets/chef.svg';
-import shop from '../assets/shop.svg';
-import pyre from '../assets/pyre.svg';
-import illume from '../assets/illume.svg';
+import travair from '../assets/projectImages/travair.svg';
+import eatz from '../assets/projectImages/eatz.svg';
+import marquet from '../assets/projectImages/marquet.svg';
+import pyre from '../assets/projectImages/pyre.svg';
+import illume from '../assets/illume.svg'
 
 import "aos/dist/aos.css";
 import '../styles/styles.scss'
 
 function Projects() {
-    const [openTravel, setOpenTravel] = useState(null);
-    const [openMarquet, setOpenMarquet] = useState(null);
-    const [openEatz, setOpenEatz] = useState(null);
-    const [openPyre, setOpenPyre] = useState(null);
-    const [openIllume, setOpenIllume] = useState(null);
+
 
     useEffect(() => {
         Aos.init({ duration: 5000 });
@@ -31,42 +23,146 @@ function Projects() {
         <div>
             <div className="projects__section" id="projects">
             <div className="projects__header" data-aos="fade-right" >
-                <h1 data-aos="fade-right">My main bits.</h1>
-                <p data-aos="fade-right" >Check out some of the <strong>projects</strong> I've been working on recently!</p>
+                <h1 data-aos="fade-right">2. Projects.</h1>
+                <p data-aos="fade-right" >Check out some of the <span>projects I've been working on</span> recently!</p>
             </div>
-            <div className="projects"  data-aos="fade-up">
-                    <div className="project focus" onClick={() => { setOpenTravel(true) }}>
-                        <img src={travel} al="Travel" />
-                        <h1>Travair</h1>
-                        <p>Responsive single page travel website/landing page</p>
+            <div className="projects">
+                <div className="travair project reverse" data-aos="fade-up">
+                    <img src={travair} alt="Travel" />
+                    <div className="project__text">
+                        <h4>WEBSITE</h4>
+                        <h1>Travel Site</h1>
+                        <p>Travair is a <span> responsive single page </span> travel website built with HTML, SASS and JS.</p>
+                        <div className="project__languages">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                        </div>
+                        <div className="btns">
+                            <a className="link" href="https://prestige-travel-cf76a.web.app/" target="_blank">
+                                <button className="site__btn focus">
+                                    <LanguageIcon className="icon"/>
+                                    Live Site
+                                </button>
+                            </a>
+                            <a className="link" href="https://github.com/HighRoller94/travel-landing" target="_blank">
+                                <button className="git__btn focus">
+                                    <GitHubIcon className="icon"/>
+                                    View Code
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    <div className="project focus" onClick={() => { setOpenMarquet(true) }}>
-                        <img src={shop} alt="Market" />
+                </div>
+                <div className="marquet project" data-aos="fade-up">
+                    <img src={marquet} alt="Marquet" />
+                    <div className="project__text">
+                    <h4>WEBSITE</h4>
                         <h1>Marquet</h1>
-                        <p>Multipage ecommerce marketplace with cart</p>
+                        <p>Marquet is a responsive <span>ecommerce multipage website</span> that features full cart functionality, built with HTML, SASS and JS.</p>
+                        <div className="project__languages">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                        </div>
+                        <div className="btns">
+                            <a className="link" href="https://marquet-ecommerce.web.app/" target="_blank">
+                                <button className="site__btn focus">
+                                    <LanguageIcon className="icon"/>
+                                    Live Site
+                                </button>
+                            </a>
+                            <a className="link" href="https://github.com/HighRoller94/marquet-ecommerce" target="_blank">
+                                <button className="git__btn focus">
+                                    <GitHubIcon className="icon"/>
+                                    View Code
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    <div className="project focus" onClick={() => { setOpenEatz(true) }}>
-                        <img src={chef} alt="Chef" />
-                        <h1>Eatz</h1>
-                        <p>Blog-type recipe app connected to an external API</p>
+                </div>
+                <div className="eatz project reverse" data-aos="fade-up">
+                    <img src={eatz} alt="Eatz" />
+                    <div className="project__text">
+                    <h4>WEBSITE</h4>
+                        <h1>Eatz App</h1>
+                        <p>Eatz is a recipe-lookup web application built with React and SASS, connected to an <span>external API</span>.</p>
+                        <div className="project__languages">
+                            <span>React</span>
+                            <span>Edamam API</span>
+                        </div>
+                        <div className="btns">
+                            <a className="link" href="https://recipe-app-bd949.web.app/" target="_blank">
+                                <button className="site__btn focus">
+                                    <LanguageIcon className="icon"/>
+                                    Live Site
+                                </button>
+                            </a>
+                            <a className="link" href="https://github.com/HighRoller94/eatz-recipe-app" target="_blank">
+                                <button className="git__btn focus">
+                                    <GitHubIcon className="icon"/>
+                                    View Code
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    <div className="project focus" onClick={() => { setOpenPyre(true) }}>
-                        <img src={pyre} alt="Pyre" />
+                </div>
+                <div className="pyre project" data-aos="fade-up">
+                <img src={pyre} alt="Pyre" />
+                    <div className="project__text">
+                        <h4>WEB APP</h4>
                         <h1>Pyre</h1>
-                        <p>Music player app with a simple dashboard layout</p>
+                        <p><span>Music player app</span> with a simple dashboard layout. Built with React and SASS, <span>Pyre uses the Spotify API</span> to allows users to login, listen and manage their media.</p>
+                        <div className="project__languages">
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>Spotify</span>
+                        </div>
+                        <div className="btns">
+                            <a className="link" href="https://pyre-2e47e.web.app/" target="_blank">
+                                <button className="site__btn focus">
+                                    <LanguageIcon className="icon"/>
+                                    Live Site
+                                </button>
+                            </a>
+                            <a className="link" href="https://github.com/HighRoller94/pyre" target="_blank">
+                                <button className="git__btn focus">
+                                    <GitHubIcon className="icon"/>
+                                    View Code
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    <div className="project focus" onClick={() => { setOpenIllume(true) }}> 
-                        <img src={illume} alt="Illume" />
+                </div>
+                <div className="illume project reverse" data-aos="fade-up">
+                <img src={illume} alt="illume" />
+                    <div className="project__text">
+                    <h4>WEBSITE</h4>
                         <h1>Illume</h1>
-                        <p>Social media app aimed at helping creatives</p>
+                        <p>Illume is a <span>CRUD social media site</span> that aims to help creatives. Built with React, Illume includes a <span>number of features such as</span> custom authentication, user based profiles and cart functionality.</p>
+                        <div className="project__languages">
+                            <span>React</span>
+                            <span>Firebase</span>
+                            <span>Router</span>
+                        </div>
+                        <div className="btns">
+                            <a className="link" href="https://illume-68c8e.web.app/home" target="_blank">
+                                <button className="site__btn focus">
+                                    <LanguageIcon className="icon"/>
+                                    Live Site
+                                </button>
+                            </a>
+                            <a className="link" href="https://github.com/HighRoller94/illume-app" target="_blank">
+                                <button className="git__btn focus">
+                                    <GitHubIcon className="icon"/>
+                                    View Code
+                                </button>
+                            </a>
+                        </div>
                     </div>
+                </div>
             </div>
         </div>
-        {openTravel && <TravelModal openTravel={openTravel} setOpenTravel={setOpenTravel} /> }
-        {openMarquet && <MarquetModal openMarquet={openMarquet} setOpenMarquet={setOpenMarquet} /> }
-        {openEatz && <EatzModal openEatz={openEatz} setOpenEatz={setOpenEatz} /> }
-        {openPyre && <PyreModal openPyre={openPyre} setOpenPyre={setOpenPyre} /> }
-        {openIllume && <IllumeModal openIllume={openIllume} setOpenIllume={setOpenIllume} /> }
         </div>
     )
 }

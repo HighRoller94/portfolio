@@ -9,7 +9,7 @@
         margin-top: 0;
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 75%;
         margin: 0 auto;
         margin-bottom: 2rem;
         h1 {
@@ -20,10 +20,13 @@
         }
         p {
             width: 100%;
-            font-size: clamp(16px, 2vw, 1.1rem);
+            font-size: $mobileBodyFontSize;
             font-weight: 400;
             color: currentColor;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
+            span {
+                color: $offRed;
+            }
         }
     }
     .projects {
@@ -32,114 +35,136 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 4rem;
+        margin-top: 2rem;
         grid-row-gap: 0;
         .project {
-            width: 80%;
-            height: 21rem;
+            width: 75%;
+            height: 22rem;
             margin-bottom: 4rem;
-            position: relative;
             overflow: hidden;
-            z-index: 1;
+            z-index: 2;
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr;
+            border-radius: 3px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             img {
                 width: 100%;
+                grid-row-start: 1;
+                grid-column-start: 1;
                 height: 100%;
                 object-fit: cover;
-                border: none;
                 background-attachment: fixed;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: contain;
-                outline: none;
-                filter: saturate(90%) brightness(90%);
+                background-size: cover;
+                opacity: .3;
+                filter: grayscale(70) saturate(90%) brightness(90%);
             }
-            h1 {
-                position: absolute;
-                color: $offWhite;
-                top: 47%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-family: 'Robot Condensed', sans-serif;
-                font-weight: 400;
-                font-size: 3rem;
-                transition: all .3s ease-in-out;
-            }
-            p {
-                position: absolute;
-                color: $offWhite;
-                bottom: 30%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80%;
-                text-align: center;
-                font-size: 1.1rem;
-                visibility: hidden;
-                transition: all .3s ease-in-out;
-                opacity: 0;
-            }
-            button {
-                transition: 200ms ease-in;
-                bottom: 30%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                visibility: hidden;
-                background: none;
-                color: $offWhite;
-                border:none;
-                outline: none;
-                font-size: 1.3rem;
-                padding: .3rem 2rem;
-                opacity: 0;
-                border: 1px solid $offWhite;
-                font-weight: 500;
-                z-index: 1;
-                transition: 300ms ease-in-out;
-                    &:hover {
-                        cursor :none;
-                        background-color: rgba(250, 250, 250, .25);
-                    }
-            }
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                z-index: 1;
-                background-color: $offBlack;
-                opacity: .7;
-                transform: scaleY(0);
-                transform-origin: bottom;
-                transition: transform 300ms ease-in-out;
-            }
-            &:hover::before,
-            &:focus::before {
-                transform: scaleY(1);
-            }
-            &:hover,
-            &:focus {
-                img {
-                    background-color: $offBlack;
-                    border: none;
+            .project__text {
+                display: flex;
+                flex-direction: column;
+                grid-row-start: 1;
+                grid-column-start: 1;
+                position: static;
+                z-index: 2;
+                background-color: rgba(250, 250, 250, .5);
+                padding: 1.5rem;
+                border-radius: 5px;
+                width: 75%;
+                height: 75%;
+                h4 {
+                    opacity: .7;
+                    color: currentColor;
+                    letter-spacing: .4rem;
+                    color: $offRed;
                 }
                 h1 {
-                    top: 35%;
-                    z-index: 2;
+                    font-family: 'Helvetica Neue', sans-serif;
+                    font-weight: 600;
+                    margin-top: 0.3rem;
+                    font-size: 2.5rem;
+                    transition: all .3s ease-in-out;
                 }
                 p {
-                    top: 55%;
-                    opacity: 1;
-                    visibility: visible;
-                    z-index: 2;
+                    margin-top: .5rem;
+                    color: currentColor;
+                    width: 100%;
+                    font-size: $mobileBodyFontSize;
+                    font-weight: 400;
+                    transition: all .3s ease-in-out;
+                    span {
+                        color: $offRed;
+                    }
                 }
-                button {
-                    opacity: 1;
-                    visibility: visible;
-                    z-index: 2;
+                .project__languages {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-top: 1.5rem;
+                    span {
+                        border: 1px solid currentColor;
+                        font-size: .85rem;
+                        border-radius: 3px;
+                        padding: .3rem 1rem;
+                        margin-right: 1rem;
+                        color: currentColor;
+                    }
+                }
+                .btns {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1.5rem;
+                    .site__btn {
+                        display: flex;
+                        align-items: center;
+                        transition: 200ms ease-in;
+                        background: none;
+                        color: currentColor;
+                        border:none;
+                        outline: none;
+                        font-size: 1rem;
+                        margin-right: 1rem;
+                        padding: .3rem .7rem;
+                        border-radius: 3px;
+                        border: 1px solid currentColor;
+                        font-weight: 500;
+                        z-index: 1;
+                        transition: 300ms ease-in-out;
+                        &:hover {
+                            cursor: none;
+                            background-color: rgba(250, 250, 250, .25);
+                        }
+                        .icon {
+                            margin-right: .5rem;
+                        }
+                    }
+                    .git__btn {
+                        color: currentColor;
+                        background: none;
+                        outline: none;
+                        display: flex;
+                        border-radius: 3px;
+                        border: none;
+                        align-items: center;
+                        &:hover {
+                            cursor: none;
+                            text-decoration: underline;
+                        }
+                        .icon {
+                            margin-right: .5rem;
+                        }
+                    }
                 }
             }
+        }
+        .marquet {
+            height: 23.5rem;
+        }
+        .pyre {
+            height: 25rem;
+        }
+        .illume {
+            height: 27.5rem;
         }
     }
 }
@@ -148,6 +173,7 @@
 @media screen and (min-width: 768px) {
     .projects__section {
         text-align: left;
+        padding-top: 2rem;
         .projects__header {
             text-align: left;
             justify-content: flex-start;
@@ -165,27 +191,125 @@
         }
         .projects {
             display: grid;
-            margin-top: 4rem;
-            grid-template-columns: 1fr 1fr;
+            margin-top: 6rem;
+            grid-template-columns: 1fr;
             width: 70%;
             justify-content: center;
-            grid-row-gap: 2.5rem;
+            grid-row-gap: 5rem;
             grid-column-gap: 2.5rem;
             .project {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                align-items: flex-start;
+                box-shadow: none;
                 width: 100%;
-                height: 15rem;
-                margin-bottom: 0;
-                h1 {
-                    font-size: 2.5rem;
+                height: 20rem;
+                img {
+                    grid-column: 3 / 8;
+                    grid-row: 1;
                 }
-                p {
-                    font-size: .9rem;
-                    width: 90%;
+                .project__text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    grid-column: 1 / 5; 
+                    
+                    grid-row: 1; 
+                    z-index: 1;
+                    
+                    h1 {
+                        font-size: 2rem;
+                    }
+                    p {
+                        width: 80%;
+                    }
+                    .btns {
+                        .site__btn {
+                            padding: .4rem .8rem;
+                            font-size: 1.1rem;
+                            .icon {
+                                margin-right: .5rem;
+                                margin-left: 0rem;
+                            }
+                        }
+                        .git__btn {
+                            font-size: 1rem;
+                            .icon {
+                                margin-right: .75rem;
+                            }
+                        }
+                    }
                 }
-                button {
-                    padding: .2rem 1.5rem;
-                    font-size: 1.1rem;
+            }
+            .marquet {
+                height: 20rem;
+                img {
+                    grid-column: 1 / 4;
+                    grid-row: 1;
                 }
+                .project__text {
+                    text-align: right;
+                    width: 100%;
+                    grid-column: 2 / 8; 
+                    grid-row: 1; 
+                    z-index: 1;
+                    align-items: end;
+                    p {
+                        text-align: right;
+                        width: 75%;
+                    }
+                    .project__languages {
+                        span {
+                            padding: .2rem .7rem;
+                            margin-right: 0;
+                            margin-left: 1rem;
+                        }
+                    }
+                    .btns {
+                        flex-direction: row-reverse;
+                        .site__btn {
+                            margin: 0;
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+            .pyre {
+                height: 22rem;
+                img {
+                    grid-column: 1 / 4;
+                    grid-row: 1;
+                }
+                .project__text {
+                    text-align: right;
+                    width: 100%;
+                    grid-column: 2 / 8; 
+                    grid-row: 1; 
+                    z-index: 1;
+                    align-items: end;
+                    p {
+                        text-align: right;
+                        width: 75%;
+                    }
+                    .project__languages {
+                        span {
+                            padding: .2rem .7rem;
+                            margin-right: 0;
+                            margin-left: 1rem;
+                        }
+                    }
+                    .btns {
+                        flex-direction: row-reverse;
+                        .site__btn {
+                            margin: 0;
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+            .illume {
+                height: 23rem;
             }
         }
     }
@@ -193,13 +317,14 @@
 
 @media screen and (min-width: 1312px) {
     .projects__section {
-        margin-top: 2rem;
         position: relative;
+        margin-top: -3rem;
+        padding-top: 8rem;
         .projects__header {
             text-align: left;
             justify-content: flex-start;
             align-items: flex-start;
-            padding-top: 8rem;
+            padding-top: 0;
             margin: 0 auto;
             width: 67%;
             h1 {
@@ -213,52 +338,60 @@
             }
         }
         .projects {
-            margin-top: 100px;
-            padding-bottom: 100px;
+            margin-top: 7rem;
             display: grid;
+            justify-content: flex-start;
             width: 67%;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
             grid-column-gap: 60px;
             grid-row-gap: 60px;
             .project {
-                background-color: $offWhite;
+                display: grid;
                 width: 100%;
                 height: 20rem;
-                transition: transform 300ms ease;
+                margin-bottom: 3rem;
                 img {
-                    transform: blur(1px);
+                    filter: grayscale(70) saturate(90%) brightness(70%);
+                    &:hover {
+                        
+                    }
                 }
-                h1 {
-                    top: 50%;
-                    text-transform: uppercase;
-                    font-size: 3rem;
-                }
-                p {
-                    bottom: 29%;
-                    font-size: 1.1rem;
-                }
-                button {
-                    bottom: 15%;
-                    left: 50%;
-                    font-size: 1.3rem;
-                }
-                &:hover {
-                    transform:translateY(-5%);
-                    
+                .project__text {
+                    display: flex;
+                    width: 100%;
+                    background: none;
+                    flex-direction: column;
+                    padding: 0;
+                    margin: 0;
+                    transform: translate(0%, 0%);
                     h1 {
-                        top: 35%;
+                        font-size: 2.3rem;
                     }
                     p {
-                        visibility: visible;
-                        opacity: 1;
-                        transition: all .2s ease-in-out;
+                        font-size: 1.1rem;
+                        width: 50%;
                     }
-                    img {
-                        border: none;
+                    .project__languages {
+                        span {
+                            font-size: .95rem;   
+                        }
                     }
-                    button {
-                        visibility: visible;
-                        opacity: 1;
+                    .btns {
+                        .site__btn {
+                            font-size: 1.1rem;
+                            .icon {
+                                margin-right: .5rem;
+                                margin-left: 0rem;
+                            }
+                        }
+                        .git__btn {
+                            
+                            font-size: 1.1rem;
+                            .icon {
+                                margin-right: .5rem;
+                                margin-left: 0rem;
+                            }
+                        }
                     }
                 }
             }
@@ -268,10 +401,32 @@
 
 body.dark-mode {
     .projects__section {
+        .projects__header {
+            p {
+                span {
+                    color: #17a889;
+                }
+            }
+        }
         .projects {
-            img {
-                filter: saturate(80%) brightness(60%);
+            .project {
+                img {
+                    filter: grayscale(70) saturate(90%) brightness(20%);
+                    opacity: 1;
+                }
+                .project__text {
+                    background: none;
+                    h4 {
+                        color: #17a889;
+                    }
+                    p {
+                        span {
+                            color: #17a889;
+                        }
+                    }
+                }
             }
         }
     }
 }
+
