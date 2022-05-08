@@ -7,15 +7,20 @@ const DarkModeToggle = () => {
 
     useEffect(() => {
       const getTheme = localStorage.getItem('Theme');
-      if (getTheme == 'dark') {
+      if (getTheme == null) {
         setThemeState(true)
-        return  document.body.classList.add('dark-mode')
+        document.body.classList.add('dark-mode')
+        ;
+      }
+      if (getTheme === 'dark') {
+        setThemeState(true)
+        document.body.classList.add('dark-mode')
         ;
       }
     }, [])
 
     const handleChange = () => {
-      if (themeState != true) {
+      if (themeState !== true) {
         localStorage.setItem('Theme', 'dark');
         document.body.classList.add('dark-mode');
       } else {
@@ -28,7 +33,7 @@ const DarkModeToggle = () => {
     return (
     <div className="toggle__container focus">
         <input className="toggle" type="checkbox" id="switch" onChange={handleChange} />
-        <label for="switch">Toggle</label>
+        <label htmlFor="switch">Toggle</label>
     </div>
     )
 }

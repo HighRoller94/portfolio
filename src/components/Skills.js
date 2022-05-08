@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 
-import graphic__design from '../assets/graphic__design.svg';
-
 import "aos/dist/aos.css";
 
 function Skills() {
@@ -12,15 +10,15 @@ function Skills() {
     }, []);
 
     return (
-        <div className="skills__section" id="skills">
+        <div className="skills__row" id="skills">
             <h1 className="bg__skills">Design</h1>
             <div className="skills__header" >
-                <h1 data-aos="fade-right">A few skills.</h1>
-                <p data-aos="fade-right" data-aos-delay="200">Here are a few <strong>skills</strong> I've picked up along the way.</p>
+                <h1 data-aos="fade-right">3. Skills</h1>
+                <p data-aos="fade-right" data-aos-delay="200">Here are a few <span>things I've picked up</span> along the way.</p>
             </div>
             <div className="skills__container">
-                <div className="skills__web" data-aos="fade-up">
-                    <svg className="web__icon" xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+                <div className="skills__section" data-aos="fade-up">
+                    <svg className="skills__icon" xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
                         <g id="Group_70" data-name="Group 70" transform="translate(-385 -3174)">
                             <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(385 3174)" stroke="currentColor" stroke-width="3">
                             <circle cx="54" cy="54" r="54" stroke="none" />
@@ -36,47 +34,27 @@ function Skills() {
                             </g>
                         </g>
                     </svg>
-                    <div className="web__header">
+                    <div className="skills__head">
                         <h2>Web Development</h2>
-                        <p>I love coding from scratch and creating something new</p>
+                        <p>I love <span>coding from scratch</span> and creating something new!</p>
                     </div>
-                    <div className="web__skills">
+                    <div className="tools__header">
                         <h3>Languages I speak:</h3>
-                        <div className="web__tools">
-                            <div className="html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="43.965" height="51.292" viewBox="0 0 43.965 51.292">
-                                <path id="Icon_awesome-html5" data-name="Icon awesome-html5" d="M0,2.25,4,47.566l17.929,5.976,18.044-5.976,4-45.316ZM35.286,16.893H14.243l.469,5.656h20.1L33.26,39.54,22.051,42.631v.034h-.126l-11.3-3.126-.687-8.678H15.4l.4,4.362,6.125,1.66,6.148-1.66L28.76,28.1H9.652L8.186,11.432h27.6l-.5,5.461Z" transform="translate(0 -2.25)" fill="currentColor"/>
-                            </svg>
-                                <h2>HTML</h2>
-                            </div>
-                            <div className="javascript">
-                                <svg className="js-icon" xmlns="http://www.w3.org/2000/svg" width="51.292" height="51.292" viewBox="0 0 51.292 51.292">
-                                    <path id="Icon_awesome-js" data-name="Icon awesome-js" d="M0,2.25V53.542H51.292V2.25Zm27.913,40c0,4.992-2.931,7.27-7.2,7.27a7.488,7.488,0,0,1-7.236-4.408l3.927-2.37c.756,1.34,1.443,2.473,3.1,2.473,1.58,0,2.588-.618,2.588-3.034V25.8h4.82Zm11.4,7.27c-4.477,0-7.373-2.13-8.782-4.923l3.927-2.267a5.26,5.26,0,0,0,4.751,2.931c1.992,0,3.274-1,3.274-2.381,0-1.649-1.305-2.233-3.515-3.206l-1.2-.515c-3.481-1.477-5.782-3.343-5.782-7.27,0-3.618,2.759-6.366,7.053-6.366a7.1,7.1,0,0,1,6.847,3.858l-3.755,2.4a3.278,3.278,0,0,0-3.1-2.061,2.092,2.092,0,0,0-2.3,2.061c0,1.443.893,2.026,2.965,2.931l1.2.515c4.1,1.752,6.4,3.549,6.4,7.579,0,4.328-3.412,6.709-7.98,6.709Z" transform="translate(0 -2.25)" fill="currentColor"/>
-                                </svg>
-                                <h2>JS</h2>
-                            </div>
-                            <div className="css">
-                            <svg className="css-icon" xmlns="http://www.w3.org/2000/svg" width="43.965" height="51.292" viewBox="0 0 43.965 51.292">
-                                <path id="Icon_awesome-css3-alt" data-name="Icon awesome-css3-alt" d="M0,2.25,4,47.566l17.987,5.976,17.987-5.976,4-45.316Zm35.847,9.159-.55,5.415L22.1,22.469l-.034.011H34.828L33.363,39.265,22.12,42.551,10.808,39.208l-.733-8.461h5.6l.366,4.385,6.022,1.523,6.263-1.763.424-7.053-19.04-.057V27.77l-.023.011-.412-5.3,12.835-5.347.744-.309H8.782l-.664-5.415Z" transform="translate(0 -2.25)" fill="currentColor" />
-                            </svg>
-                                <h2>CSS</h2>
-                            </div>
-                            <div className="react">
-                                <svg className="react-icon" id="Group_69" data-name="Group 69" xmlns="http://www.w3.org/2000/svg" width="51.814" height="50.057" viewBox="0 0 51.814 50.057">
-                                    <g id="Rectangle_22" data-name="Rectangle 22" stroke-width="2">
-                                    <rect width="51.814" height="50.057"  stroke="none" fill="currentColor" />
-                                    <rect x="0.5" y="0.5" width="50.814" height="49.057" rx="6.5" fill="currentColor" />
-                                    </g>
-                                    <path className="react-i" stroke-width="2" id="Icon_awesome-react" data-name="Icon awesome-react" d="M34.028,14.064q-.659-.22-1.318-.415c.073-.3.138-.6.2-.9,1-4.85.342-8.747-1.88-10.033-2.14-1.229-5.631.049-9.162,3.125-.35.3-.692.618-1.017.936-.22-.212-.448-.423-.675-.627-3.7-3.287-7.413-4.671-9.634-3.377-2.132,1.237-2.766,4.906-1.871,9.5.09.456.187.9.3,1.359-.521.146-1.033.309-1.513.48C3.116,15.61,0,17.986,0,20.444c0,2.539,3.32,5.085,7.836,6.631.366.122.732.244,1.107.35-.122.488-.228.968-.325,1.465-.854,4.516-.187,8.1,1.945,9.325,2.2,1.269,5.891-.033,9.487-3.181.285-.252.57-.513.854-.789.358.35.732.683,1.107,1.009,3.483,2.994,6.924,4.207,9.048,2.978,2.2-1.269,2.913-5.118,1.985-9.8q-.11-.537-.244-1.1c.26-.073.513-.155.765-.236,4.695-1.554,8.1-4.068,8.1-6.648,0-2.465-3.206-4.858-7.632-6.379ZM23.019,7.156c3.027-2.636,5.85-3.67,7.136-2.929,1.375.789,1.9,3.979,1.042,8.169-.057.277-.114.545-.187.814a41.654,41.654,0,0,0-5.476-.862,41.111,41.111,0,0,0-3.466-4.321c.317-.3.627-.586.952-.871ZM13.6,24.667c.415.708.838,1.416,1.286,2.107a36.845,36.845,0,0,1-3.775-.61,38.01,38.01,0,0,1,1.326-3.621C12.815,23.259,13.2,23.967,13.6,24.667Zm-2.465-9.789c1.172-.26,2.417-.472,3.71-.635-.431.675-.854,1.367-1.253,2.067s-.789,1.4-1.155,2.116c-.513-1.212-.944-2.4-1.3-3.548Zm2.229,5.606c.537-1.123,1.123-2.221,1.741-3.3S16.4,15.049,17.1,14.016c1.221-.09,2.465-.138,3.735-.138s2.522.049,3.735.138q1.037,1.538,1.977,3.149t1.766,3.287q-.818,1.684-1.758,3.32c-.618,1.082-1.277,2.132-1.969,3.173-1.212.09-2.474.13-3.751.13s-2.514-.041-3.71-.114q-1.062-1.55-2-3.173c-.627-1.082-1.2-2.181-1.749-3.3ZM28.064,24.65c.415-.716.806-1.44,1.188-2.173a37.772,37.772,0,0,1,1.375,3.6,35.739,35.739,0,0,1-3.824.651C27.242,26.05,27.657,25.35,28.064,24.65Zm1.172-6.225c-.382-.716-.773-1.432-1.18-2.132s-.814-1.375-1.245-2.05a37.443,37.443,0,0,1,3.735.651,36.011,36.011,0,0,1-1.31,3.531ZM20.846,9.272a35.73,35.73,0,0,1,2.408,2.913c-1.611-.073-3.23-.073-4.841,0C19.211,11.135,20.033,10.159,20.846,9.272ZM11.408,4.284c1.367-.8,4.4.342,7.6,3.173.2.179.407.374.618.57a41.339,41.339,0,0,0-3.491,4.321,42.891,42.891,0,0,0-5.468.846c-.106-.415-.2-.838-.285-1.261-.765-3.938-.26-6.908,1.025-7.649ZM9.414,25.733c-.342-.1-.675-.2-1.009-.317a16.6,16.6,0,0,1-5.126-2.539,3.651,3.651,0,0,1-1.53-2.433c0-1.489,2.571-3.393,6.282-4.687.464-.163.936-.309,1.408-.448a43.267,43.267,0,0,0,1.994,5.175,44.477,44.477,0,0,0-2.018,5.248ZM18.9,33.707a14.893,14.893,0,0,1-4.589,2.872,3.6,3.6,0,0,1-2.872.106c-1.294-.749-1.831-3.621-1.1-7.486.09-.456.187-.911.3-1.359a40.706,40.706,0,0,0,5.525.8,42.939,42.939,0,0,0,3.515,4.345C19.422,33.235,19.162,33.479,18.9,33.707ZM20.9,31.729c-.83-.9-1.66-1.888-2.465-2.954.781.033,1.587.049,2.4.049.838,0,1.66-.016,2.474-.057A35.09,35.09,0,0,1,20.9,31.729ZM31.53,34.17a3.616,3.616,0,0,1-1.343,2.547c-1.294.749-4.052-.228-7.03-2.783-.342-.293-.683-.61-1.033-.936a40.251,40.251,0,0,0,3.434-4.361,40.111,40.111,0,0,0,5.549-.854c.081.334.155.667.22.993A14.833,14.833,0,0,1,31.53,34.17Zm1.481-8.747c-.228.073-.456.146-.692.212a41.335,41.335,0,0,0-2.075-5.191,41.128,41.128,0,0,0,1.994-5.118c.423.122.83.252,1.221.382,3.792,1.3,6.452,3.238,6.452,4.719,0,1.595-2.84,3.653-6.9,5ZM20.83,24.2A3.727,3.727,0,1,0,17.1,20.476,3.726,3.726,0,0,0,20.83,24.2Z" transform="translate(5.489 4.02)" fill="currentColor" />
-                                    </svg>
-                                <h2>React</h2>
-                            </div>
+                        <div className="tools">
+                            <h2>HTML</h2>
+                            <h2>SASS</h2>
+                            <h2>Javascript</h2>
+                        </div>
+                        <h3>Dev Extras:</h3>
+                        <div className="extras">
+                            <h2>React</h2>
+                            <h2>Node</h2>
                         </div>
                     </div>
                 </div>
                 <h1 className="bg__skills2">Design</h1>
-                <div className="skills__ui" data-aos="fade-up" data-aos-delay="200">
-                    <svg className="ui__icon" xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+                <div className="skills__section" data-aos="fade-up" data-aos-delay="200">
+                    <svg className="skills__icon" xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
                     <g id="Group_72" data-name="Group 72" transform="translate(-866 -3134.915)">
                         <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(866 3134.915)" stroke="currentColor" stroke-width="3">
                         <circle cx="54" cy="54" r="54" stroke="none"/>
@@ -85,37 +63,26 @@ function Skills() {
                         <path id="Icon_awesome-pencil-ruler" data-name="Icon awesome-pencil-ruler" d="M10.4,23.176,23.176,10.4l-4.19-4.19-5.858,5.858a.752.752,0,0,1-1.065,0L11,11a.752.752,0,0,1,0-1.065l5.858-5.858L13.662.882a3.012,3.012,0,0,0-4.26,0L.882,9.4a3.013,3.013,0,0,0,0,4.26L10.4,23.176ZM47.287,12.084a4.562,4.562,0,0,0,0-6.451l-4.3-4.3a4.564,4.564,0,0,0-6.453,0L32.166,5.7l10.75,10.75ZM30.017,7.855l-28.2,28.2L.031,46.259a2.016,2.016,0,0,0,2.335,2.332L12.57,46.8l28.2-28.2ZM47.741,34.961l-3.195-3.195-5.858,5.858a.752.752,0,0,1-1.065,0l-1.065-1.065a.754.754,0,0,1,0-1.065l5.858-5.858-4.192-4.192L25.444,38.224l9.517,9.516a3.012,3.012,0,0,0,4.26,0l8.519-8.518a3.012,3.012,0,0,0,0-4.26Z" transform="translate(895.688 3164.604)" fill="currentColor"/>
                     </g>
                     </svg>
-                    <div className="ui__header">
+                    <div className="skills__head">
                         <h2>UI/UX Design</h2>
-                        <p>Clean and modern design is where I feel most comfortable</p>
+                        <p><span>Clean and simple design</span> is where I feel most comfortable.</p>
                     </div>
-                    <div className="ui__skills">
+                    <div className="tools__header">
                         <h3>Design tools:</h3>
-                        <div className="ui__tools">
-                            <div className="adobe-xd">
-                                <svg className="xd-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.99 114.99">
-                                    <rect width="114.99" height="114.99" fill="currentColor"/>
-                                    <path className="x" d="M101.06,285.16c1-2.11,1.85-4.14,2.79-6.16l7.39-15.84a1.34,1.34,0,0,1,1.35-.85c2.78,0,5.56,0,8.33,0,.91,0,1,.22.64,1l-9.9,19q-2.25,4.32-4.46,8.66a1.18,1.18,0,0,0,0,.94q4.26,8.34,8.55,16.66,3.33,6.45,6.64,12.92c.49,1,.36,1.16-.74,1.16-2.94,0-5.88,0-8.81,0a1.7,1.7,0,0,1-1.75-1.15q-5.25-11.1-10.56-22.17a1.93,1.93,0,0,0-.26-.31l-2.34,5.12Q95,310.57,92.08,317c-.71,1.53-1.46,3-2.17,4.57a1.71,1.71,0,0,1-1.78,1.13c-2.74,0-5.49,0-8.23,0-1.1,0-1.19-.16-.68-1.15l12.35-23.74c.81-1.55,1.65-3.09,2.4-4.67a1.7,1.7,0,0,0,0-1.31Q87.59,279,81.13,266.35c-.49-1-1-1.93-1.46-2.91s-.26-1.11.66-1.11h9.1a1.17,1.17,0,0,1,1.22.81c3.3,7.07,6.64,14.12,10,21.18C100.73,284.57,100.87,284.81,101.06,285.16Z" transform="translate(-62.6 -235.27)" fill="#fff"/>
-                                    <path className="d" d="M150.93,277.21v-1.55c0-4.05,0-8.1,0-12.15,0-.89.29-1.18,1.17-1.16,2.55,0,5.1,0,7.65,0,1.33,0,1.33,0,1.33,1.3q0,25,0,50.07c0,1.72.08,3.44.2,5.16a1.08,1.08,0,0,1-.71,1.26c-7,3-14.22,4.22-21.69,1.78a16.68,16.68,0,0,1-10.56-9.46,27.63,27.63,0,0,1-.19-22.66c2.93-6.8,8.25-10.79,15.5-12.08A65,65,0,0,1,150.93,277.21Zm-.07,22.87c0-4.34,0-8.68,0-13,0-.78-.29-1-1-1.17a11.12,11.12,0,0,0-13.15,8.45,23.79,23.79,0,0,0,0,11.91c1.73,6.78,7.32,9.14,13.18,7.87a1,1,0,0,0,1-1.22C150.84,308.63,150.86,304.35,150.86,300.08Z" transform="translate(-62.6 -235.27)" fill="#fff"/></svg>
+                        <div className="tools">
                             <h2>Adobe XD</h2>
-                            </div>
-                            <div className="figma">
-                            <svg className="figma-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.96 192.37">
-                                <path d="M221.25,382.92c-21.08-17.79-18.12-45.21.1-59.82-7.21-5.93-12.11-13.25-14.13-22.47-4.74-21.66,12.46-43.6,34.69-43.78,20.24-.17,40.48-.06,60.72,0A36.47,36.47,0,0,1,337,280.22a36.84,36.84,0,0,1-9.71,40.47c-.86.78-1.74,1.52-2.62,2.29,20.07,17.16,16.53,39.76,7.71,51.65-11.85,16-29.48,18.75-52.6,7.7,0,10.19-.07,20.05,0,29.91a35,35,0,0,1-7.88,23c-13.82,17-38.67,18.6-54.12,3.53-15.61-15.22-14.88-39.76,1.61-54.25C220,384,220.61,383.46,221.25,382.92ZM280,315.75c9.21,0,18,.77,26.63-.19,11-1.21,18.59-10.66,18.81-21.57s-6.94-21.14-17.69-22.59c-9-1.22-18.35-.25-27.75-.25ZM325.4,353a22.65,22.65,0,0,0-22.66-22.81,22.76,22.76,0,1,0-.09,45.52A22.64,22.64,0,0,0,325.4,353Z" transform="translate(-206.43 -256.76)" fill="currentColor"/>
-                                </svg>
-                                <h2>Figma</h2>
-                            </div>
-                            <div className="paper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="46.208" height="46.208" viewBox="0 0 46.208 46.208">
-                                    <path id="Icon_awesome-pencil-ruler" data-name="Icon awesome-pencil-ruler" d="M9.879,22.024,22.024,9.881,18.042,5.9l-5.566,5.566a.715.715,0,0,1-1.012,0l-1.012-1.012a.715.715,0,0,1,0-1.012l5.566-5.566L12.983.839a2.862,2.862,0,0,0-4.049,0l-8.1,8.1a2.863,2.863,0,0,0,0,4.049l9.04,9.041ZM44.937,11.483a4.335,4.335,0,0,0,0-6.131L40.853,1.269a4.337,4.337,0,0,0-6.132,0L30.568,5.421,40.784,15.637ZM28.526,7.465l-26.8,26.8-1.693,9.7a1.916,1.916,0,0,0,2.219,2.216l9.7-1.7,26.8-26.8ZM45.369,33.224l-3.036-3.036-5.566,5.566a.715.715,0,0,1-1.012,0l-1.012-1.012a.716.716,0,0,1,0-1.012l5.566-5.566-3.984-3.984L24.18,36.325l9.044,9.043a2.862,2.862,0,0,0,4.049,0l8.1-8.1a2.862,2.862,0,0,0,0-4.049Z" transform="translate(0 0.001)" fill="currentColor"/>
-                                </svg>
-                                <h2>Pen & Paper</h2>
-                            </div>
+                            <h2>Pen & Paper</h2>
+                            <h2>Figma</h2>
+                        </div>
+                        <h3>UI Extras:</h3>
+                        <div className="extras">
+                            <h2>Bootstrap Studio</h2>
+                            <h2>Sketch</h2>
                         </div>
                     </div>
                 </div>
-                <div className="skills__design" data-aos="fade-up" data-aos-delay="400">
-                    <svg className="gd__icon" xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+                <div className="skills__section" data-aos="fade-up" data-aos-delay="400">
+                    <svg className="skills__icon" xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
                     <g id="Group_71" data-name="Group 71" transform="translate(-1387.323 -2941.636)">
                         <g id="Group_73" data-name="Group 73">
                         <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(1387.323 2941.636)" stroke="currentColor" stroke-width="3">
@@ -126,38 +93,21 @@ function Skills() {
                         </g>
                     </g>
                     </svg>
-                    <div className="gd__header">
+                    <div className="skills__head">
                         <h2>Graphic Design</h2>
-                        <p>I've also been known to dabble with design in a few different ways</p>
+                        <p>I've been known to dabble with design in<span> a few different ways.</span></p>
                     </div>
-                    <div className="gd__skills">
-                        <h3>Tools I've used:</h3>
-                        <div className="gd__tools">
-                            <div className="illustrator">
-                                <svg className="illustrator-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.99 114.99">
-                                    <rect width="114.99" height="114.99" fill="currentColor"/>
-                                    <path className="a" d="M137.74,155.54c-3.8,0-7.46,0-11.12,0-.26,0-.65-.42-.75-.72-1.3-3.94-2.55-7.89-3.82-11.83-.45-1.39-.54-3.24-1.49-4s-2.69-.32-4.09-.33c-4.52,0-9,0-13.56,0a1.23,1.23,0,0,0-1.45,1c-1.4,4.75-2.91,9.48-4.27,14.24-.35,1.25-.82,1.79-2.21,1.72-2.72-.13-5.46,0-8.18,0H85.34l19.14-59.72c4.5,0,8.94,0,13.37,0,.28,0,.71.47.82.8q3.22,9.78,6.39,19.59,3,9.27,6,18.55l6.36,19.59C137.55,154.71,137.62,155.06,137.74,155.54Zm-19.07-25.25c-2.6-8.56-5.16-17-7.61-25.1-2.37,8.1-4.85,16.57-7.34,25.1Z" transform="translate(-62.6 -68.69)" fill="#f1f1f1"/>
-                                    <path className="dot" d="M153,155.47H142.13v-43H153Z" transform="translate(-62.6 -68.69)" fill="#f1f1f1"/>
-                                    <path className="i" d="M153.62,100.38c0,3.41-2.51,5.82-6.14,5.84a5.77,5.77,0,0,1-6.11-5.76,6,6,0,0,1,6.1-6.09A5.88,5.88,0,0,1,153.62,100.38Z" transform="translate(-62.6 -68.69)" fill="#f1f1f1"/>
-                                </svg>
-                                <h2>Illustrator</h2>
-                            </div>
-                            <div className="photoshop">
-                                <svg className="photoshop-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.99 114.99">
-                                    <rect width="114.99" height="114.99" fill="currentColor"/>
-                                    <path className="p" d="M242,130.66v20.45H229.81c0-18.93-.13-38.89-.13-58,2.6-.28,4.62.38,7.22.25,4-.19,8.08-.31,12.12-.24,4.39.16,8.6.7,12.48,2.77,6.14,3.28,8.95,8.58,8.93,15.43,0,5-1.44,9.61-5.13,13.22a21.67,21.67,0,0,1-11.77,5.6,37,37,0,0,1-10.5.48C242.74,130.64,242.45,130.66,242,130.66Zm.07-10.19a22.85,22.85,0,0,0,2.44.26,36.59,36.59,0,0,0,3.92-.14c4.65-.46,8.77-3,9-8.76.13-2.85-.69-5.37-3.19-7-3.72-1.87-7.79-1.82-12.18-1.57Z" transform="translate(-208.45 -68.69)" fill="#fff"/>
-                                    <path className="s" d="M271.05,149.11l2.26-8.93c0-.1.1-.19,0,0,3,.87,5.82,1.91,8.75,2.49a16.65,16.65,0,0,0,5.45-.12,2.89,2.89,0,0,0,2.57-2.72,3,3,0,0,0-1.74-3.24c-2.17-1-4.4-1.84-6.61-2.76a18.71,18.71,0,0,1-7.15-4.88c-3.71-4.27-3-10.92.4-14.87a16,16,0,0,1,10.2-5.35,28.71,28.71,0,0,1,15.08,1.79c.2.09.39.2.68.35l-2.25,8.75a61.12,61.12,0,0,0-6.07-1.8,18.5,18.5,0,0,0-5-.13,3.05,3.05,0,0,0-2.89,2.55c-.24,1.5.21,2.5,1.89,3.32,2,1,4.18,1.79,6.29,2.65a18.91,18.91,0,0,1,6.12,3.64,12.26,12.26,0,0,1-1.27,18.66A19.86,19.86,0,0,1,287.16,152,33.1,33.1,0,0,1,273,150C272.32,149.74,271.73,149.43,271.05,149.11Z" transform="translate(-208.45 -68.69)" fill="#fff"/>
-                                    <polygon points="21.23 29.46 37.03 29.46 37.62 24.46 21.23 24.39 21.23 29.46" fill="#fff"/></svg>
-                                <h2>Photoshop</h2>
-                            </div>
-                            <div className="indesign">
-                                <svg className="indesign-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.99 114.99">
-                                    <rect width="114.99" height="114.99" fill="currentColor"/>
-                                    <path className="i"d="M452.2,156.75l-.45-6.52a41.09,41.09,0,0,1-4.68,4.75,15.19,15.19,0,0,1-19-1.11c-4.15-3.75-6.18-8.6-7-14-.95-6.61-.34-13.06,2.8-19.09C428,112.91,436.43,109,444.62,112a12,12,0,0,1,6.1,5V91.59h10.46v65.16Zm-1.48-22.92c0-2.67.21-5.64-1-8.54a8.81,8.81,0,0,0-14.62-2.68,13.58,13.58,0,0,0-3.32,7.12c-.83,5-.8,9.85,1.85,14.36a8.54,8.54,0,0,0,8.69,4.47c3.64-.33,5.95-2.46,7.4-5.7C451,140.05,450.71,137.09,450.72,133.83Z" transform="translate(-373.43 -68.21)"  fill="#fcfcfc"/>
-                                    <path className="d" d="M400.68,94.85h11.14v61.86H400.68Z" transform="translate(-373.43 -68.21)" fill="#fcfcfc"/>
-                                </svg>
-                                <h2>InDesign</h2>
-                            </div>
+                    <div className="tools__header">
+                        <h3>Apps I've used:</h3>
+                        <div className="tools">
+                            <h2>Illustrator</h2>
+                            <h2>Photoshop</h2>
+                            <h2>InDesign</h2>
+                        </div>
+                        <h3>Design Extras:</h3>
+                        <div className="extras">
+                            <h2>Canva</h2>
+                            <h2>Figma</h2>
                         </div>
                     </div>
                 </div>

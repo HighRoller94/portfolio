@@ -1,7 +1,7 @@
 .overlay {
     .navbar {
         position: fixed;
-        background-color: rgba(241, 241, 241, 0.6);
+        background-color: rgba(248, 248, 248, 0.6);
         backdrop-filter: blur(.3rem);
         display: flex;
         height: 8rem;
@@ -21,7 +21,7 @@
             }
             .mobile__toggles {
                 display: flex;
-                align-items: center;
+                align-items: center; 
                 .navbar__toggle {
                     margin-top: -.75rem;
                     z-index: 100;
@@ -102,13 +102,17 @@
                         .navbar__links {
                             font-size: 1.2rem;
                             transition: 200ms ease-in;
-                            font-weight: 500;
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 600;
                             color: $offWhite;
                             opacity: 1;
                             &:hover {
                                 opacity: .5;
                             }
                         }
+                    }
+                    .tablet__toggle {
+                        display: none;
                     }
                     .mobile__contact {
                         display: block;
@@ -132,11 +136,13 @@
                             }
                         }
                     }
+                    .tab__toggle {
+                        display: none;
+                    }
                     .menu__socials {
                         display: flex;
                         width: 70%;
-                        margin-top: 11rem;
-                        color: $offWhite;
+                        margin-top: 50%;
                         .li__icon {
                             transition: 200ms ease;
                             font-size: 3.25rem;
@@ -172,7 +178,7 @@
                 height: 100vh;
                 position: absolute;
                 overflow: none;
-                padding-top: 7rem;
+                padding-top: 7.5rem;
                 padding-left: -1rem;
                 .navbar__menu {
                     list-style: none;
@@ -209,7 +215,7 @@
                     }
                     .mobile__contact {
                         display: block;
-                        margin: 1.5rem 0 2rem 0;
+                        margin: 2.5rem 0 2rem 0;
                         color: $offWhite;
                         button {
                             padding: .4rem 1.6rem;
@@ -229,16 +235,18 @@
                             }
                         }
                     }
+                    .tab__toggle {
+                        display: none;
+                        z-index: 0;
+                    }
                     .menu__socials {
                         display: flex;
                         width: 70%;
-                        margin-top: 11rem;
-                        color: $offWhite;
+                        margin-top: 20vh;
                         .li__icon {
                             transition: 200ms ease;
-                            font-size: 3.25rem;
-                            margin-right: 3rem;
-                            color: $offWhite;
+                            font-size: 3rem;
+                            margin-right: 2rem;
                             &:hover { 
                                 opacity: 0.7;
                                 cursor: none;
@@ -246,7 +254,7 @@
                         }
                         .gh__icon {
                             margin-top: .15rem;
-                            font-size: 2.75rem;
+                            font-size: 2.5rem;
                             color: $offWhite;
                             transition: 200ms ease;
                             &:hover { 
@@ -298,7 +306,7 @@
 
 body.dark-mode {
     .navbar {
-        background-color: rgba(12, 12, 12, 0.6);
+        background-color: rgba(8, 8, 8, 0.6);
         .navbar__container {
             .sidebar {
                 background-color: #1c1c1c;
@@ -326,14 +334,15 @@ body.dark-mode {
                     margin-top: .6rem;
                 }
                 .mobile__toggles {
-                    display: none;
+                    .navbar__toggle {
+                        display: none;
+                    }
                 }
                 .sidebar {
                     display: flex;
                     flex-direction: row;
                     justify-content: right;
                     height: auto;
-
                     width: 100%;
                     list-style: none;
                     position: static;
@@ -341,6 +350,7 @@ body.dark-mode {
                     align-items: center;
                     margin-right: 1rem;
                     padding-top: 0;
+                    background-color: transparent;
                     .navbar__menu {
                         display: flex;
                         list-style: none;
@@ -353,10 +363,9 @@ body.dark-mode {
                         .navbar__item {
                             margin: 0 1rem;
                             .navbar__links {
-                                
+                                color: $offBlack;
                                 font-size: 1rem;
                                 font-weight: 400;
-                                text-transform: uppercase;
                                 opacity: .7;
                                 &:hover {
                                     opacity: 1;
@@ -364,14 +373,16 @@ body.dark-mode {
                             }
                         }
                         .mobile__contact {
-                            
+                            color: $offBlack;
                             display: block;
                             margin-left: 1.25rem;
+                            margin-top: 2rem;
                             button {
                                 padding: .4rem 1.6rem;
                                 font-weight: 400;
+                                font-family: 'Helvetica', sans-serif;
                                 border: 1px solid currentColor;
-                                border-radius: .5rem;
+                                
                                 color: currentColor;
                                 background: none;
                                 outline: none;
@@ -383,6 +394,12 @@ body.dark-mode {
                                     background-color: rgba(250, 250, 250, .25);
                                 }
                             }
+                        }
+                        .tab__toggle {
+                            display: flex;
+                            margin-top: .5rem;
+                            margin-left: 2rem;
+                            margin-right: -1.2rem;
                         }
                         .sidebar__h1 {
                             display: none;
@@ -418,6 +435,7 @@ body.dark-mode {
             .git__icon {
                 margin-top: 10px;
                 font-size: 1.6rem;
+                margin-bottom: 1.2rem;
                 color: currentColor;
                 &:hover {
                     opacity: 0.8;
@@ -425,16 +443,8 @@ body.dark-mode {
                     cursor: none;
                 }
             }
-            p {
-                margin: 30px 0;
-                margin-bottom: 2.5rem;
-                padding-bottom: 5px;
-                font-size: .95rem;
-                font-weight: 400;
-                transform: rotate(-90deg);
-            }
             .bar {
-                height: 15rem;
+                height: 10rem;
                 width: 2px;
                 background-color: currentColor;
             }
@@ -454,7 +464,8 @@ body.dark-mode {
             p {
                 margin-bottom: 4rem;
                 font-size: .95rem;
-                font-weight: 400;
+                font-weight: 500;
+                color: $offRed;
                 transform: rotate(-90deg);
             }
             .bar {
@@ -463,15 +474,20 @@ body.dark-mode {
                 width: 2px;
                 background-color: currentColor;
             }
-            .download__icon {
-                width: 32px;
+            .icon__container {
+                width: 30px;
+                height: 30px;
                 color: currentColor;
+                .icon {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
         .download__cv.active {
             visibility: visible;
             opacity: 1;
-            bottom: 10rem;
+            bottom: 5rem;
         }
     }
     .navbar.active {
@@ -480,21 +496,34 @@ body.dark-mode {
     }
     body.dark-mode {
         .navbar {
-            background-color: rgba(12, 12, 12, 0.6);
+            background-color: rgba(8, 8, 8, 0.6);
             .navbar__container {
                 .sidebar {
-                    background-color: $offBlack;
+                    background: transparent;
                     .navbar__menu {
                         .navbar__item {
                             .navbar__links {
                                 color: $offWhite;
                             }
                         }
+                        .mobile__contact {
+                            color: $offWhite;
+                        }
                     }
                 }
                 .sidebar.active {
-                    background-color: $offBlack;
+                    background-color: $offBlack;  
                 }
+            }
+        }
+        .socials {
+            p { 
+                color: $offTeal;
+            }
+        }
+        .download__cv {
+            p {
+                color: $offTeal;
             }
         }
         .navbar.active {
@@ -523,7 +552,7 @@ body.dark-mode {
                 align-items: center;
                 margin-top: 2.5rem;
                 .nav__logo {
-                    width: 3.5rem;
+                    width: 4rem;
                     margin-left: 0;
                     margin-top: .5rem;
                 }
@@ -531,14 +560,13 @@ body.dark-mode {
                     display: none;
                 }
                 .sidebar {
-                    width: 30%;
                     display: flex;
                     list-style: none;
-                    margin-left: .5rem;
                     margin-top: -.2rem;
                     justify-content: center;
                     background-color: transparent;
                     .navbar__menu {
+                        margin-left: 3rem;
                         background-color: transparent;
                         .navbar__item {
                             margin: 0 20px;
@@ -552,10 +580,15 @@ body.dark-mode {
                         .mobile__contact {
                             display: none;
                         }
+                        
                         .menu__socials {
                             display: none;
                         }
+                        .tab__toggle {
+                            display: none;
+                        }
                     }
+                    
                 }
                 .nav__button__div {
                     display: flex;
@@ -567,11 +600,14 @@ body.dark-mode {
                         padding: .5rem 1.8rem;
                         font-weight: 400;
                         border: 1px solid currentColor;
+                        border-radius: 3px;
+                        color: currentColor;
                         font-size: 1rem;
-                        transition: 200ms ease;
-                            &:hover {
-                                background-color: rgba(250, 250, 250, .25);
-                            }
+                        transition: 500ms ease;
+                        &:hover {
+                            background-color: #1c1c1c;
+                            color: $offWhite;
+                        }
                     }
                 }
                 .side__menu__toggle {
@@ -585,37 +621,44 @@ body.dark-mode {
                 font-size: 2.4rem;
             }
             .git__icon {
-                margin-top: 4px;
+                margin-top: 1rem;
                 font-size: 1.9rem;
-                margin-bottom: -6px;
+                margin-bottom: 1.5rem;
             }
             p {
-                margin: 35px 0;
+                margin: 40px 0;
                 font-size: 1.1rem;
             }
             .bar {
-                height: 23vh;
+                height: 14rem;
             }
         }
         .download__cv {
-            right: 5.5%;
+            right: 4.5%;
             p {
-                font-size: .95rem;
+                font-size: 1.1rem;
             }
             .bar {
                 margin: 1.5rem 0;
             }
-            .download__icon {
+            .icon__container {
+                &:hover {
+                    cursor: none;
+                }
+                .icon {
+                    margin-top: 1rem;
+                    color: $offBlack;
+                    transform: scale(1.3);
+                }
                 
-                color: $offBlack;
             }
         }
         .download__cv.active {
-            bottom: 5rem;
+            bottom: 10rem;
         }
     }
     .navbar.active {
-        height: 8rem;
+        height: 8.5rem;
     }
     body.dark-mode {
         .navbar{
@@ -623,11 +666,21 @@ body.dark-mode {
                 .sidebar {
                     background-color: transparent;
                 }
+                .nav__button__div {
+                    h1 {
+                        &:hover {
+                            color: $offBlack;
+                            background-color: $offWhite;
+                        }
+                    }
+                }
             }
         }
         .download__cv {
-            .download__icon {
-                color: $offWhite;
+            .icon__container {
+                .icon {
+                    color: $offWhite;
+                }
             }
         }
     }

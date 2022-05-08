@@ -35,30 +35,27 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 3rem;
         grid-row-gap: 0;
         .project {
             width: 75%;
-            height: 22rem;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             overflow: hidden;
             z-index: 2;
             display: grid;
             place-items: center;
             grid-template-columns: 1fr;
             border-radius: 3px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             img {
                 width: 100%;
                 grid-row-start: 1;
                 grid-column-start: 1;
                 height: 100%;
-                object-fit: cover;
                 background-attachment: fixed;
-                background-position: center;
                 background-repeat: no-repeat;
-                background-size: cover;
                 opacity: .3;
+                object-fit: cover;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 filter: grayscale(70) saturate(90%) brightness(90%);
             }
             .project__text {
@@ -70,6 +67,8 @@
                 z-index: 2;
                 background-color: rgba(250, 250, 250, .5);
                 padding: 1.5rem;
+                padding-bottom: 2.5rem;
+                margin-top: 0;
                 border-radius: 5px;
                 width: 75%;
                 height: 75%;
@@ -139,13 +138,13 @@
                         }
                     }
                     .git__btn {
-                        color: currentColor;
                         background: none;
                         outline: none;
                         display: flex;
                         border-radius: 3px;
                         border: none;
                         align-items: center;
+                        color: $offBlack;
                         &:hover {
                             cursor: none;
                             text-decoration: underline;
@@ -157,11 +156,17 @@
                 }
             }
         }
+        .travair {
+            height: 22rem;
+        }
         .marquet {
             height: 23.5rem;
         }
+        .eatz {
+            height: 22rem;
+        }
         .pyre {
-            height: 25rem;
+            height: 25.5rem;
         }
         .illume {
             height: 27.5rem;
@@ -173,7 +178,7 @@
 @media screen and (min-width: 768px) {
     .projects__section {
         text-align: left;
-        padding-top: 2rem;
+        padding-top: 0rem;
         .projects__header {
             text-align: left;
             justify-content: flex-start;
@@ -191,7 +196,7 @@
         }
         .projects {
             display: grid;
-            margin-top: 6rem;
+            margin-top: 5rem;
             grid-template-columns: 1fr;
             width: 70%;
             justify-content: center;
@@ -203,21 +208,25 @@
                 align-items: flex-start;
                 box-shadow: none;
                 width: 100%;
-                height: 20rem;
+                margin-top: 0;
+                margin-bottom: 0rem;
                 img {
+                    height: 80%;
                     grid-column: 3 / 8;
                     grid-row: 1;
+                    opacity: .5;
+                    filter: grayscale(70) saturate(100%) brightness(100%);
                 }
                 .project__text {
+                    background: none;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     width: 100%;
                     grid-column: 1 / 5; 
-                    
                     grid-row: 1; 
                     z-index: 1;
-                    
+                    margin-top: -1.1rem;
                     h1 {
                         font-size: 2rem;
                     }
@@ -243,7 +252,7 @@
                 }
             }
             .marquet {
-                height: 20rem;
+                height: 23.5rem;
                 img {
                     grid-column: 1 / 4;
                     grid-row: 1;
@@ -276,10 +285,12 @@
                 }
             }
             .pyre {
-                height: 22rem;
+                height: 25.5rem;
                 img {
                     grid-column: 1 / 4;
                     grid-row: 1;
+                    opacity: 0.2;
+                    filter: brightness(100%);
                 }
                 .project__text {
                     text-align: right;
@@ -309,7 +320,10 @@
                 }
             }
             .illume {
-                height: 23rem;
+                height: 26.5rem;
+                img {
+                    opacity: 0.2;
+                }
             }
         }
     }
@@ -318,17 +332,17 @@
 @media screen and (min-width: 1312px) {
     .projects__section {
         position: relative;
-        margin-top: -3rem;
-        padding-top: 8rem;
+        margin-top: -5rem;
+        padding-top: 9rem;
         .projects__header {
-            text-align: left;
+            display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             padding-top: 0;
+            width: 65%;
             margin: 0 auto;
-            width: 67%;
             h1 {
-                margin-left: -.2rem;
+
                 font-size: $desktopHeaderFontSize;
             }
             p {
@@ -341,7 +355,7 @@
             margin-top: 7rem;
             display: grid;
             justify-content: flex-start;
-            width: 67%;
+            width: 65%;
             grid-template-columns: 1fr;
             grid-column-gap: 60px;
             grid-row-gap: 60px;
@@ -349,12 +363,12 @@
                 display: grid;
                 width: 100%;
                 height: 20rem;
-                margin-bottom: 3rem;
+                margin-bottom: 2rem;
                 img {
                     filter: grayscale(70) saturate(90%) brightness(70%);
-                    &:hover {
-                        
-                    }
+                    width: 100%;
+                    object-fit: cover;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 }
                 .project__text {
                     display: flex;
@@ -395,6 +409,46 @@
                     }
                 }
             }
+            .travair {
+                height: 22rem;
+                .project__text {
+                    p {
+                        width: 40%;
+                    }
+                }
+            }
+            .marquet {
+                height: 23.5rem;
+                .project__text {
+                    p {
+                        width: 45%;
+                    }
+                }
+            }
+            .eatz {
+                height: 22rem;
+                .project__text {
+                    p {
+                        width: 40%;
+                    }
+                }
+            }
+            .pyre {
+                height: 26rem;
+                .project__text {
+                    p {
+                        width: 45%;
+                    }
+                }
+            }
+            .illume {
+                height: 27rem;
+                .project__text {
+                    p {
+                        width: 45%;
+                    }
+                }
+            }
         }
     }
 }
@@ -422,6 +476,11 @@ body.dark-mode {
                     p {
                         span {
                             color: #17a889;
+                        }
+                    }
+                    .btns { 
+                        .git__btn {
+                            color: $offWhite;
                         }
                     }
                 }

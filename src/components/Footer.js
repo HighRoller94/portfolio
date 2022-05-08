@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import CopyrightIcon from '@material-ui/icons/Copyright';
 
 import { Link } from 'react-scroll';
 
-import '../styles/styles.scss';
-
-
 function Footer() {
-
 
     return (
         <div className="footer__section">
-            <div className="footer__links">
-                <Link data-aos="fade-up" to="about"><p>ABOUT</p></Link>
-                <Link data-aos="fade-up" data-aos-delay="200" to="projects"><p>PORTFOLIO</p></Link>
-                <Link data-aos="fade-up" data-aos-delay="400" to="skills"><p>SKILLS</p></Link>
-            </div>
             <div>
                 <Link to="home">
                     <svg id="Layer_1" className="footer__logo2 focus" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.01 229.13">
@@ -28,15 +18,15 @@ function Footer() {
                 </Link>
             </div>
             <div className="footer__icons">
-                <a className="link" href="https://www.linkedin.com/in/ash-bridges/" target="_blank" >
+                <a data-aos="fade-up" className="link" href="https://www.linkedin.com/in/ash-bridges/" target="_blank" rel="noreferrer">
                     <LinkedInIcon className="li__icon" />
                 </a>
-                <a className="link" href="https://github.com/HighRoller94" target="_blank" >
+                <a data-aos="fade-up" data-aos-delay="200" className="link" href="https://github.com/HighRoller94" target="_blank" rel="noreferrer">
                     <GitHubIcon className="gh__icon" />
                 </a>
             </div>
             <div className="footer__copyright">
-                <p>Designed and Developed by <strong>Ash Bridges</strong></p>
+                <p>Designed and Developed by <span>Ash Bridges</span></p>
             </div>
         </div>
     )

@@ -14,14 +14,14 @@ function Home() {
                 </motion.h2>
                 <motion.h1 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
-                transition={{ delay: 1.25, duration: 1 }}
+                transition={{ delay: 1, duration: 1 }}
                 >
-                    I'M ASH!
+                    I'M ASH.
                 </motion.h1>
                 <motion.div className="wrapper" 
                 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
-                transition={{ delay: 2.5, duration: 1 }}>
+                transition={{ delay: 2, duration: 1 }}>
                     <h3 data-aos="fade-up" data-aos-duration="2000">A</h3>
                     <ul data-aos="fade-up" data-aos-duration="2000" className="dynamic__text">
                         <li><span>web developer</span></li>
@@ -42,7 +42,7 @@ function Home() {
                 <motion.div className="scroll__btn" 
                 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
-                transition={{ delay: 4, duration: 1.5 }}>
+                transition={{ delay: 3, duration: 1.5 }}>
                     <div className="mouse">
                         <div className="scroller"></div>
                     </div>

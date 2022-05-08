@@ -59,7 +59,7 @@ function IllumeModal({ openIllume, setOpenIllume }) {
                         <img src={illumeLogo} alt="" />
                     </div>
                     <div className="illume__text">
-                        <p>Illume is an ongoing social media app that aims to help creatives network, grow and manage their business and portfolios. Built with React, Illume includes a number of features such as custom authentication, user based profiles and cart functionality.</p>
+                        <p>Illume is a CRUD social media app that aims to help creatives network, grow and manage their business and portfolios. Built with React, Illume includes a number of features such as custom authentication, user based profiles and cart functionality.</p>
                         <img className="illume__1" src="" alt="" />
                         <h3>Libaries used -</h3>
                         <ul className="packages">

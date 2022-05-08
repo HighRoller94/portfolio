@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&family=Roboto+Condensed&display=swap');
 
-$offBlack: #0c0c0c;
-$offWhite: #f1f1f1;
+$offBlack: #080808;
+$offWhite: #f8f8f8;
 
+$offRed: #3daaaa;
+$offTeal: #17a889;
 
-
-$headerFont: 'Roboto Condensed', sans-serif;
+$headerFont: 'Helvetica Neue', sans-serif;
 
 // MOBILE
 
-$mobileHeaderFontSize: 3rem;
-$mobileBodyFontSize: 1rem;
+$mobileHeaderFontSize: 2.5rem;
+$mobileBodyFontSize: .95rem;
 
 // TABLET 
 
-$tabletHeaderFontSize: 3.5rem;
+$tabletHeaderFontSize: 3rem;
 $tabletBodyFontSize: 1rem;
 
 // DESKTOP
 
-$desktopHeaderFontSize: 4.5rem;
+$desktopHeaderFontSize: 3.5rem;
 $desktopBodyFontSize: 1.1rem;
 
 @import './navOverlay';
@@ -28,12 +29,6 @@ $desktopBodyFontSize: 1.1rem;
 @import './about';
 
 @import './projects';
-@import './travel';
-@import './pyre';
-@import './marquet';
-@import './illume';
-@import './eatz';
-
 @import './skills';
 @import './contact';
 @import './footer';
@@ -111,7 +106,6 @@ body.dark-mode {
         background: transparent;
         pointer-events: none;
     }
-    
 }
 
 @media screen and (min-width: 1312px) {
@@ -127,6 +121,11 @@ body.dark-mode {
     transform: scale(2);
     animation: none;
     background-color: currentColor;
+}
+
+.link {
+    text-decoration: none;
+    color: currentColor;
 }
 
 @keyframes cursorAnim {

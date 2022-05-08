@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home';
 import About from './components/About';
@@ -13,7 +13,6 @@ import Skills from './components/Skills';
 import './styles/styles.scss';
 
 function App() {
-  const [project, setProject] = useState(null);
   
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
@@ -48,7 +47,7 @@ function App() {
                 <NavOverlay />
                 <Home />
                 <About  />
-                <Projects setProject={setProject}/>
+                <Projects />
                 <Skills />
                 <Contact />
                 <Footer />
