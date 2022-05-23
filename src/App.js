@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home';
@@ -15,6 +16,7 @@ import './styles/styles.scss';
 function App() {
   
   useEffect(() => {
+
     const cursor = document.querySelector(".cursor");
     const focus = document.querySelectorAll(".focus")
     document.addEventListener('mousemove', e => {
@@ -32,6 +34,7 @@ function App() {
 
   return (
     <Router>
+      <div className="cursor"></div>
       <motion.div 
         className="app"
         initial={{ opacity: 0}}
@@ -39,7 +42,6 @@ function App() {
         transition={{ duration: 1 }}
         exit={{ opacity: 0}}
       >
-      <div className="cursor"></div>
       <div className="border"></div>
           <AnimatePresence exitBeforeEnter>
             <Switch>

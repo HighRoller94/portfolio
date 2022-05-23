@@ -26,7 +26,7 @@ function Projects() {
                 <p data-aos="fade-right" >Check out some of the <span>projects I've been working on</span> recently!</p>
             </div>
             <div className="projects">
-                <div className="travair project" data-aos="fade-up">
+                {/* <div className="travair project" data-aos="fade-up">
                     <img data-aos="fade-up" src={travair} alt="Travel" />
                     <div data-aos="fade-up" data-aos-delay="200" className="project__text">
                         <h4>WEBSITE</h4>
@@ -52,7 +52,7 @@ function Projects() {
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="marquet project" data-aos="fade-up">
                     <img data-aos="fade-up" src={marquet} alt="Marquet" />
                     <div data-aos="fade-up" data-aos-delay="200" className="project__text">
