@@ -1,8 +1,8 @@
 .overlay {
     .navbar {
         position: fixed;
-        background-color: rgba(248, 248, 248, 0.6);
-        backdrop-filter: blur(.3rem);
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(.5rem);
         display: flex;
         height: 8rem;
         justify-content: center;
@@ -106,9 +106,6 @@
                             font-weight: 600;
                             color: $offWhite;
                             opacity: 1;
-                            &:hover {
-                                opacity: .5;
-                            }
                         }
                     }
                     .tablet__toggle {
@@ -208,9 +205,6 @@
                             font-weight: 500;
                             color: $offWhite;
                             opacity: 1;
-                            &:hover {
-                                opacity: .5;
-                            }
                         }
                     }
                     .mobile__contact {
@@ -309,15 +303,15 @@ body.dark-mode {
         background-color: rgba(8, 8, 8, 0.6);
         .navbar__container {
             .sidebar {
-                background-color: #1c1c1c;
+                background-color: #080808;
             }
             .sidebar.active {
-                background-color: #1c1c1c;
+                background-color: #080808;
             }
         }
     }
     .navbar.active {
-        box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
+        box-shadow: none;
     }
 }
 
@@ -357,20 +351,35 @@ body.dark-mode {
                         align-items: center;
                         margin-left: 0;
                         flex-direction: row;
+                        margin-top: .7rem;
                         .sidebar__name {
                             display: none;
                         }
                         .navbar__item {
                             margin: 0 1rem;
                             .navbar__links {
-                                color: $offBlack;
-                                font-size: 1rem;
-                                font-weight: 400;
-                                opacity: .7;
-                                &:hover {
-                                    opacity: 1;
+                                color: $lightModeGrey;
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                                position: relative;
+                                height: 100%;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 1rem;
+                                    left: 0;
+                                    
+                                    z-index: -1;
+                                    width: 0%;
+                                    height: .7rem;
+                                    background: $offRed;
+                                    transition: 200ms ease-in;
+                                }
+                                &:hover::after {
+                                    width: 100%;
                                 }
                             }
+                            
                         }
                         .mobile__contact {
                             color: $offBlack;
@@ -382,7 +391,6 @@ body.dark-mode {
                                 font-weight: 400;
                                 font-family: 'Helvetica', sans-serif;
                                 border: 1px solid currentColor;
-                                
                                 color: currentColor;
                                 background: none;
                                 outline: none;
@@ -426,27 +434,24 @@ body.dark-mode {
             .linked__icon {
                 font-size: 2rem;
                 color: currentColor;
+                transition: 300ms ease-in;
                 &:hover {
-                    opacity: 0.8;
-                    transition: 200ms ease-in;
+                    opacity: 0.5;
                     cursor: none;
+                    transform: scale(1.2);
                 }
             }
             .git__icon {
                 margin-top: 10px;
                 font-size: 1.6rem;
-                margin-bottom: 1.2rem;
+                margin-bottom: 1.1rem;
                 color: currentColor;
+                transition: 300ms ease-in;
                 &:hover {
-                    opacity: 0.8;
-                    transition: 200ms ease-in;
+                    opacity: 0.5;
                     cursor: none;
+                    transform: scale(1.2);
                 }
-            }
-            .bar {
-                height: 10rem;
-                width: 2px;
-                background-color: currentColor;
             }
         }
         .download__cv {
@@ -465,6 +470,7 @@ body.dark-mode {
                 margin-bottom: 4rem;
                 font-size: .95rem;
                 font-weight: 500;
+                font-family: 'Grape Nuts', cursive;
                 color: $offRed;
                 transform: rotate(-90deg);
             }
@@ -472,6 +478,7 @@ body.dark-mode {
                 margin: 1rem 0;
                 height: 10rem;
                 width: 2px;
+                opacity: .5;
                 background-color: currentColor;
             }
             .icon__container {
@@ -481,6 +488,11 @@ body.dark-mode {
                 .icon {
                     width: 100%;
                     height: 100%;
+                    transition: 300ms ease-in-out;
+                    &:hover {
+                        opacity: .5;
+                        transform: scale(1.2);
+                    }
                 }
             }
         }
@@ -493,42 +505,6 @@ body.dark-mode {
     .navbar.active {
         height: 6rem;
         padding-top: 1rem;
-    }
-    body.dark-mode {
-        .navbar {
-            background-color: rgba(8, 8, 8, 0.6);
-            .navbar__container {
-                .sidebar {
-                    background: transparent;
-                    .navbar__menu {
-                        .navbar__item {
-                            .navbar__links {
-                                color: $offWhite;
-                            }
-                        }
-                        .mobile__contact {
-                            color: $offWhite;
-                        }
-                    }
-                }
-                .sidebar.active {
-                    background-color: $offBlack;  
-                }
-            }
-        }
-        .socials {
-            p { 
-                color: $offTeal;
-            }
-        }
-        .download__cv {
-            p {
-                color: $offTeal;
-            }
-        }
-        .navbar.active {
-            box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
-        }
     }
 }
 
@@ -553,6 +529,7 @@ body.dark-mode {
                 margin-top: 2.5rem;
                 .nav__logo {
                     width: 4rem;
+                    transform: scale(1.2);
                     margin-left: 0;
                     margin-top: .5rem;
                 }
@@ -562,7 +539,7 @@ body.dark-mode {
                 .sidebar {
                     display: flex;
                     list-style: none;
-                    margin-top: -.2rem;
+                    margin-top: 0;
                     justify-content: center;
                     background-color: transparent;
                     .navbar__menu {
@@ -570,11 +547,9 @@ body.dark-mode {
                         background-color: transparent;
                         .navbar__item {
                             margin: 0 20px;
+                            height: 2.5rem;
                             .navbar__links {
-                                color: $offBlack;
                                 font-size: 1.2rem;
-                                font-weight: 400;
-                                position: relative;
                             }
                         }
                         .mobile__contact {
@@ -623,20 +598,17 @@ body.dark-mode {
             .git__icon {
                 margin-top: 1rem;
                 font-size: 1.9rem;
-                margin-bottom: 1.5rem;
+                margin-bottom: 1.75rem;
             }
             p {
                 margin: 40px 0;
                 font-size: 1.1rem;
             }
-            .bar {
-                height: 14rem;
-            }
         }
         .download__cv {
             right: 4.5%;
             p {
-                font-size: 1.1rem;
+                font-size: 1.3rem;
             }
             .bar {
                 margin: 1.5rem 0;
@@ -649,8 +621,10 @@ body.dark-mode {
                     margin-top: 1rem;
                     color: $offBlack;
                     transform: scale(1.3);
+                    &:hover {
+                        transform: scale(1.5);
+                    }
                 }
-                
             }
         }
         .download__cv.active {
@@ -660,35 +634,54 @@ body.dark-mode {
     .navbar.active {
         height: 8.5rem;
     }
-    body.dark-mode {
-        .navbar{
-            .navbar__container {
-                .sidebar {
-                    background-color: transparent;
-                }
-                .nav__button__div {
-                    h1 {
-                        &:hover {
-                            color: $offBlack;
-                            background-color: $offWhite;
-                        }
-                    }
-                }
-            }
-        }
-        .download__cv {
-            .icon__container {
-                .icon {
-                    color: $offWhite;
-                }
-            }
-        }
-    }
-    .nav__hidden {
-        transform: translateY(-8rem);
-    }
-    
 }
 
 
 
+body.dark-mode {
+    .navbar {
+        .navbar__container {
+            .sidebar {
+                background: transparent;
+                .navbar__menu {
+                    .navbar__item {
+                        .navbar__links {
+                            color: $offWhite;
+                            &::after {
+                                background: $offTeal;
+                            }
+                        }
+                    }
+                    .mobile__contact {
+                        color: $offWhite;
+                    }
+                }
+            }
+            .nav__button__div {
+                h1 {
+                    &:hover {
+                        color: $offBlack;
+                        background-color: $offWhite;
+                    }
+                }
+            }
+            .sidebar.active {
+                background-color: $offBlack;  
+            }
+        }
+    }
+    .download__cv {
+        p {
+            color: $offTeal;
+        }
+        .icon__container {
+            .icon {
+                color: $offWhite;
+            }
+        }
+    }
+    
+    .navbar.active {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
+    }
+}

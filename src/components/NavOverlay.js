@@ -16,6 +16,22 @@ function NavOverlay() {
         setDownloaded(true)
     }
 
+    const pathVariants = {
+        hidden: {
+            opacity: 0,
+            pathLength: 0
+        },
+        visible: {
+            opacity: 1,
+            pathLength: 1,
+            transition: {
+                duration: 1.25,
+                delay: 3.5,
+                ease: "easeInOut"
+            }
+        }
+    }
+
     useEffect(() => {
         const menu = document.querySelector(".navbar__toggle");
         const navMenu = document.querySelector(".sidebar");
@@ -42,7 +58,7 @@ function NavOverlay() {
         const download = document.querySelector('.download__cv');
 
         const downloadAppear = () => {
-            download.classList.toggle('active', window.scrollY > 500);
+            download.classList.toggle('active', window.scrollY > 300);
         }
 
         window.addEventListener("scroll", downloadAppear);
@@ -78,7 +94,7 @@ function NavOverlay() {
             initial={{ opacity: 0}}
             animate={{ opacity: 1}}
             viewport={{ once: true }}
-            transition={{ delay: 3, duration: 1.5 }}>
+            transition={{ delay: 2.75, duration: 1 }}>
             <div className="navbar">
                 <div className="navbar__container">
                     <Link to="home">
@@ -96,21 +112,21 @@ function NavOverlay() {
                             <motion.li 
                                     initial={{ opacity: 0}}
                                     animate={{ opacity: 1}} 
-                                    transition={{ delay: 3.25, duration: 1.5 }} 
+                                    transition={{ delay: 3, duration: 1 }} 
                                     className="navbar__item focus">
                                 <Link to="about"><h1 className="navbar__links focus">About</h1></Link>
                             </motion.li>
                             <motion.li 
                                     initial={{ opacity: 0}}
                                     animate={{ opacity: 1}} 
-                                    transition={{ delay: 3.5, duration: 1.5 }} 
+                                    transition={{ delay: 3.25, duration: 1 }} 
                                     className="navbar__item focus">
                                 <Link to="projects"><h1 className="navbar__links focus">Portfolio</h1></Link>
                             </motion.li>
                             <motion.li 
                                     initial={{ opacity: 0}}
                                     animate={{ opacity: 1}} 
-                                    transition={{ delay: 3.75, duration: 1.5 }} 
+                                    transition={{ delay: 3.5, duration: 1 }} 
                                     className="navbar__item focus">
                                 <Link to="skills"><h1 className="navbar__links focus">Skills</h1></Link>
                             </motion.li>
@@ -143,13 +159,23 @@ function NavOverlay() {
                 </div>
             </div>
             <div className="socials" >
-                    <a className="link" href="https://www.linkedin.com/in/ash-bridges/" target="_blank" rel="noreferrer" >
+                    <motion.a 
+                            initial={{ opacity: 0}}
+                            animate={{ opacity: 1}} 
+                            transition={{ delay: 5, duration: 1 }}  
+                            className="link" href="https://www.linkedin.com/in/ash-bridges/" target="_blank" rel="noreferrer" >
                         <LinkedInIcon className="linked__icon focus" />
-                    </a>
-                    <a className="link" href="https://github.com/HighRoller94" target="_blank" rel="noreferrer" >
+                    </motion.a>
+                    <motion.a
+                            initial={{ opacity: 0}}
+                            animate={{ opacity: 1}} 
+                            transition={{ delay: 4.75, duration: 1 }} 
+                            className="link" href="https://github.com/HighRoller94" target="_blank" rel="noreferrer" >
                         <GitHubIcon className="git__icon focus" />
-                    </a>
-                    <span className="bar"></span>
+                    </motion.a>
+                    <motion.svg initial="hidden" animate="visible" xmlns="http://www.w3.org/2000/svg" width="2" height="229.494" viewBox="0 0 2 229.494">
+                        <motion.path variants={pathVariants} id="Path_48" data-name="Path 48" d="M14904.395,1586.325V1356.831" transform="translate(-14903.395 -1356.831)" fill="currentColor" stroke="currentColor" stroke-width="3"/>
+                    </motion.svg>
             </div>
             
                 <div className="download__cv">

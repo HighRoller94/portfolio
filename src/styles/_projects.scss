@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
     width: 100%;
     .projects__header {
         padding-top: 6rem;
@@ -17,13 +18,23 @@
             font-weight: 600;
             color: currentColor;
             font-size: $mobileHeaderFontSize;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -1rem;
+                left: 0;
+                height: .8rem;
+                width: 4rem;
+                border-radius: 2rem;
+                background-color: $offRed;
+            }
         }
         p {
             width: 100%;
             font-size: $mobileBodyFontSize;
             font-weight: 400;
-            color: currentColor;
-            margin-top: 1rem;
+            color: $lightModeGrey;
+            margin-top: $mobileHeaderMargin;
             span {
                 color: $offRed;
             }
@@ -38,16 +49,18 @@
         margin-top: 3rem;
         grid-row-gap: 0;
         .project {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
             width: 75%;
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
             overflow: hidden;
+            border-radius: 1rem;
+            padding: 2rem 1rem;
             z-index: 2;
-            display: grid;
-            place-items: center;
-            grid-template-columns: 1fr;
-            border-radius: 3px;
             img {
                 width: 100%;
+                border-radius: 1rem;
                 grid-row-start: 1;
                 position: relative;
                 grid-column-start: 1;
@@ -57,34 +70,15 @@
                 opacity: .3;
                 object-fit: cover;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                filter: grayscale(70) saturate(90%) brightness(90%);
-                &::after {
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $offRed;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: .7;
-                    z-index: 2;
-                }
             }
             .project__text {
                 display: flex;
                 flex-direction: column;
-                grid-row-start: 1;
-                grid-column-start: 1;
-                position: static;
                 z-index: 2;
-                background-color: rgba(250, 250, 250, .5);
-                padding: 1.5rem;
-                padding-bottom: 2.5rem;
-                margin-top: 0;
+                padding-bottom: 3rem;
+                margin-top: -3rem;
                 border-radius: 5px;
-                width: 75%;
-                height: 75%;
+                width: 100%;
                 h4 {
                     opacity: .7;
                     color: currentColor;
@@ -92,7 +86,7 @@
                     color: $offRed;
                 }
                 h1 {
-                    font-family: 'Helvetica Neue', sans-serif;
+                    font-family: $headerFont;
                     font-weight: 600;
                     margin-top: 0.3rem;
                     font-size: 2.5rem;
@@ -100,26 +94,23 @@
                 }
                 p {
                     margin-top: .5rem;
-                    color: currentColor;
+                    color: $lightModeGrey;
                     width: 100%;
                     font-size: $mobileBodyFontSize;
                     font-weight: 400;
                     transition: all .3s ease-in-out;
-                    span {
-                        color: $offRed;
-                    }
                 }
                 .project__languages {
                     display: flex;
                     justify-content: flex-start;
                     margin-top: 1.5rem;
                     span {
-                        border: 1px solid currentColor;
-                        font-size: .85rem;
-                        border-radius: 3px;
+                        background-color: rgb(158, 158, 158);
+                        font-size: 1rem;
+                        border-radius: 1rem;
                         padding: .3rem 1rem;
                         margin-right: 1rem;
-                        color: currentColor;
+                        color: $offWhite;
                     }
                 }
                 .btns {
@@ -130,23 +121,24 @@
                         display: flex;
                         align-items: center;
                         transition: 200ms ease-in;
-                        background: none;
                         color: currentColor;
                         border:none;
                         outline: none;
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                         margin-right: 1rem;
-                        padding: .3rem .7rem;
+                        padding: .5rem 1rem;
                         border-radius: 3px;
-                        border: 1px solid currentColor;
+                        background: none;
+                        border: 1px solid grey;
                         font-weight: 500;
                         z-index: 1;
                         transition: 300ms ease-in-out;
                         &:hover {
                             cursor: none;
-                            background-color: rgba(250, 250, 250, .25);
+                            background-color: lightgrey;
                         }
                         .icon {
+                            font-size: 2rem;
                             margin-right: .5rem;
                         }
                     }
@@ -154,10 +146,11 @@
                         background: none;
                         outline: none;
                         display: flex;
-                        border-radius: 3px;
+                        font-size: 1.1rem;
+                        border-radius: 1rem;
                         border: none;
                         align-items: center;
-                        color: $offBlack;
+                        color: currentColor;
                         &:hover {
                             cursor: none;
                             text-decoration: underline;
@@ -168,21 +161,6 @@
                     }
                 }
             }
-        }
-        .travair {
-            height: 22rem;
-        }
-        .marquet {
-            height: 23.5rem;
-        }
-        .eatz {
-            height: 22rem;
-        }
-        .pyre {
-            height: 25.5rem;
-        }
-        .illume {
-            height: 27.5rem;
         }
     }
 }
@@ -201,14 +179,16 @@
                 padding: 0;
                 margin-left: 0;
                 font-size: $tabletHeaderFontSize;
+                &::after {
+                    bottom: -.4rem;
+                }
             }
             p {
+                margin-top: $headerMargin;
                 font-size: $tabletBodyFontSize;
-                margin-top: .5rem;
             }
         }
         .projects {
-            display: grid;
             margin-top: 5rem;
             grid-template-columns: 1fr;
             width: 70%;
@@ -216,22 +196,24 @@
             grid-row-gap: 5rem;
             grid-column-gap: 2.5rem;
             .project {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                align-items: flex-start;
-                box-shadow: none;
                 width: 100%;
                 margin-top: 0;
                 margin-bottom: 0rem;
                 img {
-                    height: 80%;
-                    grid-column: 3 / 8;
-                    grid-row: 1;
-                    opacity: .5;
-                    filter: grayscale(70) saturate(100%) brightness(100%);
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $offRed;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: .7;
+                        z-index: 2;
+                    }
                 }
                 .project__text {
-                    background: none;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -239,12 +221,13 @@
                     grid-column: 1 / 5; 
                     grid-row: 1; 
                     z-index: 1;
-                    margin-top: -1.1rem;
+                    margin-top: -5.5rem;
                     h1 {
                         font-size: 2rem;
                     }
                     p {
-                        width: 80%;
+                        width: 100%;
+                        color: $lightModeGrey;
                     }
                     .btns {
                         .site__btn {
@@ -264,88 +247,15 @@
                     }
                 }
             }
-            .marquet {
-                height: 23.5rem;
-                img {
-                    grid-column: 1 / 4;
-                    grid-row: 1;
-                }
-                .project__text {
-                    text-align: right;
-                    width: 100%;
-                    grid-column: 2 / 8; 
-                    grid-row: 1; 
-                    z-index: 1;
-                    align-items: end;
-                    p {
-                        text-align: right;
-                        width: 75%;
-                    }
-                    .project__languages {
-                        span {
-                            padding: .2rem .7rem;
-                            margin-right: 0;
-                            margin-left: 1rem;
-                        }
-                    }
-                    .btns {
-                        flex-direction: row-reverse;
-                        .site__btn {
-                            margin: 0;
-                            margin-left: 1rem;
-                        }
-                    }
-                }
-            }
-            .pyre {
-                height: 25.5rem;
-                img {
-                    grid-column: 1 / 4;
-                    grid-row: 1;
-                    opacity: 0.2;
-                    filter: brightness(100%);
-                }
-                .project__text {
-                    text-align: right;
-                    width: 100%;
-                    grid-column: 2 / 8; 
-                    grid-row: 1; 
-                    z-index: 1;
-                    align-items: end;
-                    p {
-                        text-align: right;
-                        width: 75%;
-                    }
-                    .project__languages {
-                        span {
-                            padding: .2rem .7rem;
-                            margin-right: 0;
-                            margin-left: 1rem;
-                        }
-                    }
-                    .btns {
-                        flex-direction: row-reverse;
-                        .site__btn {
-                            margin: 0;
-                            margin-left: 1rem;
-                        }
-                    }
-                }
-            }
-            .illume {
-                height: 26.5rem;
-                img {
-                    opacity: 0.2;
-                }
-            }
         }
     }
+
 }
 
 @media screen and (min-width: 1312px) {
     .projects__section {
         position: relative;
-        margin-top: -5rem;
+        margin-top: -2rem;
         padding-top: 9rem;
         .projects__header {
             display: flex;
@@ -355,48 +265,44 @@
             width: 65%;
             margin: 0 auto;
             h1 {
-
                 font-size: $desktopHeaderFontSize;
             }
             p {
                 width: 100%;
-                margin-top: 1.25rem;
                 font-size: $desktopBodyFontSize;
             }
         }
         .projects {
-            margin-top: 7rem;
-            display: grid;
+            margin-top: 6rem;
+            display: flex;
             justify-content: flex-start;
             width: 65%;
-            grid-template-columns: 1fr;
-            grid-column-gap: 60px;
-            grid-row-gap: 60px;
             .project {
-                display: grid;
+                display: flex;
+                flex-direction: row;
                 width: 100%;
                 height: 20rem;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 img {
-                    filter: grayscale(70) saturate(90%) brightness(70%);
                     width: 100%;
-                    object-fit: cover;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    height: 100%;
+                    object-fit:cover;
                 }
                 .project__text {
                     display: flex;
                     width: 100%;
-                    background: none;
                     flex-direction: column;
-                    padding: 0;
-                    margin: 0;
+                    border-radius: .5rem;
+                    margin-top: 2.5rem;
+                    margin-left: 3rem;
                     transform: translate(0%, 0%);
                     h1 {
                         font-size: 2.3rem;
+                        font-family: $headerFont;
                     }
                     p {
                         font-size: 1.1rem;
-                        width: 50%;
+                        width: 100%;
                     }
                     .project__languages {
                         span {
@@ -412,7 +318,6 @@
                             }
                         }
                         .git__btn {
-                            
                             font-size: 1.1rem;
                             .icon {
                                 margin-right: .5rem;
@@ -422,45 +327,17 @@
                     }
                 }
             }
-            .travair {
-                height: 22rem;
+            .reverse {
+                flex-direction: row-reverse;
                 .project__text {
+                    margin-left: 0;
                     p {
-                        width: 40%;
-                    }
-                }
-            }
-            .marquet {
-                height: 23.5rem;
-                .project__text {
-                    p {
-                        width: 45%;
-                    }
-                }
-            }
-            .eatz {
-                height: 22rem;
-                .project__text {
-                    p {
-                        width: 40%;
-                    }
-                }
-            }
-            .pyre {
-                height: 26rem;
-                .project__text {
-                    p {
-                        width: 45%;
+                        width: 85%;
                     }
                 }
             }
             .illume {
-                height: 27rem;
-                .project__text {
-                    p {
-                        width: 45%;
-                    }
-                }
+                height: 22rem;
             }
         }
     }
@@ -469,7 +346,13 @@
 body.dark-mode {
     .projects__section {
         .projects__header {
+            h1 {
+                &::after {
+                    background-color: $offTeal;
+                }
+            }
             p {
+                color: $darkModeGrey;
                 span {
                     color: $offTeal;
                 }
@@ -487,8 +370,14 @@ body.dark-mode {
                         color: $offTeal;
                     }
                     p {
+                        color: $darkModeGrey;
                         span {
                             color: $offTeal;
+                        }
+                    }
+                    .project__languages {
+                        span {
+                            background-color: $lightModeGrey;
                         }
                     }
                     .btns { 

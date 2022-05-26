@@ -21,12 +21,13 @@ function Contact() {
     };
     
     return (
-        <div className="contact__section" id="contact">
+        <div className="contact__section" data-scroll-section id="contact">
             <div className="contact__container">
             <h1 className="bg__contact">Contact</h1>
                 <div className="contact">
-                    <div className="contact__header" data-aos="fade-right">
-                        <h1>4. Get in touch!</h1>
+                    <div className="contact__header">
+                        <h2 data-aos="fade-right">What's next?</h2>
+                        <h1 data-aos="fade-right">Get in touch!</h1>
                     </div>
                     <div className="contact__text">
                         <p data-aos="fade-right">I'd <span>love to hear from you</span>, feel free to shoot me a message!</p>

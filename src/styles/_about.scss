@@ -1,6 +1,7 @@
 .about__section {
     padding-top: 7rem;
     display: flex;
+    height: 100%;
     flex-direction: column;
     width: 75%;
     margin: 0 auto;
@@ -9,45 +10,42 @@
         position: absolute;
         opacity: .025;
         color: currentColor;
-        font-family: 'Roboto Condensed', sans-serif;
         font-weight: 500;
         top: 6rem;
         left: -3.5rem;
-        font-size: 13.5rem;
-    }
-    .bg-about2 {
-        position: absolute;
-        top: 35rem;
-        left: -6.5rem;
-        font-size: 12rem;
-        color: $offWhite;
-        font-family: 'Roboto Condensed', sans-serif;
-        opacity: .025;
-        z-index: 1;
-        font-weight: 500;
+        font-size: 6rem;
     }
     h1 {
         font-family: $headerFont;
-        font-weight: 600;
+        font-weight: 700;
         color: currentColor;
-        opacity: 0.7;
         font-size: $mobileHeaderFontSize;
+        position: relative;
         span {
             color: $offRed;
             font-weight: 600;
         }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            height: .8rem;
+            width: 4rem;
+            border-radius: 2rem;
+            background-color: $offRed;
+        }
     }
-    
     .about__text {
         display: flex;
-        margin-top: 0;
+        margin-top: $mobileHeaderMargin;
         width: 100%;
         flex-direction: column;
         justify-content: center;
         p {
             font-size: $mobileBodyFontSize;
-            margin-top: 1.25rem;
             font-weight: 400;
+            color: $lightModeGrey;
             span {
                 color: $offRed;
             }
@@ -93,13 +91,16 @@
                 font-size: $tabletHeaderFontSize;
                 padding: 0;
                 background: none;
+                &::after {
+                    bottom: -.4rem;
+                }
             }
             .about__text {
                 margin-left: 1rem;
+                margin-top: .5rem;
                 p {
                     font-size: $tabletBodyFontSize;
                     margin-left: .5rem;
-                    margin-top: .5rem;
                     font-size: 1rem;
                     width: 100%;
                     text-align: left;
@@ -109,7 +110,6 @@
                     margin-left: 0;
                     margin-top: 4rem;
                     max-width: 300px;
-                    
                 }
             }
             
@@ -136,13 +136,9 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
-        .bg-about {
-            top: 15rem;
-            left: -3.5rem;
-        }
         .about__container {
             width: 65%;
-            padding-top: 6rem;
+            padding-top: 8rem;
             flex-direction: column;
             h1 {
                 font-size: $desktopHeaderFontSize;
@@ -152,7 +148,7 @@
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
-                margin-top: 1.5rem;
+                margin-top: $headerMargin;
                 width: 100%;
                 p {
                     font-size: $desktopBodyFontSize;
@@ -172,19 +168,10 @@
             position: absolute;
             opacity: .01;
             color: $offWhite;
-            font-family: 'Roboto Condensed', sans-serif;
             font-weight: 500;
             top: 5rem;
             left: -5rem;
             font-size: 35rem;
-        }
-        .bg-about2 {
-            position: absolute;
-            color: $offWhite;
-            font-family: 'Roboto Condensed', sans-serif;
-            opacity: .025;
-            font-weight: 500;
-            display: none;
         }
     }
 }
@@ -193,14 +180,15 @@ body.dark-mode {
     .about__section {
         .about__container {
             h1 {
-                span {
-                    color: #17a889;
+                &::after {
+                    background-color: $offTeal;
                 }
             }
             .about__text {
                 p {
+                    color: $darkModeGrey;
                     span {
-                        color: #17a889;
+                        color: $offTeal;
                     }
                 }
             }

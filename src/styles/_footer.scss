@@ -45,8 +45,9 @@
         margin-bottom: 6rem;
         margin-top: 1rem;
         p {
-            font-weight: 300;
+            font-weight: 400;
             font-size: .9rem;
+            color: $lightModeGrey;
             span {
                 color: $offRed;
             }
@@ -60,6 +61,9 @@ body.dark-mode {
             color: $offWhite;
         }
         .footer__copyright {
+            p {
+                color: $darkModeGrey;
+            }
             span {
                 color: $offTeal;
             }
@@ -106,7 +110,6 @@ body.dark-mode {
             display: flex;
             align-items: center;
             p {
-                font-weight: 200;
                 font-size: .9rem;
             }
         }

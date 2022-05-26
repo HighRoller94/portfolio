@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 import Home from './components/Home';
 import About from './components/About';
@@ -14,7 +13,7 @@ import Skills from './components/Skills';
 import './styles/styles.scss';
 
 function App() {
-  
+
   useEffect(() => {
 
     const cursor = document.querySelector(".cursor");
@@ -32,32 +31,23 @@ function App() {
     })
   });
 
+  console.log(document.body.clientHeight)
   return (
-    <Router>
+    <div>
       <div className="cursor"></div>
-      <motion.div 
-        className="app"
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1}}
-        transition={{ duration: 1 }}
-        exit={{ opacity: 0}}
-      >
       <div className="border"></div>
-          <AnimatePresence exitBeforeEnter>
-            <Switch>
-              <Route path="/">
-                <NavOverlay />
-                <Home />
-                <About  />
-                <Projects />
-                <Skills />
-                <Contact />
-                <Footer />
-              </Route>
-            </Switch>
-          </AnimatePresence>
-      </motion.div>
-    </Router>
+      <AnimatePresence exitBeforeEnter>
+          <NavOverlay />
+            <div className="container" data-scroll-container>
+              <Home />
+              <About  />
+              <Projects />
+              <Skills />
+              <Contact />
+            </div>
+            <Footer />
+      </AnimatePresence>
+      </div>
   );
 }
 
