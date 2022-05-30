@@ -5,8 +5,8 @@ import LanguageIcon from '@material-ui/icons/Language';
 
 import travair from '../assets/projectImages/travair.svg';
 import eatz from '../assets/projectImages/eatz.svg';
-import marquet from '../assets/projectImages/marquet.svg';
-import pyre from '../assets/projectImages/pyre.svg';
+import marquet from '../assets/projectImages/marquet.png';
+import pyre from '../assets/projectImages/pyre.png';
 import illume from '../assets/projectImages/illume.svg'
 
 import "aos/dist/aos.css";

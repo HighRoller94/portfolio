@@ -63,7 +63,7 @@ function Skills() {
                     </svg>
                     <div className="skills__head">
                         <h2>UI/UX Design</h2>
-                        <p><span>Clean and simple design</span> is where I feel most comfortable.</p>
+                        <p><span>Clean and modern design</span> is where I feel most comfortable.</p>
                     </div>
                     <div className="tools__header">
                         <h3>Design tools:</h3>

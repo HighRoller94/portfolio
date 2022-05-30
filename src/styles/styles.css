@@ -662,6 +662,7 @@ body.dark-mode .navbar.active {
     display: flex;
     width: 100%;
     z-index: 99;
+    margin-bottom: -1rem;
   }
   .overlay .navbar .nav__hidden {
     -webkit-transform: translateY(-12rem);
@@ -906,7 +907,7 @@ body.dark-mode label::after {
 
 @media screen and (min-width: 768px) {
   .toggle__container {
-    margin-top: 0.07rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -986,6 +987,24 @@ body.dark-mode label::after {
   width: 78%;
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
+}
+
+.hero__section .hit__lightsDiv {
+  position: absolute;
+  top: 10%;
+  right: calc(18.5%);
+  z-index: 100;
+}
+
+.hero__section .hit__lightsDiv .lights {
+  width: 100px;
+}
+
+.hero__section .hit__lightsDiv .arrow {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  width: 55px;
 }
 
 .hero__section .hero__text {
@@ -1241,7 +1260,7 @@ body.dark-mode label::after {
 
 @media screen and (min-width: 768px) {
   .hero__section {
-    padding-top: 22vh;
+    padding-top: 25vh;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1249,6 +1268,20 @@ body.dark-mode label::after {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-left: 15%;
+  }
+  .hero__section .hit__lightsDiv {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 100;
+  }
+  .hero__section .hit__lightsDiv .lights {
+    width: 120px;
+  }
+  .hero__section .hit__lightsDiv .arrow {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    width: 75px;
   }
   .hero__section .hero__text {
     margin-left: 0;
@@ -1283,6 +1316,20 @@ body.dark-mode label::after {
     padding-top: 27vh;
     background: none;
     margin-left: 18%;
+  }
+  .hero__section .hit__lightsDiv {
+    position: absolute;
+    top: 18%;
+    right: 19%;
+    z-index: 100;
+  }
+  .hero__section .hit__lightsDiv .lights {
+    width: 130px;
+  }
+  .hero__section .hit__lightsDiv .arrow {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    width: 75px;
   }
   .hero__section .hero__text {
     margin-left: 0;
@@ -1332,6 +1379,10 @@ body.dark-mode label::after {
   .hero__section .scroll__btn {
     display: none;
   }
+}
+
+body.dark-mode .hero__section .hit__lightsDiv {
+  display: none;
 }
 
 body.dark-mode .hero__section .hero__text .swipe__text h3 {
@@ -2004,8 +2055,19 @@ body.dark-mode .about__section .about__container .about__text p span {
   .projects__section .projects .project img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    -webkit-filter: grayscale(50);
+            filter: grayscale(50);
+  }
+  .projects__section .projects .project img:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
   }
   .projects__section .projects .project .project__text {
     display: -webkit-box;
@@ -2214,7 +2276,7 @@ body.dark-mode .projects__section .projects .project .project__text .btns .git__
   padding-bottom: 3rem;
   margin-bottom: 6rem;
   text-align: center;
-  background-color: #cccccc;
+  background-color: lightgrey;
   border-radius: 1rem;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -2261,6 +2323,10 @@ body.dark-mode .projects__section .projects .project .project__text .btns .git__
   font-size: 0.95rem;
   width: 75%;
   font-weight: 400;
+}
+
+.skills__row .skills__container .skills__section .tools__header {
+  color: #373737;
 }
 
 .skills__row .skills__container .skills__section .tools__header h3 {
@@ -2487,15 +2553,19 @@ body.dark-mode .skills__row .skills__container .skills__section .skills__icon {
 }
 
 body.dark-mode .skills__row .skills__container .skills__section .skills__head {
+  color: lightgrey;
+}
+
+body.dark-mode .skills__row .skills__container .skills__section .skills__head h2 {
   color: #ffffff;
 }
 
 body.dark-mode .skills__row .skills__container .skills__section .tools__header {
-  color: #ffffff;
+  color: lightgrey;
 }
 
-body.dark-mode .skills__row .skills__container .skills__section .tools__header h3::after {
-  background-color: #71DBD4;
+body.dark-mode .skills__row .skills__container .skills__section .tools__header h3 {
+  color: #ffffff;
 }
 
 .contact__section {
@@ -2523,7 +2593,7 @@ body.dark-mode .skills__row .skills__container .skills__section .tools__header h
 }
 
 .contact__section .contact__container .bg__contact {
-  display: block;
+  display: none;
   font-size: 30rem;
   top: -11rem;
   left: -6rem;
@@ -3162,6 +3232,10 @@ body.dark-mode .skills__row .skills__container .skills__section .tools__header h
   .contact__section .bg__contact2 {
     display: none;
   }
+}
+
+body.dark-mode .contact__section .contact__container .bg__contact {
+  display: block;
 }
 
 body.dark-mode .contact__section .contact__container .contact .contact__header h1::after {

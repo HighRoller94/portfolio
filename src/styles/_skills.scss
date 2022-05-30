@@ -13,7 +13,6 @@ $toolsHeaderFontSize: 1.2rem;
         display: flex;
         position: absolute;
         font-size: 10rem;
-
         font-weight: 500;
         color: $offWhite;
         opacity: .025;
@@ -72,7 +71,7 @@ $toolsHeaderFontSize: 1.2rem;
             padding-bottom: 3rem;
             margin-bottom: 6rem;
             text-align: center;
-            background-color: $darkModeGrey;
+            background-color: lightgrey;
             border-radius: 1rem;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             .skills__icon {
@@ -105,6 +104,7 @@ $toolsHeaderFontSize: 1.2rem;
                 }
             }
             .tools__header {
+                color: $lightModeGrey;
                 h3 {
                     margin-top: 1.5rem;
                     font-size: $toolsHeaderFontSize;
@@ -317,14 +317,15 @@ body.dark-mode {
                     fill: $offBlack;
                 }
                 .skills__head {
-                    color: $offWhite;
+                    color: lightgrey;
+                    h2 {
+                        color: $offWhite;
+                    }
                 }
                 .tools__header {
-                    color: $offWhite;
+                    color: lightgrey;
                     h3 {
-                        &::after {
-                            background-color: $offTeal;
-                        }
+                        color: $offWhite;
                     }
                 }
             }

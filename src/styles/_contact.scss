@@ -10,7 +10,7 @@
         margin-left: 0;
         position: relative;
         .bg__contact {
-            display: block;
+            display: none;
             font-size: 30rem;
             top: -11rem;
             left: -6rem;
@@ -502,6 +502,9 @@
 body.dark-mode {
     .contact__section {
         .contact__container {
+            .bg__contact {
+                display: block;
+            }
             .contact {
                 .contact__header {
                     h1 {

@@ -25,8 +25,8 @@ function NavOverlay() {
             opacity: 1,
             pathLength: 1,
             transition: {
-                duration: 1.25,
-                delay: 3.5,
+                duration: 1,
+                delay: 3,
                 ease: "easeInOut"
             }
         }
@@ -162,14 +162,14 @@ function NavOverlay() {
                     <motion.a 
                             initial={{ opacity: 0}}
                             animate={{ opacity: 1}} 
-                            transition={{ delay: 5, duration: 1 }}  
+                            transition={{ delay: 4.75, duration: 1 }}  
                             className="link" href="https://www.linkedin.com/in/ash-bridges/" target="_blank" rel="noreferrer" >
                         <LinkedInIcon className="linked__icon focus" />
                     </motion.a>
                     <motion.a
                             initial={{ opacity: 0}}
                             animate={{ opacity: 1}} 
-                            transition={{ delay: 4.75, duration: 1 }} 
+                            transition={{ delay: 4.5, duration: 1 }} 
                             className="link" href="https://github.com/HighRoller94" target="_blank" rel="noreferrer" >
                         <GitHubIcon className="git__icon focus" />
                     </motion.a>
