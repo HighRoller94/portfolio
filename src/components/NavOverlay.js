@@ -55,14 +55,6 @@ function NavOverlay() {
             })
         })
 
-        const download = document.querySelector('.download__cv');
-
-        const downloadAppear = () => {
-            download.classList.toggle('active', window.scrollY > 300);
-        }
-
-        window.addEventListener("scroll", downloadAppear);
-
         const nav = document.querySelector('.navbar');
         let lastScrollY = window.scrollY;
         window.addEventListener("scroll", () => {
@@ -177,7 +169,6 @@ function NavOverlay() {
                         <motion.path variants={pathVariants} id="Path_48" data-name="Path 48" d="M14904.395,1586.325V1356.831" transform="translate(-14903.395 -1356.831)" fill="currentColor" stroke="currentColor" stroke-width="3"/>
                     </motion.svg>
             </div>
-            
                 <div className="download__cv">
                     <p className="socials__header">Download my CV!</p>
                     <span className="bar"></span>

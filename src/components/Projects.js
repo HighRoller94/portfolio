@@ -53,8 +53,8 @@ function Projects() {
                 </div>
             </div> */}
             <div className="reverse project" >
-                <img data-aos="fade-left"  src={marquet} alt="Marquet" />
-                <div data-aos="fade-up"  className="project__text">
+                <img data-aos="fade-up" src={marquet} alt="Marquet" />
+                <div data-aos="fade-up" className="project__text">
                 <h4>WEBSITE</h4>
                     <h1>Marquet</h1>
                     <p>Marquet is a responsive <span>ecommerce multipage website</span> that features full cart functionality, built with HTML, SASS and JS.</p>
@@ -80,7 +80,7 @@ function Projects() {
                 </div>
             </div>
             <div className="project">
-                <img data-aos="fade-right"  src={eatz} alt="Eatz" />
+                <img data-aos="fade-up"  src={eatz} alt="Eatz" />
                 <div data-aos="fade-up"  data-aos-delay="200" className="project__text">
                 <h4>WEBSITE</h4>
                     <h1>Eatz App</h1>
@@ -106,7 +106,7 @@ function Projects() {
                 </div>
             </div>
             <div className="reverse project">
-                <img data-aos="fade-left" src={pyre} alt="Pyre" />
+                <img data-aos="fade-up" src={pyre} alt="Pyre" />
                 <div data-aos="fade-up" data-aos-delay="200" className="project__text">
                     <h4>WEB APP</h4>
                     <h1>Pyre</h1>
@@ -133,7 +133,7 @@ function Projects() {
                 </div>
             </div>
             <div className="illume project">
-                <img data-aos="fade-right" src={illume} alt="illume" />
+                <img data-aos="fade-up" src={illume} alt="illume" />
                 <div data-aos="fade-up" data-aos-delay="200" className="project__text">
                     <h4>WEBSITE</h4>
                     <h1>Illume</h1>

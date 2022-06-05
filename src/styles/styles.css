@@ -1092,6 +1092,8 @@ body.dark-mode label::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  bottom: 7rem;
 }
 
 .hero__section .download__btn button {
@@ -1100,8 +1102,6 @@ body.dark-mode label::after {
   background-color: #080808;
   position: relative;
   text-transform: uppercase;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
   color: #ffffff;
   border: 1px solid #080808;
   outline: none;
@@ -1109,12 +1109,34 @@ body.dark-mode label::after {
   font-size: 1.1rem;
   font-weight: 500;
   border-radius: 3px;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .hero__section .download__btn button a {
   color: #ffffff;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
+  text-decoration: none;
+  position: relative;
+  z-index: 99;
+}
+
+.hero__section .download__btn button .icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.hero__section .download__btn button .icon:nth-child(3) {
+  opacity: 0;
 }
 
 .hero__section .download__btn button::before {
@@ -1153,10 +1175,32 @@ body.dark-mode label::after {
   color: #080808;
 }
 
-.hero__section .download__btn .link {
-  text-decoration: none;
-  position: relative;
-  z-index: 99;
+.hero__section .download__btn.active {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  display: none;
+}
+
+.hero__section .clicked button {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.hero__section .clicked button .icon {
+  opacity: 1;
+}
+
+.hero__section .clicked button a {
+  display: none;
+}
+
+.hero__section .clicked button::before {
+  display: none;
 }
 
 .hero__section .scroll__btn {
@@ -1169,7 +1213,7 @@ body.dark-mode label::after {
       -ms-flex-pack: center;
           justify-content: center;
   width: 30px;
-  margin-top: 6rem;
+  margin-top: 7rem;
   margin-bottom: 1rem;
   height: 50px;
 }
@@ -1271,9 +1315,10 @@ body.dark-mode label::after {
   }
   .hero__section .hit__lightsDiv {
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 5%;
     z-index: 100;
+    height: 0;
   }
   .hero__section .hit__lightsDiv .lights {
     width: 120px;
@@ -1281,7 +1326,6 @@ body.dark-mode label::after {
   .hero__section .hit__lightsDiv .arrow {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
-    width: 75px;
   }
   .hero__section .hero__text {
     margin-left: 0;
@@ -1296,11 +1340,10 @@ body.dark-mode label::after {
   .hero__section .hero__text .swipe__text h2 {
     margin-top: -1rem;
   }
-  .hero__section .wrapper h3 {
-    font-size: 2rem;
-  }
-  .hero__section .wrapper .dynamic__text {
-    font-size: 2rem;
+  .hero__section .hero__text .download__btn.active {
+    display: block;
+    bottom: 5rem;
+    right: 5rem;
   }
 }
 
@@ -1319,19 +1362,22 @@ body.dark-mode label::after {
   }
   .hero__section .hit__lightsDiv {
     position: absolute;
-    top: 18%;
+    top: 20%;
     right: 19%;
     z-index: 100;
   }
   .hero__section .hit__lightsDiv .lights {
     width: 130px;
+    margin-bottom: -1rem;
   }
   .hero__section .hit__lightsDiv .arrow {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-bottom: 0;
     width: 75px;
+    height: 75px;
   }
   .hero__section .hero__text {
+    height: 22rem;
     margin-left: 0;
   }
   .hero__section .hero__text .swipe__text {
@@ -1361,9 +1407,14 @@ body.dark-mode label::after {
     width: 100%;
   }
   .hero__section .download__btn {
-    margin-top: 2rem;
+    bottom: 1rem;
     margin-left: .3rem;
-    width: 37%;
+    -webkit-transition: 300ms ease-in;
+    transition: 300ms ease-in;
+  }
+  .hero__section .download__btn .icon {
+    width: 40px;
+    height: 40px;
   }
   .hero__section .download__btn button {
     font-weight: 500;
@@ -1375,6 +1426,17 @@ body.dark-mode label::after {
     text-decoration: none;
     position: relative;
     z-index: 99;
+  }
+  .hero__section .clicked {
+    padding: 0;
+  }
+  .hero__section .clicked button {
+    height: 50px;
+    width: 50px;
+  }
+  .hero__section .download__btn.active {
+    bottom: 5rem;
+    right: 5rem;
   }
   .hero__section .scroll__btn {
     display: none;
@@ -1602,7 +1664,7 @@ body.dark-mode .hero__section .scroll__btn .mouse .scroller {
   }
   .about__section .about__container {
     width: 65%;
-    padding-top: 8rem;
+    padding-top: 6.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

@@ -21,6 +21,7 @@
         color: currentColor;
         font-size: $mobileHeaderFontSize;
         position: relative;
+        height: 100%;
         span {
             color: $offRed;
             font-weight: 600;
@@ -91,8 +92,9 @@
                 font-size: $tabletHeaderFontSize;
                 padding: 0;
                 background: none;
+                line-height: 3.5rem;
                 &::after {
-                    bottom: -.4rem;
+                    bottom: -1.5rem;
                 }
             }
             .about__text {
@@ -138,7 +140,7 @@
         position: relative;
         .about__container {
             width: 65%;
-            padding-top: 8rem;
+            padding-top: 6.5rem;
             flex-direction: column;
             h1 {
                 font-size: $desktopHeaderFontSize;

@@ -15,7 +15,7 @@
         margin-bottom: 2rem;
         h1 {
             font-family: $headerFont;
-            font-weight: 600;
+            font-weight: 700;
             color: currentColor;
             font-size: $mobileHeaderFontSize;
             &::after {
@@ -199,6 +199,7 @@
                 width: 100%;
                 margin-top: 0;
                 margin-bottom: 0rem;
+                
                 img {
                     &::before {
                         content: "";
@@ -283,6 +284,7 @@
                 width: 100%;
                 height: 20rem;
                 margin-bottom: 1rem;
+                border: 1px border $offRed;
                 img {
                     width: 100%;
                     height: 100%;
@@ -290,6 +292,7 @@
                     padding: 0;
                     margin: 0;
                     opacity: 1;
+                    transition: 0.5s ease-in-out;
                     filter: grayscale(50);
                     &:hover {
                         filter: grayscale(0);
@@ -369,8 +372,11 @@ body.dark-mode {
         .projects {
             .project {
                 img {
-                    filter: grayscale(70) saturate(90%) brightness(20%);
+                    filter: grayscale(50) saturate(90%) brightness(50%);
                     opacity: 1;
+                    &:hover {
+                        filter: grayscale(0) saturate(90%) brightness(80%);
+                    }
                 }
                 .project__text {
                     background: none;
